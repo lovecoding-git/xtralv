@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu>
+	<tabitems>
+		<item>
+			<title>Last Run</title>
+			<subitems>
+				<subitem>
+					<subitemtitle>Last Run</subitemtitle>
+					<subitemlang>seo_lastrun</subitemlang>
+					<subsection>info</subsection>
+					<subitemurl></subitemurl>
+					<subitemrolekey></subitemrolekey>
+					<subisredirect>0</subisredirect>
+				</subitem>
+			</subitems>
+		</item>
+		<item>
+			<title>Settings</title>
+			<subitems>
+				<subitem>
+					<subitemtitle>Settings</subitemtitle>
+					<subitemlang>seo_esettings</subitemlang>
+					<subsection>info</subsection>
+					<subitemurl>do=settings</subitemurl>
+					<subitemrolekey></subitemrolekey>
+					<subisredirect>0</subisredirect>
+				</subitem>
+			</subitems>
+		</item>
+		<item>
+			<title>Run Via Cron</title>
+			<subitems>
+				<subitem>
+					<subitemtitle>Run via Cron</subitemtitle>
+					<subitemlang>seo_rcron</subitemlang>
+					<subsection>info</subsection>
+					<subitemurl>do=cron</subitemurl>
+					<subitemrolekey></subitemrolekey>
+					<subisredirect>0</subisredirect>
+				</subitem>
+			</subitems>
+		</item>
+	</tabitems>
+</menu>

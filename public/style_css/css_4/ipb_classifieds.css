@@ -1,0 +1,59 @@
+@charset "utf-8";#category_menu{margin:6px
+0px 6px 15px}#category_menu
+.menutag{position:relative;left:-24px}.category_list{padding:6px
+0px}.category_list
+li{padding:5px
+0px 3px 0px;display:block}.category_list
+li.active{background-color:#4b76ad}.category_list li.active
+a{color:#fff}.category_list li
+a{position:relative;left:-18px;padding:0
+0 0 0px;margin:0
+0 0 0px}.item_count{font-size:10px;padding:1px
+4px;font-weight:bold;color:#ccc;background:#333;-moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;position:absolute;right:2px}.highlight_image{padding:8px}#intro_text{padding:10px;margin-bottom:10px;border:1px
+solid #CCC}.col_thumb{width:85px}.col_expiry{width:220px;text-align:center}.price_box{padding:15px;margin-top:10px;margin-bottom:10px;width:200px;background:#EEE;font-size:1.2em;font-weight:bold}.price_box_small{padding:5px;margin-top:2px;margin-bottom:5px;font-size:1.1em;font-weight:bold}.purchase_box{margin:6px
+0 6px 0;background:#EEE;font-weight:bold;padding:12px;text-align:center}.purchase_box
+a{text-decoration:none}.question{padding:12px
+10px 8px 10px}.question_wrap{clear:both;border-bottom:2px solid #B5C0CF;margin:0
+0 8px 0}.expired_row{background-color:#ddd;-moz-opacity:1.0;opacity: .40;filter:alpha(opacity = 40)}.renew_button{background-color:#528f6c;text-align:center;text-decoration:none;line-height:1.2;font-weight:bold;color:#fff;display:inline-block;font-size:15px;padding-top:8px;padding-right:0px;padding-bottom:8px;padding-left:0px;min-width:100px;margin-left:0px}.renew_button:hover{background-color:#619e7b;color:#fff;text-decoration:none !important}.cfds_box_right{width:350px;height:320px;position:relative}#advertiser_overview
+ul{font-size:0.9em;-moz-border-radius:0 0 10px 10px;-webkit-border-bottom-left-radius:10px;-webkit-border-bottom-right-radius:10px;padding:5px
+10px}#advertiser_overview ul
+li{margin:2px
+0;text-align:left}#advertiser_overview ul
+a{background:#d5dde5;text-decoration:none;-moz-border-radius:4px;-webkit-border-radius:4px;padding:5px
+7px;display:block}ul#tabNav{margin:-20px 0 0 6px;border-left:1px solid #dbe4ef;height:30px;display:block;line-height:29px}ul#tabNav
+li{background:#f6f8fb;color:#808080;float:left;height:34px;list-style-type:none;position:relative}ul#tabNav li
+a{border-top:1px solid #dbe4ef;border-right:1px solid #dbe4ef;border-bottom:1px solid #DBE4EF;text-decoration:none;display:block;float:left;height:29px;margin:0
+0 0 0px;padding:0px
+10px;position:relative;color:#8d8d8d;-webkit-transition:background-color 0.1s ease-in-out;-moz-transition:background-color 0.3s ease-in-out}ul#tabNav li a:hover{background:#eaeff5 none repeat scroll 0%;color:#808080}ul#tabNav li
+a.selected{border-bottom:1px solid #fff;background:#fff;color:#353535;font-weight:bold}#Viewer{width:300px;height:300px}.carousel{position:absolute;bottom:40px;clear:both;left:20px;margin-top:0px}.carousel
+.navButton{cursor:pointer;display:block;text-indent:-9999px;background-repeat:none;z-index:10}.carousel
+.container{position:absolute;overflow:hidden}.carousel
+.items{position:absolute}.carousel
+.item{position:relative;cursor:pointer;filter:progid : DXImageTransform.Microsoft.Alpha ( opacity = 70 );-moz-opacity:0.7;opacity:0.7;list-style-type:none;margin:0px}.carousel .item.hover,.carousel
+.item.selected{filter:progid : DXImageTransform.Microsoft.Alpha ( opacity = 100 );-moz-opacity:1.0;opacity:1.0}#Carousel{height:75px;width:320px}#Carousel
+.container{width:320px;height:100px}#Carousel
+.items{top:0;left:2px;width:10000px}#Carousel
+.item{height:50px;width:75px;float:left;clear:right;margin:0
+0 0 5px}#Carousel .item .icon
+img{position:relative;left:0px;width:75px !important;height:75px;cursor:pointer}#Carousel
+.navButton{position:absolute;bottom:0px;width:20px;height:60px}#Carousel
+.navButton.previous{left:-20px;background-image:url('http://www.xtra.lv/public/style_images/master/classifieds/carousel/slideLeft.png')}#Carousel
+.navButton.next{left:325px;background-image:url('http://www.xtra.lv/public/style_images/master/classifieds/carousel/slideRight.png')}#Carousel .item
+.picture{display:none}#cfds_category
+.cfds_category_row{padding:10px;border-bottom:1px solid #eaeaea;line-height:1.4;position:relative}#cfds_category .cfds_category_row
+a{text-decoration:none}#cfds_category
+h3{font-weight:bold;padding:0;display:inline-block}#cfds_category h3
+.ipsType_small{font-weight:normal}#cfds_category
+.cat_name{font-size:12px;margin-left:6px}#cfds_category .cat_name,#cfds_category .cat_name
+a{color:#bebebe}#cfds_category
+.item_info{font-size:14px;line-height:2;color:#616161;min-width:180px;padding-left:10px;border-left:1px solid #dfdfdf;min-height:75px;margin-left:8px}#cfds_category .item_info
+.date{font-size:13px}#cfds_category
+.topic_prefix{float:right;margin-top:3px;margin-right:10px;padding:2px
+5px}.cfdsthumb{padding:2px;border:1px
+solid #e7e7e7;display:inline-block;background:#fff;float:left;margin-right:8px}.priceBadge{position:absolute;top:6px;left:4px;font-size:11px !important}.priceBadge_sidebar{position:absolute;top:95px;right:30px;font-size:11px !important}.filters{padding:7px;font-size:12px;margin-top:10px}.filters li,.filters
+ul{display:inline}.filters
+a{display:inline-block;padding:5px
+9px;text-decoration:none}.filters .active
+a{background:#1D3652;color:#fff;font-weight:bold;opacity:1;-moz-border-radius:3px;-webkit-border-radius:5px;border-radius:3px}.filters li.dropdown
+a{padding-right:17px;background-image:url(http://www.xtra.lv/public/style_images/master/dropdown.png);background-repeat:no-repeat;background-position:right 10px}#filter_type_menucontent{min-width:130px}#panel_features
+span.row_title{width:180px}.packagedesc{margin-left:200px;margin-top:-5px;float:left}#listing_price_container{text-align:center}

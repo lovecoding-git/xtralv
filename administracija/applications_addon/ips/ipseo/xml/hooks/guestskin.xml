@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hookexport>
+  <hookdata>
+    <config>
+      <hook_name>IP.SEO: Guest Skin</hook_name>
+      <hook_desc>Allows you to set a default skin specifically for guests.</hook_desc>
+      <hook_author>Invision Power Services, Inc.</hook_author>
+      <hook_email>dan@invisionpower.com</hook_email>
+      <hook_website>http://www.invisionpower.com/</hook_website>
+      <hook_update_check/>
+      <hook_requirements><![CDATA[a:4:{s:20:"hook_ipb_version_min";i:0;s:20:"hook_ipb_version_max";i:0;s:20:"hook_php_version_min";s:1:"0";s:20:"hook_php_version_max";s:1:"0";}]]></hook_requirements>
+      <hook_version_human>1.1</hook_version_human>
+      <hook_version_long>10100</hook_version_long>
+      <hook_extra_data><![CDATA[a:4:{s:7:"display";a:1:{s:8:"settings";s:20:"Settings: Guest Skin";}s:8:"settings";a:1:{s:0:"";s:16:"ipseo_guest_skin";}s:8:"database";a:0:{}s:13:"settingGroups";a:0:{}}]]></hook_extra_data>
+      <hook_key>ipseo_guest_skin</hook_key>
+    </config>
+  </hookdata>
+  <hookfiles>
+    <file>
+      <hook_file_real>ipseoGuestSkin.php</hook_file_real>
+      <hook_type>libraryHooks</hook_type>
+      <hook_classname>ipSeoGuestSkin</hook_classname>
+      <hook_data><![CDATA[a:8:{s:12:"dataLocation";s:0:"";s:14:"libApplication";s:4:"core";s:15:"classToOverload";s:6:"output";s:9:"skinGroup";N;s:12:"skinFunction";N;s:4:"type";N;s:2:"id";N;s:8:"position";N;}]]></hook_data>
+      <hooks_source><![CDATA[<?php
+
+class ipSeoGuestSkin extends (~extends~)
+{	
+	protected function _fetchUserSkin()
+	{	
+		$skinId = parent::_fetchUserSkin();
+	
+		if(!$this->memberData['member_id'] && !empty($this->settings['ipseo_guest_skin']))
+		{
+			// Find out if the set we've got back from _fetchUserSkin() is the default,
+			// if it is not, we give that skin ID back.
+			foreach( $this->allSkins as $data )
+			{
+				if($data['set_id'] == $skinId && !$data['set_is_default'])
+				{
+					return $skinId;
+				}
+			}
+		
+			// Loop through all the skins, and if we find one whose ID matches the setting *and* can be used by this gateway, then return that ID.
+			foreach( $this->allSkins as $data )
+			{
+				if ( $data['_gatewayExclude'] === false && $data['set_id'] == $this->settings['ipseo_guest_skin'] )
+				{
+					IPSDebug::addMessage( 'Using IP.SEO guest skin setting: ' . $this->settings['ipseo_guest_skin'] );
+					
+					return $data['set_id'];
+				}
+			}
+		}
+		
+		return $skinId;
+	}
+}
+	  ]]></hooks_source>
+    </file>
+  </hookfiles>
+  <hookextras_settings/>
+  <hookextras_language/>
+  <hookextras_modules/>
+  <hookextras_help/>
+  <hookextras_templates/>
+  <hookextras_css/>
+  <hookextras_tasks/>
+  <hookextras_database_create/>
+  <hookextras_database_alter/>
+  <hookextras_database_update/>
+  <hookextras_database_insert/>
+</hookexport>

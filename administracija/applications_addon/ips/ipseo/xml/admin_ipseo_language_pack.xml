@@ -1,0 +1,695 @@
+<?xml version="1.0" encoding="utf-8"?>
+<languageexport>
+  <languagegroup>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>meta_tag_edit</word_key>
+      <word_default>Edit Tag</word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>meta_tag_add</word_key>
+      <word_default>Add Tag</word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>meta_tag_content</word_key>
+      <word_default>Content</word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>meta_tag_title_desc</word_key>
+      <word_default><![CDATA[e.g. 'description', 'keywords', 'robots', etc.]]></word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>meta_tag_title</word_key>
+      <word_default>Title</word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>meta_tags</word_key>
+      <word_default>Meta Tags</word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>meta_page_desc</word_key>
+      <word_default><![CDATA[Enter the URI (without your domain) which the meta tags you will specify should be displayed on. For example, entering '/members/' allows you to specify meta tags to show on the member list.<br /><br />You may use * as a wildcard, for example entering '/user/*' will allow you to specify meta tags to show on all user profiles.]]></word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>meta_page</word_key>
+      <word_default>Page URI</word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>meta_none_add</word_key>
+      <word_default>Click here to set up meta tags.</word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>meta_none</word_key>
+      <word_default>You do not have any meta tags set up yet.</word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>meta_add</word_key>
+      <word_default>Add Meta Tags</word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>meta_blurb</word_key>
+      <word_default>This page allows you to set up meta tags to display on certain areas of your community.</word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>meta_title</word_key>
+      <word_default>Meta Tags</word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>atn_htaccess_mod_rewrite_desc</word_key>
+      <word_default>You are currently not using .htaccess style FURLs.</word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>atn_htaccess_mod_rewrite_title</word_key>
+      <word_default>.htaccess mod_rewrite FURLs disabled</word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>atn_seo_r_on_desc</word_key>
+      <word_default>You have not enabled redirects from old style URLs to new FURLs.</word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>atn_seo_r_on_title</word_key>
+      <word_default>FURL Redirect Not Enabled</word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>atn_sitemap_ping_desc</word_key>
+      <word_default>You have set the sitemap generator to not ping the search engines when updated, this is not advisable.</word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>atn_ipseo_no_meta_title</word_key>
+      <word_default>No Meta Tags Defined</word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>atn_ipseo_no_meta_desc</word_key>
+      <word_default>You have not defined any custom meta tags in IP.SEO.</word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>atn_sitemap_ping_title</word_key>
+      <word_default>Sitemap Ping Disabled</word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>atn_sitemap_not_run_title</word_key>
+      <word_default>Sitemap Not Generated Yet</word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>atn_sitemap_not_run_desc</word_key>
+      <word_default>The sitemap generator has not yet been run.</word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>atn_spider_group_desc</word_key>
+      <word_default>You are treating spiders as a member of a different group than your guest group - This will lead to search engines seeing the board differently than guests, also known as cloaking.</word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>atn_spider_group_title</word_key>
+      <word_default>Spiders Not Treated as Guests</word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>atn_spider_visit_desc</word_key>
+      <word_default>IP.SEO cannot generate spider visit charts and statistics without this enabled.</word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>atn_spider_visit_title</word_key>
+      <word_default>Not Logging Spider Visits</word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>atn_seo_index_md_desc</word_key>
+      <word_default>You have not defined a meta description for your Board Index.</word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>atn_seo_index_md_title</word_key>
+      <word_default>No Board Index Description</word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>atn_seo_index_title_desc</word_key>
+      <word_default>You have not defined a title tag for your Board Index.</word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>atn_seo_index_title_title</word_key>
+      <word_default>No Board Index Title</word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>atn_seo_bad_url_title</word_key>
+      <word_default>Bad Links Not Redirected</word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>atn_seo_bad_url_desc</word_key>
+      <word_default><![CDATA[You are not currently redirecting bad permalinks, the recommended setting is to "Redirect to the correct link with a 301 header".]]></word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>atn_url_type_desc</word_key>
+      <word_default>You are currently using query string based FURLs. The advised setting is Path Info.</word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>atn_url_type_title</word_key>
+      <word_default>Query String FURLs</word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>atn_sitemap_path_desc</word_key>
+      <word_default>IP.SEO was unable to locate a sitemap.xml file in your specified sitemap location. Click the fix button to download a blank sitemap.xml file and upload it to your forum root (or the custom path specified in the sitemap settings) and ensure it can be written to (CHMOD 0777).</word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>atn_sitemap_path_title</word_key>
+      <word_default>Sitemap Not Writeable</word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>atn_sitemap_success_desc</word_key>
+      <word_default>The sitemap generator did not finish the last run, this may be because you tried to run it manually from the Admin CP.</word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>atn_sitemap_success_title</word_key>
+      <word_default>Sitemap Generation Failed</word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>attention_ignore</word_key>
+      <word_default>Ignore this problem</word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>attention_clear_warnings</word_key>
+      <word_default>Restore Ignored Warnings</word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>attention_fix</word_key>
+      <word_default>Fix this problem</word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>attention_none</word_key>
+      <word_default>There are no items to display.</word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>attention_title</word_key>
+      <word_default>Items Requiring Attention</word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>sitemap_priority_ignore</word_key>
+      <word_default>Do not include</word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>sitemap_priority_inherit</word_key>
+      <word_default>Use default</word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>sitemap_forum_priority_desc</word_key>
+      <word_default>This will set the priority given in the site map for the forum itself. If you have set to calculate topic scores automatically, this will also influence the topic priority for topics inside this forum.</word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>sitemap_forum_priority</word_key>
+      <word_default>Sitemap Priority</word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>sitemap</word_key>
+      <word_default>IP.SEO Sitemap</word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>acronym_deleted</word_key>
+      <word_default>Acronym Deleted</word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>acronym_delete_confirm</word_key>
+      <word_default>Are you sure you want to delete this acronym?</word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>acronym_saved</word_key>
+      <word_default>Acronym Saved</word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>acronyms_none_add</word_key>
+      <word_default>Click here to add an acronym</word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>err_no_acronym</word_key>
+      <word_default>Could not find the acronym you are trying to edit.</word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>err_acronym_details</word_key>
+      <word_default>You did not fill in the entire form. You must specify an acronym and the long version.</word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>err_acronym_toolong</word_key>
+      <word_default>Both the acronym and the long version cannot be longer than 255 characters.</word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>acronyms_none</word_key>
+      <word_default>No acronyms have been set up.</word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>acronyms_short_desc</word_key>
+      <word_default>When the user uses this acronym in a post, it will be replaced with the long version you enter below.</word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>acronyms_long</word_key>
+      <word_default>Long Version</word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>acronyms_semantic</word_key>
+      <word_default>Uses acronym tag?</word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>acronyms_semantic_desc</word_key>
+      <word_default>If yes, rather than replacing the acronym entirely, a HTML acronym tag will be used.</word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>acronyms</word_key>
+      <word_default>Acronym Expansion</word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>acronyms_add</word_key>
+      <word_default>Add Acronym</word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>acronyms_edit</word_key>
+      <word_default>Edit Acronym</word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>acronyms_short</word_key>
+      <word_default>Acronym</word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>meta_save</word_key>
+      <word_default>Save</word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>err_no_page</word_key>
+      <word_default>You did not specify a page URI</word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>meta_magic</word_key>
+      <word_default>Launch Live Meta Tag Editor</word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>dashboard_title</word_key>
+      <word_default>Dashboard</word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>dashboard_visitors</word_key>
+      <word_default>Latest Search Visitors</word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>dashboard_spiders</word_key>
+      <word_default>Latest Spider Hits</word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>dashboard_keywords</word_key>
+      <word_default>Top Search Keywords</word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>dashboard_all</word_key>
+      <word_default><![CDATA[View All &rarr;]]></word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>dashboard_graphs_date</word_key>
+      <word_default>Graph Range</word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>dashboard_graphs_day</word_key>
+      <word_default>Last 24 Hours</word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>dashboard_graphs_week</word_key>
+      <word_default>Last 7 Days</word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>dashboard_graphs_month</word_key>
+      <word_default>Last 28 Days</word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>keywords_title</word_key>
+      <word_default>Search Keywords</word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>keywords_blurb</word_key>
+      <word_default>This page shows you the most popular keywords that users search for to find your community.</word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>keywords_keyword</word_key>
+      <word_default>Keyword</word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>keywords_count</word_key>
+      <word_default>Hits</word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>keywords_none</word_key>
+      <word_default>There are no results to display.</word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>visitors_title</word_key>
+      <word_default>Search Visitors</word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>visitors_blurb</word_key>
+      <word_default>This page shows you the users the users that found your community by a search engine</word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>visitors_member</word_key>
+      <word_default>Member</word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>visitors_date</word_key>
+      <word_default>Date</word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>visitors_keywords</word_key>
+      <word_default>Search Keywords</word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>visitors_engine</word_key>
+      <word_default>Search Engine</word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>visitors_page</word_key>
+      <word_default>Page Found</word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>visitors_none</word_key>
+      <word_default>There are no results to display.</word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>spiders_spider</word_key>
+      <word_default>Spider</word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>spiders_date</word_key>
+      <word_default>Date</word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>spiders_page</word_key>
+      <word_default>Page</word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>spiders_none</word_key>
+      <word_default>There are no results to display.</word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>sitemaplog_title</word_key>
+      <word_default>Sitemap: Last Run</word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>sitemaplog_log</word_key>
+      <word_default>Log</word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>sitemaplog_lastran</word_key>
+      <word_default>Last Run: %s</word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>sitemaplog_time</word_key>
+      <word_default>Time</word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>sitemaplog_action</word_key>
+      <word_default>Action</word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>sitemap_cron_title</word_key>
+      <word_default>How to run IP.SEO sitemap generator via Cron</word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>sitemap_cron_header1</word_key>
+      <word_default>Step One</word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>sitemap_cron_1</word_key>
+      <word_default><![CDATA[<ol style='margin: 10px 30px; line-height: 150%; list-style-type: square;'><li>Go to the 'System' tab</li><li>Find 'System Scheduler' in the menu</li><li>Go to the 'IP.SEO' tab in the System Scheduler</li><li>Find 'Sitemap Generator', and click the little down arrow on the end of the row - Go to 'Edit Task'</li><li>Find the 'Enable Task?' option and set this to 'No'</li><li>Save the task by clicking the 'Edit Task' button.</li></ol>]]></word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>sitemap_cron_header2</word_key>
+      <word_default>Step Two</word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>sitemap_cron_2</word_key>
+      <word_default><![CDATA[<ol style='margin: 10px 30px; line-height: 150%; list-style-type: square;'><li>Log into your server via SSH</li><li>Type 'crontab -e' (without quotes)</li><li>Add to the bottom of the file, the following line:</li></ol><pre>0 * * * * {path}</pre><ol style='margin: 10px 30px; line-height: 150%; list-style-type: square;'><li>Save the file and close the command-line text editor.</li><li>Cron will now run the sitemap generator once per hour.</li></ol>]]></word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>sitemap_cron_3</word_key>
+      <word_default><![CDATA[<strong>Important!</strong> If you intend to generate a large sitemap (10,000 URLs or more), then you should probably run this task less often, as it can be quite resource intensive. You may also need to change the path to PHP if this is not correct for your server.]]></word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_menulang</word_pack>
+      <word_key>menu__seo_esettings</word_key>
+      <word_default>Settings</word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_menulang</word_pack>
+      <word_key>menu__seo_lastrun</word_key>
+      <word_default>Last Run</word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_menulang</word_pack>
+      <word_key>menu__seo_ssettings</word_key>
+      <word_default>Settings</word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_menulang</word_pack>
+      <word_key>menu__seo_metatags</word_key>
+      <word_default>Meta Tags</word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_menulang</word_pack>
+      <word_key>menu__seo_dashboard1</word_key>
+      <word_default>Items Requiring Attention</word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_menulang</word_pack>
+      <word_key>menu__seo_visitors</word_key>
+      <word_default>Visitors</word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_menulang</word_pack>
+      <word_key>menu__seo_keywords</word_key>
+      <word_default>Keywords</word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_menulang</word_pack>
+      <word_key>menu__seo_dashboard</word_key>
+      <word_default>Dashboard</word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_menulang</word_pack>
+      <word_key>menu__seo_rcron</word_key>
+      <word_default>Run via Cron</word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>admin_menulang</word_pack>
+      <word_key>menu__seo_acronyms</word_key>
+      <word_default>Ancronym Expansion</word_default>
+    </lang>
+  </languagegroup>
+</languageexport>

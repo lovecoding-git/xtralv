@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<export>
+  <group>
+    <row>
+      <task_id>25</task_id>
+      <task_title>Expire Ads</task_title>
+      <task_file>expireads.php</task_file>
+      <task_next_run>1325092560</task_next_run>
+      <task_week_day>-1</task_week_day>
+      <task_month_day>-1</task_month_day>
+      <task_hour>-1</task_hour>
+      <task_minute>2</task_minute>
+      <task_cronkey>1bb0ccee193c3dcac70d5ce2bf6b09ca</task_cronkey>
+      <task_log>1</task_log>
+      <task_description>Deactivate any expired ads.</task_description>
+      <task_enabled>1</task_enabled>
+      <task_key>cfds_expire_ads</task_key>
+      <task_safemode>0</task_safemode>
+      <task_locked>0</task_locked>
+      <task_application>classifieds</task_application>
+    </row>
+    <row>
+      <task_id>26</task_id>
+      <task_title>Prune Ads</task_title>
+      <task_file>pruneads.php</task_file>
+      <task_next_run>1325031480</task_next_run>
+      <task_week_day>-1</task_week_day>
+      <task_month_day>-1</task_month_day>
+      <task_hour>-1</task_hour>
+      <task_minute>0</task_minute>
+      <task_cronkey>b3d019c615290cc6bd8ac5461356da9c</task_cronkey>
+      <task_log>1</task_log>
+      <task_description/>
+      <task_enabled>1</task_enabled>
+      <task_key>cfds_prune_ads</task_key>
+      <task_safemode>0</task_safemode>
+      <task_locked>0</task_locked>
+      <task_application>classifieds</task_application>
+    </row>
+  </group>
+</export>

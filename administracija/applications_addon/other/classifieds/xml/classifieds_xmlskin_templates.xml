@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<templates application="classifieds" templategroups="a:1:{s:16:&quot;skin_classifieds&quot;;s:8:&quot;contains&quot;;}">
+  <templategroup group="skin_classifieds">
+    <template>
+      <template_group>skin_classifieds</template_group>
+      <template_content><![CDATA[<!--no data in this master skin-->]]></template_content>
+      <template_name>answer_form</template_name>
+      <template_data>$item, $question, $editor, $post_key</template_data>
+      <template_updated>1325112960</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_classifieds</template_group>
+      <template_content><![CDATA[<!--no data in this master skin-->]]></template_content>
+      <template_name>basic_item_info</template_name>
+      <template_data>$item, $seller</template_data>
+      <template_updated>1325112960</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_classifieds</template_group>
+      <template_content><![CDATA[<!--no data in this master skin-->]]></template_content>
+      <template_name>bbCodeItem</template_name>
+      <template_data><![CDATA[$item=""]]></template_data>
+      <template_updated>1325112960</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_classifieds</template_group>
+      <template_content><![CDATA[<!--no data in this master skin-->]]></template_content>
+      <template_name>category_index</template_name>
+      <template_data>$categories</template_data>
+      <template_updated>1325112960</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_classifieds</template_group>
+      <template_content><![CDATA[<!--no data in this master skin-->]]></template_content>
+      <template_name>category_view</template_name>
+      <template_data>$category, $categories, $items, $pages, $sort, $filter, $siblings, $types</template_data>
+      <template_updated>1325112960</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_classifieds</template_group>
+      <template_content><![CDATA[<!--no data in this master skin-->]]></template_content>
+      <template_name>checkboxFormField</template_name>
+      <template_data>$field</template_data>
+      <template_updated>1325112960</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_classifieds</template_group>
+      <template_content><![CDATA[<!--no data in this master skin-->]]></template_content>
+      <template_name>chooseCategory</template_name>
+      <template_data><![CDATA[$form, $error='']]></template_data>
+      <template_updated>1325112960</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_classifieds</template_group>
+      <template_content><![CDATA[<!--no data in this master skin-->]]></template_content>
+      <template_name>delete_item_form</template_name>
+      <template_data>$item, $form</template_data>
+      <template_updated>1325112960</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_classifieds</template_group>
+      <template_content><![CDATA[<!--no data in this master skin-->]]></template_content>
+      <template_name>delete_question_form</template_name>
+      <template_data>$question, $form</template_data>
+      <template_updated>1325112960</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_classifieds</template_group>
+      <template_content><![CDATA[<!--no data in this master skin-->]]></template_content>
+      <template_name>dropdownFormField</template_name>
+      <template_data>$field</template_data>
+      <template_updated>1325112960</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_classifieds</template_group>
+      <template_content><![CDATA[<!--no data in this master skin-->]]></template_content>
+      <template_name>inputFormField</template_name>
+      <template_data>$field</template_data>
+      <template_updated>1325112960</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_classifieds</template_group>
+      <template_content><![CDATA[<!--no data in this master skin-->]]></template_content>
+      <template_name>item_attachments</template_name>
+      <template_data>$attachments, $item</template_data>
+      <template_updated>1325112960</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_classifieds</template_group>
+      <template_content><![CDATA[<!--no data in this master skin-->]]></template_content>
+      <template_name>item_row</template_name>
+      <template_data>$item</template_data>
+      <template_updated>1325112960</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_classifieds</template_group>
+      <template_content><![CDATA[<!--no data in this master skin-->]]></template_content>
+      <template_name>item_view</template_name>
+      <template_data>$item, $seller, $attachments, $questions, $watched</template_data>
+      <template_updated>1325112960</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_classifieds</template_group>
+      <template_content><![CDATA[<!--no data in this master skin-->]]></template_content>
+      <template_name>listing_form</template_name>
+      <template_data>$item, $form, $type, $editor, $fields, $post_key, $packages, $category</template_data>
+      <template_updated>1325112960</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_classifieds</template_group>
+      <template_content><![CDATA[<!--no data in this master skin-->]]></template_content>
+      <template_name>listingPrice</template_name>
+      <template_data>$price</template_data>
+      <template_updated>1325112960</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_classifieds</template_group>
+      <template_content><![CDATA[<!--no data in this master skin-->]]></template_content>
+      <template_name>moderateSelectCategory</template_name>
+      <template_data>$categories</template_data>
+      <template_updated>1325112960</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_classifieds</template_group>
+      <template_content><![CDATA[<!--no data in this master skin-->]]></template_content>
+      <template_name>profileBlock</template_name>
+      <template_data>$items=array()</template_data>
+      <template_updated>1325112960</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_classifieds</template_group>
+      <template_content><![CDATA[<!--no data in this master skin-->]]></template_content>
+      <template_name>question_form</template_name>
+      <template_data>$item, $editor, $post_key</template_data>
+      <template_updated>1325112960</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_classifieds</template_group>
+      <template_content><![CDATA[<!--no data in this master skin-->]]></template_content>
+      <template_name>radioFormField</template_name>
+      <template_data>$field</template_data>
+      <template_updated>1325112960</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_classifieds</template_group>
+      <template_content><![CDATA[<!--no data in this master skin-->]]></template_content>
+      <template_name>rateCard</template_name>
+      <template_data>$package</template_data>
+      <template_updated>1325112960</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_classifieds</template_group>
+      <template_content><![CDATA[<!--no data in this master skin-->]]></template_content>
+      <template_name>renewal_form</template_name>
+      <template_data>$item, $form</template_data>
+      <template_updated>1325112960</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_classifieds</template_group>
+      <template_content><![CDATA[<!--no data in this master skin-->]]></template_content>
+      <template_name>search_row</template_name>
+      <template_data>$item</template_data>
+      <template_updated>1325112960</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_classifieds</template_group>
+      <template_content><![CDATA[<!--no data in this master skin-->]]></template_content>
+      <template_name>seller_info</template_name>
+      <template_data>$seller, $item</template_data>
+      <template_updated>1325112960</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_classifieds</template_group>
+      <template_content><![CDATA[<!--no data in this master skin-->]]></template_content>
+      <template_name>textareaFormField</template_name>
+      <template_data>$field</template_data>
+      <template_updated>1325112960</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_classifieds</template_group>
+      <template_content><![CDATA[<!--no data in this master skin-->]]></template_content>
+      <template_name>uploadForm</template_name>
+      <template_data><![CDATA[$post_key="",$type="",$stats=array(),$id=0]]></template_data>
+      <template_updated>1325112960</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+  </templategroup>
+  <templategroup group="skin_classifieds_hooks">
+    <template>
+      <template_group>skin_classifieds_hooks</template_group>
+      <template_content><![CDATA[<!--no data in this master skin-->]]></template_content>
+      <template_name>manage_link</template_name>
+      <template_data>$url</template_data>
+      <template_updated>1325112960</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_classifieds_hooks</template_group>
+      <template_content><![CDATA[<!--no data in this master skin-->]]></template_content>
+      <template_name>randomAd</template_name>
+      <template_data>$item</template_data>
+      <template_updated>1325112960</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_classifieds_hooks</template_group>
+      <template_content><![CDATA[<!--no data in this master skin-->]]></template_content>
+      <template_name>sidebar_hook_latest</template_name>
+      <template_data>$items</template_data>
+      <template_updated>1325112960</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+  </templategroup>
+  <templategroup group="skin_classifieds_manage">
+    <template>
+      <template_group>skin_classifieds_manage</template_group>
+      <template_content><![CDATA[<!--no data in this master skin-->]]></template_content>
+      <template_name>item_row</template_name>
+      <template_data>$item</template_data>
+      <template_updated>1325112960</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_classifieds_manage</template_group>
+      <template_content><![CDATA[<!--no data in this master skin-->]]></template_content>
+      <template_name>items</template_name>
+      <template_data>$items, $pages</template_data>
+      <template_updated>1325112960</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_classifieds_manage</template_group>
+      <template_content><![CDATA[<!--no data in this master skin-->]]></template_content>
+      <template_name>menu</template_name>
+      <template_data/>
+      <template_updated>1325112960</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+  </templategroup>
+</templates>

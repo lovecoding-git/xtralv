@@ -1,0 +1,16 @@
+<?php
+/*
+*
+*  (SN) PM Viewer 1.6.0
+*  SQL queries to be run on install
+*
+*/
+
+$DB = ipsRegistry::DB();
+
+if ( ! $DB->checkForField( 'pmviewer_hide', 'message_topics' ) )
+{
+	$SQL[] = "ALTER TABLE message_topics ADD pmviewer_hide TINYINT( 1 ) NOT NULL DEFAULT '0'";
+}
+
+?>

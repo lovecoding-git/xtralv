@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<languageexport>
+  <languagegroup>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>public_notifications</word_pack>
+      <word_key>subject__pmviewer_keyword_notification</word_key>
+      <word_default><![CDATA[<a href='%s'>%s</a> has sent a %s containing a flagged keyword.]]></word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>public_notifications</word_pack>
+      <word_key>pmviewer_keyword_notification</word_key>
+      <word_default><![CDATA[<#NAME#>,
+
+<#AUTHOR#> has just sent a message featuring one of the specified keywords you are monitoring conversations for. <#TEXT#>
+
+======================================================================
+You can turn off this notification by visiting <#URL#>
+]]></word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>public_notifications</word_pack>
+      <word_key>notify__pmviewer_keyword_monitor</word_key>
+      <word_default>Notify me of conversations containing keywords specified in (SN) PM Viewer</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>public_notifications</word_pack>
+      <word_key>pm_keyword_link_text</word_key>
+      <word_default>You can view the conversation by logging into the ACP using this link:</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>public_notifications</word_pack>
+      <word_key>pm_keyword_nolink_text</word_key>
+      <word_default>The conversation id is</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>public_notifications</word_pack>
+      <word_key>pm_keyword_nolink_msg</word_key>
+      <word_default>message</word_default>
+    </lang>
+  </languagegroup>
+</languageexport>

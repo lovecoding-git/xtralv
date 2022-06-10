@@ -1,0 +1,41 @@
+<ips:template parameters="$guestPostBeforeRegister, $modQueued, $standalone=false" />
+{{if !member.member_id}}
+	{{if !$standalone}}
+		<div class='ipsPad cGuestTeaser ipsSpacer_bottom'>
+			<h2 class='ipsType_pageTitle'>{lang="guest_post_header"}</h2>
+			<p class='ipsType_normal ipsType_reset ipsSpacer_top ipsSpacer_half'>
+	{{else}}
+			<p class='ipsType_normal ipsSpacer_top ipsSpacer_half'>
+	{{endif}}
+				{{if $guestPostBeforeRegister}}
+					{lang="guest_post_pbr_blurb"}
+				{{else}}
+					{lang="guest_post_normal_blurb"}
+				{{endif}}
+				{lang="guest_post_sign_in"}
+				{{if $modQueued}}
+					<br><span class='ipsType_warning'>{lang="guest_post_mod_approval"}</span>
+				{{endif}}
+			</p>
+	{{if !$standalone}}
+		</div>
+	{{endif}}
+{{elseif $modQueued}}
+	<div class="ipsType_reset ipsPad ipsAreaBackground_light ipsSpacer_bottom {{if $standalone}}ipsBox{{endif}}">
+		{{$warnings = member.warnings( 1, NULL, 'mq' );}}
+		{{foreach $warnings as $idx => $warning}}
+			<a href="{$warning->url()}" class='ipsButton ipsButton_verySmall ipsButton_veryLight ipsPos_right' data-ipsDialog data-ipsDialog-size='narrow'>{lang="view_warning_details"}</a>
+		{{endforeach}}
+		<strong class="ipsType_warning ipsType_normal">{lang="mod_queue_message"}</strong>
+		{{if \count( $warnings ) or member.mod_posts > 0}}
+			<p class="ipsType_light ipsType_reset ipsType_normal">
+				{{if \count( $warnings )}}
+					{lang="this_will_be_moderated"}
+				{{endif}}
+				{{if member.mod_posts > 0}}
+					{lang="restriction_ends" sprintf="\IPS\DateTime::ts( \IPS\Member::loggedIn()->mod_posts )->relative()"}
+				{{endif}}
+			</p>
+		{{endif}}
+	</div>	
+{{endif}}

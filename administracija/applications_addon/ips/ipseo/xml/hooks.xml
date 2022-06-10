@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hooks>
+	<hook>
+		<file>topiclinks.xml</file>
+		<enabled>1</enabled>
+	</hook>
+	<hook>
+		<file>guestskin.xml</file>
+		<enabled>1</enabled>
+	</hook>
+	<hook>
+		<file>pingtopics.xml</file>
+		<enabled>0</enabled>
+	</hook>
+	<hook>
+		<file>tracking.xml</file>
+		<enabled>1</enabled>
+	</hook>
+	<hook>
+		<file>meta.xml</file>
+		<enabled>1</enabled>
+	</hook>
+	<hook>
+		<file>acronyms.xml</file>
+		<enabled>1</enabled>
+	</hook>
+</hooks>

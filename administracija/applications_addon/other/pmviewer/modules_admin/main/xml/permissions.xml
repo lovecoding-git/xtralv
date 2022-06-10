@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<permissions>
+	<group>
+		<grouptitle>Viewing Private Conversations</grouptitle>
+		<items>
+			<item>
+				<key>pmviewer_view</key>
+				<string>Can view the PM Viewer?</string>
+			</item>
+			<item>
+				<key>pmviewer_topic</key>
+				<string>Can read private conversations?</string>
+			</item>
+			<item>
+				<key>pmviewer_hide_topic</key>
+				<string>Can hide conversations?</string>
+			</item>
+			<item>
+				<key>pmviewer_view_attach</key>
+				<string>Can view attachment thumbnails in messages?</string>
+			</item>				
+		</items>
+	</group>
+	<group>
+		<grouptitle>Managing Private Conversations</grouptitle>
+		<items>
+			<item>
+				<key>pmviewer_join_topic</key>
+				<string>Can join conversations?</string>
+			</item>
+			<item>
+				<key>pmviewer_block_user</key>
+				<string>Can block and unblock users?</string>
+			</item>
+			<item>
+				<key>pmviewer_delete_posts</key>
+				<string>Can delete individual posts from within a conversation?</string>
+			</item>
+			<item>
+				<key>pmviewer_delete_topic</key>
+				<string>Can delete conversations?</string>
+			</item>
+			<item>
+				<key>pmviewer_edit_post</key>
+				<string>Can edit messages?</string>
+			</item>
+		</items>
+	</group>
+	<group>
+		<grouptitle>Keyword Monitoring</grouptitle>
+		<items>
+			<item>
+				<key>pmviewer_keyword_monitor</key>
+				<string>Can recieve notifications of keywords used in conversations?</string>
+			</item>
+		</items>
+	</group>
+	<group>
+		<grouptitle>PM Viewer Configuration and Management</grouptitle>
+		<items>
+			<item>
+				<key>pmviewer_settings</key>
+				<string>Can edit the settings for the PM Viewer?</string>
+			</item>
+			<item>
+				<key>pmviewer_tools</key>
+				<string>Can unhide all conversations?</string>
+			</item>
+			<item>
+				<key>pmviewer_empty_logs</key>
+				<string>Can empty the logs tables?</string>
+			</item>
+			<item>
+				<key>pmviewer_prune_convos</key>
+				<string>Can prune old conversations?</string>
+			</item>
+		</items>
+	</group>
+</permissions>

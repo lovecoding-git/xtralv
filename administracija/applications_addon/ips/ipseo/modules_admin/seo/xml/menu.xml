@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu>
+	<tabitems>
+		<item>
+			<title>Items Requiring Attention</title>
+			<subitems>
+				<subitem>
+					<subitemtitle>Items Requiring Attention</subitemtitle>
+					<subitemlang>seo_dashboard1</subitemlang>
+					<subsection>dashboard</subsection>
+					<subitemurl></subitemurl>
+					<subitemrolekey></subitemrolekey>
+					<subisredirect>0</subisredirect>
+				</subitem>
+			</subitems>
+		</item>
+		<item>
+			<title>Meta Tags</title>
+			<subitems>
+				<subitem>
+					<subitemtitle>Meta Tags</subitemtitle>
+					<subitemlang>seo_metatags</subitemlang>
+					<subsection>meta</subsection>
+					<subitemurl></subitemurl>
+					<subitemrolekey></subitemrolekey>
+					<subisredirect>0</subisredirect>
+				</subitem>
+			</subitems>
+		</item>
+		<item>
+			<title>Acronym Expansion</title>
+			<subitems>
+				<subitem>
+					<subitemtitle>Acronym Expansion Tags</subitemtitle>
+					<subitemlang>seo_acronyms</subitemlang>
+					<subsection>acronyms</subsection>
+					<subitemurl></subitemurl>
+					<subitemrolekey></subitemrolekey>
+					<subisredirect>0</subisredirect>
+				</subitem>
+			</subitems>
+		</item>
+		<item>
+			<title>Settings</title>
+			<subitems>
+				<subitem>
+					<subitemtitle>Settings</subitemtitle>
+					<subitemlang>seo_ssettings</subitemlang>
+					<subsection>settings</subsection>
+					<subitemurl></subitemurl>
+					<subitemrolekey></subitemrolekey>
+					<subisredirect>0</subisredirect>
+				</subitem>
+			</subitems>
+		</item>
+	</tabitems>
+</menu>

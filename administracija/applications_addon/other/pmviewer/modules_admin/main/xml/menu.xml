@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu>
+	<tabitems>
+		<item>
+			<title>View Private Conversations</title>
+			<subitems>
+				<subitem>
+					<subitemtitle>View Private Conversations</subitemtitle>
+					<subsection>overview</subsection>
+					<subitemurl></subitemurl>
+					<subitemrolekey></subitemrolekey>
+					<subisredirect>0</subisredirect>
+				</subitem>
+			</subitems>
+		</item>
+		<item>
+			<title>Edit Settings</title>
+			<subitems>
+				<subitem>
+					<subitemtitle>Edit Settings</subitemtitle>
+					<subsection>overview</subsection>
+					<subitemurl>do=editSettings</subitemurl>
+					<subitemrolekey></subitemrolekey>
+					<subisredirect>0</subisredirect>
+				</subitem>
+			</subitems>
+		</item>
+		<item>
+			<title>Tools</title>
+			<subitems>
+				<subitem>
+					<subitemtitle>Tools</subitemtitle>
+					<subsection>overview</subsection>
+					<subitemurl>do=tools</subitemurl>
+					<subitemrolekey></subitemrolekey>
+					<subisredirect>0</subisredirect>
+				</subitem>				
+			</subitems>
+		</item>
+	</tabitems>
+</menu>

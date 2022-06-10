@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hookexport>
+  <hookdata>
+    <config>
+      <hook_name>IP.SEO: Topic Links</hook_name>
+      <hook_desc>Improves the Next / Previous link functionality on topic view.</hook_desc>
+      <hook_author>Invision Power Services, Inc.</hook_author>
+      <hook_email>dan@invisionpower.com</hook_email>
+      <hook_website>http://www.invisionpower.com/</hook_website>
+      <hook_update_check/>
+      <hook_requirements><![CDATA[a:4:{s:20:"hook_ipb_version_min";i:0;s:20:"hook_ipb_version_max";i:0;s:20:"hook_php_version_min";s:1:"0";s:20:"hook_php_version_max";s:1:"0";}]]></hook_requirements>
+      <hook_version_human>1.1</hook_version_human>
+      <hook_version_long>10100</hook_version_long>
+      <hook_extra_data/>
+      <hook_key>ipseo_topic_links</hook_key>
+    </config>
+  </hookdata>
+  <hookfiles>
+    <file>
+      <hook_file_real>ipseoTopicLinks.php</hook_file_real>
+      <hook_type>skinHooks</hook_type>
+      <hook_classname>ipSeoTopicLinks</hook_classname>
+      <hook_data><![CDATA[a:8:{s:12:"dataLocation";s:0:"";s:14:"libApplication";s:0:"";s:15:"classToOverload";s:10:"skin_topic";s:9:"skinGroup";N;s:12:"skinFunction";N;s:4:"type";N;s:2:"id";N;s:8:"position";N;}]]></hook_data>
+      <hooks_source><![CDATA[
+		class ipSeoTopicLinks extends skin_topic(~id~)
+		{
+			function topicViewTemplate($forum, $topic, $post_data, $displayData)
+			{
+				$out = parent::topicViewTemplate($forum, $topic, $post_data, $displayData);
+				
+				$prev = $this->getPrevTopicLink($topic);
+				$next = $this->getNextTopicLink($topic);
+				
+				if($prev)
+				{
+					$out = preg_replace("/\<li class\=\'previous\'\>(.*)\<\/li\>/", "<li class='previous'>{$prev}</li>", $out);
+				}
+				
+				if($next)
+				{
+					$out = preg_replace("/\<li class\=\'next\'\>(.*) {$this->lang->words['_rarr']}\<\/a\>\<\/li\>/", "<li class='next'>{$next}</li>", $out);
+				}
+								
+				return $out;
+			}
+			
+			protected function getPrevTopicLink($topic)
+			{				
+				$this->DB->build( array( 
+												'select' => 'tid, title, title_seo',
+												'from'   => 'topics',
+												'where'  => "forum_id={$topic['forum_id']} 
+																AND approved=1 
+																AND state <> 'link' 
+																AND last_post < {$topic['last_post']}",
+												'order'  => 'last_post DESC',
+												'limit'  => array( 0,1 )
+									)	);
+									
+				$this->DB->execute();
+					
+				if ( $this->DB->getTotalRows() )
+				{
+					$data = $this->DB->fetch();
+					$link = ipsRegistry::getClass('output')->buildSEOUrl('showtopic=' . $data['tid'], 'public', $data['title_seo'], 'showtopic');
+					$rtn  = $this->lang->words['_larr'].' <a class="prev" rel="prev" href="'.$link.'">'.$data['title'].'</a>';
+				}
+				else
+				{
+					$rtn = '';
+				}
+				
+				return $rtn;
+			}
+			
+			protected function getNextTopicLink($topic)
+			{
+				$this->DB->build( array( 
+												'select' => 'tid, title, title_seo',
+												'from'   => 'topics',
+												'where'  => "forum_id={$topic['forum_id']} 
+																AND approved=1 
+																AND state <> 'link' 
+																AND last_post > {$topic['last_post']}",
+												'order'  => 'last_post',
+												'limit'  => array( 0,1 )
+									)	);
+									
+				$this->DB->execute();
+					
+				if ( $this->DB->getTotalRows() )
+				{
+					$data = $this->DB->fetch();
+					$link = ipsRegistry::getClass('output')->buildSEOUrl('showtopic=' . $data['tid'], 'public', $data['title_seo'], 'showtopic');
+					$rtn  = '<a class="next" rel="next" href="'.$link.'">'.$data['title'].'</a> '.$this->lang->words['_rarr'];
+				}
+				else
+				{
+					$rtn = '';
+				}
+				
+				return $rtn;
+			}
+		} ]]></hooks_source>
+    </file>
+  </hookfiles>
+  <hookextras_settings/>
+  <hookextras_language/>
+  <hookextras_modules/>
+  <hookextras_help/>
+  <hookextras_templates/>
+  <hookextras_css/>
+  <hookextras_tasks/>
+  <hookextras_database_create/>
+  <hookextras_database_alter/>
+  <hookextras_database_update/>
+  <hookextras_database_insert/>
+</hookexport>

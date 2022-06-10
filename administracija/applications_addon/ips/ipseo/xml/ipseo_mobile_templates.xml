@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<templates application="ipseo" templategroups="a:1:{s:10:&quot;skin_ipseo&quot;;s:8:&quot;contains&quot;;}">
+  <templategroup group="skin_ipseo">
+    <template>
+      <template_group>skin_ipseo</template_group>
+      <template_content><![CDATA[<!--no data in this master skin-->]]></template_content>
+      <template_name>metaEditor</template_name>
+      <template_data>$tags, $url</template_data>
+      <template_updated>1317131579</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+  </templategroup>
+</templates>

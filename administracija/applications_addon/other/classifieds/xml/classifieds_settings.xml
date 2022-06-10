@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<settingexport>
+  <settinggroup>
+    <setting>
+      <conf_is_title>1</conf_is_title>
+      <conf_title_keyword>cfds_general</conf_title_keyword>
+      <conf_title_title>General Configuration</conf_title_title>
+      <conf_title_desc>Settings for the Classifieds application.</conf_title_desc>
+      <conf_title_tab>Classifieds</conf_title_tab>
+      <conf_title_app>classifieds</conf_title_app>
+      <conf_title_noshow>0</conf_title_noshow>
+    </setting>
+    <setting>
+      <conf_title>Items per page</conf_title>
+      <conf_description>How many items should be shown on each page of the listing results?</conf_description>
+      <conf_group>31</conf_group>
+      <conf_type>input</conf_type>
+      <conf_key>classifieds_items_per_page</conf_key>
+      <conf_default>10</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>1</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>cfds_general</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Public Name</conf_title>
+      <conf_description>Public name for classifieds application</conf_description>
+      <conf_group>31</conf_group>
+      <conf_type>input</conf_type>
+      <conf_key>classifieds_public_name</conf_key>
+      <conf_default>Classifieds</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>2</conf_position>
+      <conf_start_group>General Application Settings</conf_start_group>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>cfds_general</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Days to Display After Expiry</conf_title>
+      <conf_description>How long (in days) do you want adverts to display in listing after expiring?</conf_description>
+      <conf_group>31</conf_group>
+      <conf_type>input</conf_type>
+      <conf_key>classifieds_display_after_expiry</conf_key>
+      <conf_default>2</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>3</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>cfds_general</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Prune After How Long</conf_title>
+      <conf_description>How long (in days) do you want adverts to be available to relist before they are pruned?</conf_description>
+      <conf_group>31</conf_group>
+      <conf_type>input</conf_type>
+      <conf_key>classifieds_prune_listings</conf_key>
+      <conf_default>60</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>4</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>cfds_general</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Require Images?</conf_title>
+      <conf_description>Should at least one image attachment be required for adverts?</conf_description>
+      <conf_group>31</conf_group>
+      <conf_type>yes_no</conf_type>
+      <conf_key>classifieds_must_have_image</conf_key>
+      <conf_default>0</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>5</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>cfds_general</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>RSS Enabled</conf_title>
+      <conf_description/>
+      <conf_group>31</conf_group>
+      <conf_type>yes_no</conf_type>
+      <conf_key>cfds_rss_enabled</conf_key>
+      <conf_default>0</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>6</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>cfds_general</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Description Length</conf_title>
+      <conf_description>Maximum length of description to display in results.</conf_description>
+      <conf_group>31</conf_group>
+      <conf_type>input</conf_type>
+      <conf_key>classifieds_desc_trunc</conf_key>
+      <conf_default>50</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>7</conf_position>
+      <conf_start_group>Display Settings</conf_start_group>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>cfds_general</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Stop Shouting in Advert Titles</conf_title>
+      <conf_description>Will turn: MY AWESOME ADVERT into My Awesome Advert</conf_description>
+      <conf_group>31</conf_group>
+      <conf_type>yes_no</conf_type>
+      <conf_key>cfds_ucwords</conf_key>
+      <conf_default>1</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>8</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>cfds_general</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Override Locale</conf_title>
+      <conf_description>If you are using multiple languages with different locales, you should set this to the locale to use for formatting currencies.</conf_description>
+      <conf_group>31</conf_group>
+      <conf_type>input</conf_type>
+      <conf_key>classifieds_locale</conf_key>
+      <conf_default/>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>9</conf_position>
+      <conf_start_group>Localization</conf_start_group>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>cfds_general</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+  </settinggroup>
+</settingexport>

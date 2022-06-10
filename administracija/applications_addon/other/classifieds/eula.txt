@@ -1,0 +1,50 @@
+Classifieds Software License ("SOFTWARE")
+
+End User License Agreement
+
+LICENSE
+Andrew Millne grants you a non-exclusive license to use the SOFTWARE on one installation to be accessible by one URL (web address) subject to the provisions in all sections of this Agreement.
+
+TERM
+The SOFTWARE is offered under unique licensing terms varying based on your purchase choice. All license terms allow you to operate your then-installed copy of the SOFTWARE without further renewals or costs. Extending technical support and additional services incurs additional fees and vary based on license type chosen at purchase time.
+
+SCOPE OF GRANT
+
+You may:
+- customize the SOFTWARE's design and operation to suit the internal needs of your web site except to the extent not permitted in this Agreement
+- produce and distribute modification instructions, Skin packs, or Language packs provided that they contain notification that the Skin and Language packs were exported from and originally created by Andrew Millne. The modifications instructions you personally create are not owned by Andrew Millne so long as they contain no proprietary coding from the SOFTWARE.
+- create applications which interface with the operation of the SOFTWARE provided said application is an original work
+
+You may not:
+- permit other individuals to use the SOFTWARE except under the terms listed above
+- reverse engineer, disassemble, or create derivative works based on the SOFTWARE for distribution or usage outside your web site
+- use the SOFTWARE in such as way as to condone or encourage terrorism, promote or provide pirated Software, or any other form of illegal or damaging activity
+- modify and/or remove any copyright notices or labels on the SOFTWARE on each page (unless copyright output removal license is purchased) and in the header of each script source file
+- distribute the SOFTWARE
+- distribute individual copies of files, libraries, or other programming material in the SOFTWARE package
+- distribute or modify proprietary graphics, HTML, or CSS packaged with the SOFTWARE for use in Software applications other than the SOFTWARE or web sites without written permission from Andrew Millne
+- modify the SOFTWARE to function in more than instance or location (URL, domain, subdomain, etc.) from a single set of source program files unless each location is separately licensed
+
+DISCLAIMER OF WARRANTY
+the SOFTWARE is provided on an "AS IS" basis, without warranty of any kind, including without limitation the warranties of merchantability, fitness for a particular purpose, and non-infringement. The entire risk as to the quality and performance of the SOFTWARE is borne by you. Should the SOFTWARE prove defective, you and not Andrew Millne assume the entire cost of any service and repair. In addition, the security mechanisms implemented by Andrew Millne have inherent limitations, and you must determine that the SOFTWARE sufficiently meets your requirements. This disclaimer of warranty constitutes an essential part of the Agreement.
+
+TITLE
+Title, ownership rights, and intellectual property rights in the SOFTWARE shall remain with Andrew Millne. the SOFTWARE is protected by copyright laws and treaties. Title and related rights in the content generated through the SOFTWARE is the property of the applicable content owner and may be protected by applicable law. This License gives Andrew Millne no rights to such content.
+
+TERMINATION
+This Agreement will terminate automatically upon failure to comply with the limitations described herein or on written notice from an authorized representative of Andrew Millne. On termination, you must destroy all copies of the SOFTWARE within 48 hours. Termination of the license due to noncompliance will not result in any refunds of license fees.
+
+MISCELLANEOUS
+Andrew Millne reserves the right to publish a selected list of users of the SOFTWARE. Andrew Millne reserves the right to change the terms of this Agreement at any time. Changes to the Agreement will be announced via the website at http://dev.millne.com/. Failure to receive notification of a change does not make those changes invalid.
+
+Skin packs and Language packs are defined as the group of code, text, and graphics that are exported from the SOFTWARE using the provided functions of the SOFTWARE Administration Control Panel. Integrated add-ons for the SOFTWARE are released under this Agreement. Purchasing or downloading integrated add-ons constitute an additional, separate instance of this Agreement.
+
+Technical support will not be provided for third-party modifications to the SOFTWARE including modifications to code, Skin packs, and Language packs to any license holder. If the SOFTWARE is modified using a third-party modification instruction or otherwise, technical support may be refused to any license holder.
+
+COPYRIGHT
+Authorization to remove or modify output of copyright notices can be obtained from Andrew Millne for a fee. This fee authorizes you to remove the output of copyright notices: it does not give you authorization to remove any copyright notices in the program source files or any other rights.
+
+APPLICABLE LAW
+This EULA is governed by the laws of England, UK.
+
+Questions relating to this agreement should be directed via email to andy@millne.com. 

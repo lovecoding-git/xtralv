@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hookexport>
+  <hookdata>
+    <config>
+      <hook_name>IP.SEO: Ping Services</hook_name>
+      <hook_desc>Sends new content pings to Ping Services.</hook_desc>
+      <hook_author>Invision Power Services, Inc.</hook_author>
+      <hook_email>dan@invisionpower.com</hook_email>
+      <hook_website>http://www.invisionpower.com/</hook_website>
+      <hook_update_check/>
+      <hook_requirements><![CDATA[a:4:{s:20:"hook_ipb_version_min";i:0;s:20:"hook_ipb_version_max";i:0;s:20:"hook_php_version_min";s:1:"0";s:20:"hook_php_version_max";s:1:"0";}]]></hook_requirements>
+      <hook_version_human>1.0</hook_version_human>
+      <hook_version_long>10000</hook_version_long>
+      <hook_extra_data><![CDATA[a:4:{s:7:"display";a:1:{s:8:"settings";s:23:"Settings: Ping Services";}s:8:"settings";a:1:{s:0:"";s:3:"602";}s:8:"database";a:0:{}s:13:"settingGroups";a:0:{}}]]></hook_extra_data>
+      <hook_key>ipseo_ping_services</hook_key>
+    </config>
+  </hookdata>
+  <hookfiles>
+    <file>
+      <hook_file_real>ipseoPingTopics.php</hook_file_real>
+      <hook_type>libraryHooks</hook_type>
+      <hook_classname>ipSeoPingTopics</hook_classname>
+      <hook_data><![CDATA[a:8:{s:12:"dataLocation";s:0:"";s:14:"libApplication";s:6:"forums";s:15:"classToOverload";s:14:"classPostForms";s:9:"skinGroup";N;s:12:"skinFunction";N;s:4:"type";N;s:2:"id";N;s:8:"position";N;}]]></hook_data>
+      <hooks_source><![CDATA[<?php
+
+class ipSeoPingTopics extends classPostForms
+{
+	public function addTopic()
+	{
+		$result = parent::addTopic();
+
+		if( ! $result )
+		{
+			return $result;
+		}
+
+		$topic = $this->getTopicData();
+
+		$url = ipsRegistry::$settings['board_url'] . '/index.php?showtopic=' . $topic['tid'];
+		$url = ipsRegistry::getClass('output')->buildSEOUrl($url, 'none', $row['title_seo'], 'showtopic');
+
+		require_once(IPSLib::getAppDir( 'ipseo' ) . '/sources/ping.php');
+
+		PingServices::ping($url, $topic['title']);
+	}
+}
+]]>
+	  </hooks_source>
+    </file>
+  </hookfiles>
+  <hookextras_settings/>
+  <hookextras_language/>
+  <hookextras_modules/>
+  <hookextras_help/>
+  <hookextras_templates/>
+  <hookextras_css/>
+  <hookextras_tasks/>
+  <hookextras_database_create/>
+  <hookextras_database_alter/>
+  <hookextras_database_update/>
+  <hookextras_database_insert/>
+</hookexport>

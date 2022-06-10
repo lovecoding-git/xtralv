@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<languageexport>
+  <languagegroup>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>public_lang</word_pack>
+      <word_key>meta_editor_no_admin</word_key>
+      <word_default>You must be logged in as an administrator to use the Live Meta Editor</word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>public_lang</word_pack>
+      <word_key>no_hook</word_key>
+      <word_default><![CDATA[You must ensure that the 'IP.SEO: Meta Tags and Google Analytics' hook is enabled before you can use the Live Meta Tag Editor.]]></word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>public_lang</word_pack>
+      <word_key>meta_editor_title</word_key>
+      <word_default>Live Meta Tag Editor</word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>public_lang</word_pack>
+      <word_key>meta_tag_title</word_key>
+      <word_default>Title</word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>public_lang</word_pack>
+      <word_key>meta_tag_title_desc</word_key>
+      <word_default><![CDATA[e.g. 'description', 'keywords', 'robots', etc.]]></word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>public_lang</word_pack>
+      <word_key>meta_tag_content</word_key>
+      <word_default>Content</word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>public_lang</word_pack>
+      <word_key>meta_save</word_key>
+      <word_default>Save Tags</word_default>
+    </lang>
+    <lang>
+      <word_app>ipseo</word_app>
+      <word_pack>public_lang</word_pack>
+      <word_key>meta_editor_done</word_key>
+      <word_default>Close Editor</word_default>
+    </lang>
+  </languagegroup>
+</languageexport>

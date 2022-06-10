@@ -1,0 +1,6 @@
+[24-Feb-2011 13:44:41] PHP Parse error:  syntax error, unexpected $end, expecting ')' in /home/xtralv/public_html/ips_kernel/classDb.php on line 108
+[11-Oct-2011 13:54:03] PHP Parse error:  syntax error, unexpected $end, expecting T_FUNCTION in /home/xtralv/public_html/admin/sources/base/core.php on line 834
+[11-Oct-2011 13:54:10] PHP Fatal error:  Class 'IPSMember' not found in /home/xtralv/public_html/admin/sources/loginauth/login_core.php on line 161
+[11-Oct-2011 13:54:22] PHP Fatal error:  Class 'IPSMember' not found in /home/xtralv/public_html/admin/sources/loginauth/login_core.php on line 161
+[11-Oct-2011 13:54:28] PHP Fatal error:  Class 'IPSMember' not found in /home/xtralv/public_html/admin/sources/loginauth/login_core.php on line 161
+[15-Sep-2019 14:49:31 Europe/Riga] PHP Parse error:  syntax error, unexpected '?' in /home/reklamb/public_html/xtra.lv/init.php on line 1076

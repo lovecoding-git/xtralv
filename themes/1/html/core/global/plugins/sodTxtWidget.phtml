@@ -1,0 +1,12 @@
+<ips:template parameters="$title, $content, $desc, $orientation='vertical'" />
+{{if $title != null}}
+	<h3 class='ipsType_reset ipsWidget_title'>$title</h3>
+{{endif}}
+<div class='ipsWidget_inner {{if $orientation == 'vertical'}}ipsPad{{endif}}'>
+	{{if $desc != null}}
+		<span class='ipsType_light ipsType_unbold ipsType_medium'>$desc</span>
+	{{endif}}
+	{{if $content != null}}
+		<p class='ipsType_reset ipsType_medium ipsType_light'>{$content|raw}</p>
+	{{endif}}
+</div>

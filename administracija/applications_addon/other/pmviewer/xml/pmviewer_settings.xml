@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<settingexport>
+  <settinggroup>
+    <setting>
+      <conf_is_title>1</conf_is_title>
+      <conf_title_keyword>pmviewer</conf_title_keyword>
+      <conf_title_title>PM Viewer</conf_title_title>
+      <conf_title_desc>Settings for the (SN) PM Viewer application.</conf_title_desc>
+      <conf_title_tab>PM Viewer</conf_title_tab>
+      <conf_title_app>pmviewer</conf_title_app>
+      <conf_title_noshow>1</conf_title_noshow>
+    </setting>
+    <setting>
+      <conf_title>Groups to show Conversations for</conf_title>
+      <conf_description>If a member from a selected group is involved in a conversation, then this conversation will be viewable in the PM Viewer application.</conf_description>
+      <conf_group>130</conf_group>
+      <conf_type>multi</conf_type>
+      <conf_key>pmviewer_show</conf_key>
+      <conf_default/>
+      <conf_extra>#show_groups#</conf_extra>
+      <conf_evalphp><![CDATA[if ( $save == 1)
+{
+	if ( is_array($_POST['pmviewer_show']) )
+	{
+		$_POST['pmviewer_show'] = implode(",",$_POST['pmviewer_show']);
+	}
+	else
+	{
+		$_POST['pmviwer_show'] = "";
+	}
+	
+	$key = 'pmviewer_show';
+}
+if ( $show == 1 )
+{
+    $key='pmviewer_show[]';
+}]]></conf_evalphp>
+      <conf_protected>1</conf_protected>
+      <conf_position>1</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>pmviewer</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Groups to hide conversations for</conf_title>
+      <conf_description><![CDATA[If a member from a selected group is involved in a conversation, then this conversation will be not viewable in the PM Viewer application regardless of who else is involved.
+<b>This setting will override the previous one.</b>]]></conf_description>
+      <conf_group>130</conf_group>
+      <conf_type>multi</conf_type>
+      <conf_key>pmviewer_hide</conf_key>
+      <conf_default/>
+      <conf_extra>#show_groups#</conf_extra>
+      <conf_evalphp><![CDATA[if ( $save == 1)
+{
+	if ( is_array($_POST['pmviewer_hide']) )
+	{
+		$_POST['pmviewer_hide'] = implode(",",$_POST['pmviewer_hide']);
+	}
+	else
+	{
+		$_POST['pmviwer_hide'] = "";
+	}
+	
+	$key = 'pmviewer_hide';
+}
+if ( $show == 1 )
+{
+    $key='pmviewer_hide[]';
+}]]></conf_evalphp>
+      <conf_protected>1</conf_protected>
+      <conf_position>2</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>pmviewer</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Check group of conversation starter</conf_title>
+      <conf_description>Check the conversation starter to see if their group is being hidden or is to be shown.</conf_description>
+      <conf_group>130</conf_group>
+      <conf_type>yes_no</conf_type>
+      <conf_key>pmviewer_starter</conf_key>
+      <conf_default>1</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>3</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>pmviewer</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title><![CDATA[Check primary recipient&#39;s group]]></conf_title>
+      <conf_description>Checks whether the primary recipient of the conversations is in the selection to be shown or hidden.</conf_description>
+      <conf_group>130</conf_group>
+      <conf_type>yes_no</conf_type>
+      <conf_key>pmviewer_recipient</conf_key>
+      <conf_default>1</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>4</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>pmviewer</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Check the groups of invited members</conf_title>
+      <conf_description><![CDATA[<span style="text-decoration: line-through;">Checks whether the invited members of the conversations are in the selection to be shown or hidden.<br />
+Note: This will cause extra queries to be run which may be slow in some cases</span><br /><strong>This setting functionality has temporarily been disabled, it will hopefully be restored in a future build</strong>]]></conf_description>
+      <conf_group>130</conf_group>
+      <conf_type>yes_no</conf_type>
+      <conf_key>pmviewer_invited</conf_key>
+      <conf_default>0</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>5</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>pmviewer</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Hide system messages</conf_title>
+      <conf_description>Enabling will hide messages sent by the system (Reports to moderators, friend requests, comments put on profile, etc)</conf_description>
+      <conf_group>130</conf_group>
+      <conf_type>yes_no</conf_type>
+      <conf_key>pmviewer_system_hide</conf_key>
+      <conf_default>1</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>6</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>pmviewer</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Only show messages containing a keyword</conf_title>
+      <conf_description>Only messages containing one of these keywords will be shown by the system (space or comma separated)</conf_description>
+      <conf_group>130</conf_group>
+      <conf_type>textarea</conf_type>
+      <conf_key>pmviewer_keywords</conf_key>
+      <conf_default/>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>7</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>pmviewer</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Show deleted conversations and messages</conf_title>
+      <conf_description>Would you like show all deleted conversations and messages in the system?</conf_description>
+      <conf_group>130</conf_group>
+      <conf_type>yes_no</conf_type>
+      <conf_key>pmviewer_show_deleted</conf_key>
+      <conf_default>0</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>8</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>pmviewer</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Log PM Viewer deleted messages</conf_title>
+      <conf_description>Would you like to save a copy of the messages that are deleted using the PM Viewer?</conf_description>
+      <conf_group>130</conf_group>
+      <conf_type>yes_no</conf_type>
+      <conf_key>pmviewer_deleted_log</conf_key>
+      <conf_default>0</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>9</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>pmviewer</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Log user deleted messages</conf_title>
+      <conf_description><![CDATA[Would you like to save a copy of the messages that are deleted by users on the public side?<br />
+<strong>This requires the PM Viewer Logging hook to be enabled</strong>]]></conf_description>
+      <conf_group>130</conf_group>
+      <conf_type>yes_no</conf_type>
+      <conf_key>pmviewer_log_deleted</conf_key>
+      <conf_default>0</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>10</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>pmviewer</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Enable keyword monitoring</conf_title>
+      <conf_description><![CDATA[If enabled, will search for specified keywords in conversations, and alert an admin to their usage.<br /><strong>Note: This requires the PM Keyword Search hook to be enabled</strong><br />You can configure your notification preferences using the <!--URL-->. Only admins who have not got ACP restrictions preventing them from recieving notifications will see the options to configure their notifications for (SN) PM Viewer.]]></conf_description>
+      <conf_group>130</conf_group>
+      <conf_type>yes_no</conf_type>
+      <conf_key>pmviewer_keyword_search_on</conf_key>
+      <conf_default>0</conf_default>
+      <conf_extra/>
+      <conf_evalphp><![CDATA[if( $show == 1 )
+{
+	$this_host   = getenv( 'SERVER_NAME' );
+	$this_script = getenv( 'SCRIPT_NAME' );
+	$this_script = str_replace( "&#092;&#092;&#092;&#092;", "/", $this_script );
+
+	if( $this_host AND $this_script )
+	{
+		$this_script = str_replace( '/'.CP_DIRECTORY.'/index.php', '/index.php?app=core&module=usercp&tab=core&area=notifications', $this_script );
+		$r['conf_description'] = str_replace( "<!--URL-->", "<a href='http://".$this_host.$this_script."' target='_blank'>notifications options manager</a>", $r['conf_description'] );
+	}
+}]]></conf_evalphp>
+      <conf_protected>1</conf_protected>
+      <conf_position>11</conf_position>
+      <conf_start_group>Conversation Keyword Monitoring</conf_start_group>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>pmviewer</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Keywords to monitor</conf_title>
+      <conf_description><![CDATA[Keywords to monitor conversations for. Keywords should be space or comma seperated.<br /><strong>Note: This will only search messages that also match the previous display settings</strong>]]></conf_description>
+      <conf_group>130</conf_group>
+      <conf_type>textarea</conf_type>
+      <conf_key>pmviewer_keyword_search_keywords</conf_key>
+      <conf_default/>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>12</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>pmviewer</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Provide link to message in notification</conf_title>
+      <conf_description><![CDATA[Enabling this will provide a link to view the conversation containing the keyword in the ACP. <strong>If you have renamed the 'admin' directory, this will provide a link revealing it's location.</strong> It is recommended that you leave this disabled if you have disabled the ACP link from the board header.]]></conf_description>
+      <conf_group>130</conf_group>
+      <conf_type>yes_no</conf_type>
+      <conf_key>pmviewer_keyword_search_link</conf_key>
+      <conf_default>0</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>13</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>pmviewer</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+  </settinggroup>
+</settingexport>

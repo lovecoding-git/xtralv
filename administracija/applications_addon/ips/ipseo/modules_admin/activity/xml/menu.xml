@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu>
+	<tabitems>
+		<item>
+			<title>Search Activity</title>
+			<subitems>
+				<subitem>
+					<subitemtitle>Dashboard</subitemtitle>
+					<subitemlang>seo_dashboard</subitemlang>
+					<subsection>activity</subsection>
+					<subitemurl></subitemurl>
+					<subitemrolekey></subitemrolekey>
+					<subisredirect>0</subisredirect>
+				</subitem>
+			</subitems>
+		</item>
+		<item>
+			<title>Search Activity</title>
+			<subitems>
+				<subitem>
+					<subitemtitle>Keywords</subitemtitle>
+					<subitemlang>seo_keywords</subitemlang>
+					<subsection>activity</subsection>
+					<subitemurl>do=keywords</subitemurl>
+					<subitemrolekey></subitemrolekey>
+					<subisredirect>0</subisredirect>
+				</subitem>
+			</subitems>
+		</item>
+		<item>
+			<title>Search Activity</title>
+			<subitems>
+				<subitem>
+					<subitemtitle>Visitors</subitemtitle>
+					<subitemlang>seo_visitors</subitemlang>
+					<subsection>activity</subsection>
+					<subitemurl>do=visitors</subitemurl>
+					<subitemrolekey></subitemrolekey>
+					<subisredirect>0</subisredirect>
+				</subitem>
+			</subitems>
+		</item>
+	</tabitems>
+</menu>

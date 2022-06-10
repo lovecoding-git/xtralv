@@ -1,0 +1,1555 @@
+<?xml version="1.0" encoding="utf-8"?>
+<templates application="classifieds" templategroups="a:1:{s:16:&quot;skin_classifieds&quot;;s:8:&quot;contains&quot;;}">
+  <templategroup group="skin_classifieds">
+    <template>
+      <template_group>skin_classifieds</template_group>
+      <template_content><![CDATA[<div class="ipsLayout">
+      <h3 class="maintitle">{$this->lang->words['cfds_answering_question']}</h3>
+	<div class='ipsBox'>
+	<h3 class="bar altbar">{$this->lang->words['cfds_item_details']}</h3>
+		<div class='ipsBox_container ipsPad'>  
+			<p>{$this->lang->words['cfds_name']} - {$item['name']}</p>
+			<p>{$this->lang->words['cfds_price']} - <if test="$item['price'] != '0.00'"> {parse expression="ipsRegistry::getClass('class_localization')->formatMoney( $item['price'], true )"}
+                <else />
+                    <if test="forsaleorwanted:|:$item['advert_type'] == 'sale'">{$this->lang->words['cfds_free']}<else />{$this->lang->words['cfds_wanted_noprice']}</if> </if></p>
+        </div>
+	</div>
+	
+	<div class='ipsBox'>
+	<h3 class="bar altbar">{$this->lang->words['cfds_question']}</h3>
+		<div class='ipsBox_container ipsPad'>  
+				{$question['question']}
+		</div>
+	</div>
+    
+        <form action='{$this->settings['base_url']}app=classifieds&amp;module=questions&amp;do=doanswer' id='mainform' method='post'>
+      <input type='hidden' name='question_id' value='{$question['question_id']}' />
+      <input type='hidden' name='post_key' value='{$post_key}' />
+    <ul class="ipsForm ipsForm_horizontal">
+	<div class='ipsBox'>
+		<div class='ipsBox_container ipsPad'>
+			<li class="ipsField">
+	        <label class="ipsField_title" for="answer">{$this->lang->words['cfds_answer']} <span class="ipsForm_required">*</span></label>
+	        <div class="ipsField_content">{$editor}</div>
+	        </li>
+	        <li class="ipsField ipsField_checkbox">
+	        <input type="checkbox" name="public_answer" value="1" checked />
+	        <div class="ipsField_content">
+        		<label for="public_answer">{$this->lang->words['cfds_public_answer']}</label>
+        	</div>
+            
+            </li>
+		</div>
+	</div>
+    </ul>  
+    <br class='clear' />
+		<fieldset class="submit">
+	        <input type="submit" name="submit" value="{$this->lang->words['cfds_answer_action']}" class="input_submit" />
+	          <if test="$item"> {$this->lang->words['cfds_or']} <a href="{parse url="do=view_item&amp;item_id={$item['item_id']}" base="publicWithApp"}" title="{$this->lang->words['cfds_cancel']}" class="cancel">{$this->lang->words['cfds_cancel']}</a>
+	          <else />
+	          {$this->lang->words['cfds_or']} <a href="{parse url="app=classifieds" base="public"}" title="{$this->lang->words['cfds_cancel']}" class="cancel">{$this->lang->words['cfds_cancel']}</a>
+	          </if>
+    	</fieldset>
+	</form>
+</div>]]></template_content>
+      <template_name>answer_form</template_name>
+      <template_data>$item, $question, $editor, $post_key</template_data>
+      <template_updated>1325112960</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_classifieds</template_group>
+      <template_content><![CDATA[<h1 class='ipsType_subtitle'>
+    				 {$item['name']} <span class='ipsBadge ipsBadge_{$item['badge_color']} right'>{$item['advert_type']}</span>					
+    			</h1>
+                    <div class="price_box rounded"> {$this->lang->words['cfds_price']} -
+                        <if test="$item['price'] != '0.00' || !$item['zero_text']"> {parse expression="ipsRegistry::getClass('class_localization')->formatMoney( $item['price'], true )"}
+                            <else />
+                            {$item['zero_text']}                         
+                        </if>
+                    </div>
+                    <p>{$this->lang->words['cfds_expires']} - {parse time_until="$item['date_expiry']"}</p>
+                    
+                    
+			         <if test="$this->memberData['member_id']">
+			            <if test="contactseller:|:($seller['member_id'] != $this->memberData['member_id']) AND $this->memberData['g_use_pm'] AND $this->memberData['members_disable_pm'] == 0 AND IPSLib::moduleIsEnabled( 'messaging', 'members' )">
+			              <a class='pm_button' id='pm_xxx_{$seller['member_id']}' href='{parse url="app=members&amp;module=messaging&amp;section=send&amp;do=form&amp;fromMemberID={$seller['member_id']}" base="public"}' title='{$this->lang->words['cfds_contact_seller']}' title='{$this->lang->words['cfds_contact_seller']}'><div class="purchase_box rounded">{parse replacement="send_msg"} {$this->lang->words['cfds_contact_seller']}</div></a>
+			            </if>
+			        <else />
+			        <div class="purchase_box rounded">{$this->lang->words['cfds_sign_in']}</div>
+			        </if>                   
+		            <if test="hasShareLinks:|:$this->settings['sl_enable']">
+					<div class='ipsPad'>
+						{IPSLib::shareLinks( $item['name'] )}
+						<br /><br />
+						{parse template="genericFacebookLike" group="global_other" params="$this->registry->output->buildSEOUrl( 'app=classifieds&amp;module=core&amp;do=view_item&amp;item_id=' . $item['item_id'], 'public', $item['seo_title'] , 'view_item' )"}
+					</div>
+					</if>]]></template_content>
+      <template_name>basic_item_info</template_name>
+      <template_data>$item, $seller</template_data>
+      <template_updated>1325112960</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_classifieds</template_group>
+      <template_content><![CDATA[<div class='_sharedMediaBbcode'>
+	<div class='bbcode_mediaWrap' style='position:relative;'>
+		<span class='ipsBadge ipsBadge_green priceBadge' style='position: absolute;top: -6px; left: -4px;font-size: 11px !important;'>
+			<if test="$item['price'] != '0.00' || !$item['zero_text']"> {parse expression="ipsRegistry::getClass('class_localization')->formatMoney( $item['price'], false )"}
+            <else />
+                  {$item['zero_text']}                         
+            </if>
+		</span>
+	
+			<if test="smthumb:|:$item['thumb_location']">
+				<a href='{parse url="app=classifieds&amp;module=core&amp;do=view_item&amp;item_id={$item['item_id']}" base="public" template="view_item" seotitle="{$item['seo_title']}"}' title='{$item['name']}'><img src="{$this->settings['upload_url']}/{$item['thumb_location']}" width="75" height="75" style="padding: 2px;border: 1px solid #e7e7e7;display: inline-block;background: #fff;float: left;" /></a>
+			<else />
+				<a href='{parse url="app=classifieds&amp;module=core&amp;do=view_item&amp;item_id={$item['item_id']}" base="public" template="view_item" seotitle="{$item['seo_title']}"}' title='{$item['name']}'><img src='{$this->settings['img_url']}/classifieds/noimage.png' width="75" height="75" style="padding: 2px;border: 1px solid #e7e7e7;display: inline-block;background: #fff;float: left;" /></a>
+			</if>
+		<div class='details' style="width:375px;">
+		<if test="typebadge:|:$item['show_badge'] == 1"><span class='ipsBadge ipsBadge_{$item['badge_color']} right'>{$item['advert_type']}</span></if>
+								
+			<h5><a href='{parse url="app=classifieds&amp;module=core&amp;do=view_item&amp;item_id={$item['item_id']}" base="public" template="view_item" seotitle="{$item['seo_title']}"}' title='{$item['name']}'>{$item['name']}</a></h5> 
+			
+			<div>{parse date="$item['date_added']" format="tiny"}</div>
+			<div>{parse expression="IPSText::truncate( $item['description'], 255)"}</div>
+		</div>
+	</div>
+</div>
+<br />]]></template_content>
+      <template_name>bbCodeItem</template_name>
+      <template_data><![CDATA[$item=""]]></template_data>
+      <template_updated>1325112960</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_classifieds</template_group>
+      <template_content><![CDATA[<div class="ipsLayout ipsLayout_withleft">
+  <div id="intro_text" class="row2 rounded">
+    <p><img src='{style_images_url}/classifieds/merchant.png' /> {$this->lang->words['cfds_intro_text']}</p>
+  </div>
+  <h3 class="maintitle">{$this->lang->words['cfds_browse']}</h3>
+  <div class="general_box" id="category_index">
+    <if test="!empty($categories)">
+   {parse template="category_tree" group="classifieds" params="$categories"}
+    <else />
+      {$this->lang->words['cfds_no_cats']} </if>
+  </div>
+</div>]]></template_content>
+      <template_name>category_index</template_name>
+      <template_data>$categories</template_data>
+      <template_updated>1325112960</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_classifieds</template_group>
+      <template_content><![CDATA[<div class="ipsLayout ipsLayout_withleft">
+    <div class='ipsLayout_left '><div class='general_box ipsPad'>
+    <h1 class='ipsType_pagetitle'>{$category['name']}</h1>
+				
+			
+			<if test="categorytest:|:count($categories)">
+				<!-- If this category has subcategories -->
+				   <ul class="category_list" id="category_menu">
+          				<foreach loop="sub_categories:$categories as $category">
+				            <li><if test="$category['is_read'] == 1"><img src='{style_images_url}/classifieds/tag_read.png' alt='Category Read' class='menutag' /><else /><img src='{style_images_url}/classifieds/tag_unread.png' alt='Category Unread' class='menutag' /></if> <a href="{parse url="module=core&amp;do=view_category&amp;category_id={$category['category_id']}&amp;sort_key={$sort['key']}&amp;sort_order={$sort['order']}&amp;filter={$filter}" template="view_category" seotitle="{$category['seo_title']}" base="publicWithApp"}" data-tooltip="{$category['name']}">{IPSText::truncate($category['name'], 20)}</a>
+                		<span class='item_count' data-tooltip="{parse format_number="$category['item_count']"} {$this->lang->words['cfds_active_adverts']}">
+							{parse format_number="$category['item_count']"}
+						</span>
+            </li>
+          				</foreach>
+        			</ul>
+	
+			</if>
+			<if test="siblingtest:|:count($siblings)">
+				<!-- If this category is a leaf show siblings -->
+				   <ul class="category_list" id="category_menu">
+          				<foreach loop="siblings:$siblings as $sibling">
+				            <li<if test="$sibling['category_id'] == $category['category_id']"> class='active'</if>><if test="$sibling['is_read'] == 1"><img src='{style_images_url}/classifieds/tag_read.png' alt='Category Read' class='menutag' /><else /><img src='{style_images_url}/classifieds/tag_unread.png' alt='Category Unread' class='menutag' /></if> <a href="{parse url="module=core&amp;do=view_category&amp;category_id={$sibling['category_id']}&amp;sort_key={$sort['key']}&amp;sort_order={$sort['order']}&amp;filter={$filter}" template="view_category" seotitle="{$sibling['seo_title']}" base="publicWithApp"}" data-tooltip="{$sibling['name']}">{IPSText::truncate($sibling['name'], 20)}</a>
+                		<span class='item_count' data-tooltip="{parse format_number="$sibling['item_count']"} {$this->lang->words['cfds_active_adverts']}">
+							{parse format_number="$sibling['item_count']"}
+						</span>
+            </li>
+          				</foreach>
+        			</ul>
+	
+			</if>
+		</div>
+    </div>
+{$pages}
+    <div class='topic_controls'> 
+        <ul class='topic_buttons'>
+            <if test="listitem:|:$this->memberData['g_classifieds_can_list']==1">
+				<if test="count($categories) == 0">
+	            <li> <a href="{parse url="module=listing&amp;do=add&amp;category_id={$category['category_id']}" base="publicWithApp"}" title="{$this->lang->words['cfds_add_item']}"><img src='{style_images_url}/add.png' /> {$this->lang->words['cfds_add_item']}</a> </li>
+	            <else />
+	            <li> <a href="{parse url="module=listing&amp;do=cat" base="publicWithApp"}" title="{$this->lang->words['cfds_add_item']}"><img src='{style_images_url}/add.png' /> {$this->lang->words['cfds_add_item']}</a> </li>
+	            </if>
+            </if>
+            <if test="watchismember:|:$this->memberData['member_id']">
+                <if test="stopwatching:|:$category['watched']">
+                    <li><a href='{parse url="app=classifieds&amp;module=subscribe&amp;do=cat_unsubscribe&amp;id={$category['category_id']}" base="public"}' title=''><img src='{style_images_url}/classifieds/transmit_blue.png'> {$this->lang->words['cfds_unsubscribe_cat']}</a></li>
+                    <else />
+                    <li>
+                        <a href='{parse url="app=classifieds&amp;module=subscribe&amp;do=cat_subscribe&amp;id={$category['category_id']}" base="public"}' title=''><img src='{style_images_url}/classifieds/transmit_blue.png'> {$this->lang->words['cfds_subscribe_cat']}</a>
+                    </li>
+                </if>
+            </if>
+        </ul>
+    </div>
+    <br />
+    <if test="categorydescription:|:$category['description']">
+    	<p class='message unspecific' style="clear:none;">{$category['description']}</p>
+    </if>
+    <div class='ipsLayout_content'>
+        <div class="maintitle ipsFilterbar">
+            <a href='#filter_type_menucontent' id='filter_type' class='right ipsType_smaller'>
+                <if test="$filter == '0' || !$filter ">{$this->lang->words['cfds_all_advert_types']}</if>
+                <foreach loop="filterloop:$types as $type">
+                <if test="$filter == $type['type_id']">{$type['name']}</if>
+                </foreach>
+                <img src='{$this->settings['img_url']}/useropts_arrow.png' />
+            </a>
+            <span class='ipsType_small'>{$this->lang->words['cfds_sort_by']}</span>&nbsp;&nbsp;
+			<ul class='ipsList_inline' style='display:inline;'>			
+				<li<if test="$sort['key'] == 'date_added'"> class='active'</if>>
+					<a href='{parse url="app=classifieds&amp;module=core&amp;do=view_category&amp;category_id={$category['category_id']}&amp;sort_key=date_added&amp;sort_order={$sort['order']}&amp;filter={$filter}" base="public" seotitle="{$category['seo_title']}" template="view_category"}'>{$this->lang->words['cfds_sort_date']}</a>
+				</li>			
+				<li<if test="$sort['key'] == 'price'"> class='active'</if>>
+					<a href='{parse url="app=classifieds&amp;module=core&amp;do=view_category&amp;category_id={$category['category_id']}&amp;sort_key=price&amp;sort_order={$sort['order']}&amp;filter={$filter}" base="public" seotitle="{$category['seo_title']}" template="view_category"}'>{$this->lang->words['cfds_sort_price']}</a>
+				</li>
+				<li<if test="$sort['key'] == 'date_expiry'"> class='active'</if>>
+					<a href='{parse url="app=classifieds&amp;module=core&amp;do=view_category&amp;category_id={$category['category_id']}&amp;sort_key=date_expiry&amp;sort_order={$sort['order']}&amp;filter={$filter}" base="public" seotitle="{$category['seo_title']}" template="view_category"}'>{$this->lang->words['cfds_sort_timeleft']}</a>
+				</li>	
+				<li<if test="$sort['key'] == 'views'"> class='active'</if>>
+					<a href='{parse url="app=classifieds&amp;module=core&amp;do=view_category&amp;category_id={$category['category_id']}&amp;sort_key=views&amp;sort_order={$sort['order']}&amp;filter={$filter}" base="public" seotitle="{$category['seo_title']}" template="view_category"}'>{$this->lang->words['cfds_sort_views']}</a>
+				</li>					
+				
+			</ul> 
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+				<span class='ipsType_small'>{$this->lang->words['cfds_sort_order']}</span>&nbsp;&nbsp;
+				<ul class='ipsList_inline ipsType_smaller' style='display: inline'>
+					<li<if test="$sort['order'] == 'desc'"> class='active'</if>>
+						<a href='{parse url="app=classifieds&amp;module=core&amp;do=view_category&amp;category_id={$category['category_id']}&amp;sort_key={$sort['key']}&amp;sort_order=desc&amp;filter={$filter}" base="public" seotitle="{$category['seo_title']}" template="view_category"}'>{$this->lang->words['cfds_sort_desc']}</a>
+					</li>
+					<li<if test="$sort['order'] == 'asc'"> class='active'</if>>
+						<a href='{parse url="app=classifieds&amp;module=core&amp;do=view_category&amp;category_id={$category['category_id']}&amp;sort_key={$sort['key']}&amp;sort_order=asc&amp;filter={$filter}" base="public" seotitle="{$category['seo_title']}" template="view_category"}'>{$this->lang->words['cfds_sort_asc']}</a>
+					</li>
+				</ul>			         
+        </div>
+        <ul id='filter_type_menucontent' class='ipbmenu_content with_checks' style='display: none'>
+            <li<if test="$filter == '0' || !$filter "> class='selected'</if>>
+                <a href='{parse url="app=classifieds&amp;module=core&amp;do=view_category&amp;category_id={$category['category_id']}&amp;sort_key={$sort['key']}&amp;sort_order={$sort['order']}&amp;filter=all" base="public" seotitle="{$category['seo_title']}" template="view_category"}'>{$this->lang->words['cfds_all_advert_types']}</a>
+            </li>
+            <foreach loop="filterloop:$types as $type">
+            <li<if test="$filter == $type['type_id']"> class='selected'</if>>
+                <a href='{parse url="app=classifieds&amp;module=core&amp;do=view_category&amp;category_id={$category['category_id']}&amp;sort_key={$sort['key']}&amp;sort_order={$sort['order']}&amp;filter={$type['type_id']}" base="public" seotitle="{$category['seo_title']}" template="view_category"}'>{$type['name']}</a>
+            </li>            
+            </foreach>
+        </ul>
+        <script type='text/javascript'>
+            new ipb.Menu( $('filter_type'), $('filter_type_menucontent') );
+        </script>
+        <div id='cfds_category' class='ipsBox_container'>
+            <if test="count($items)"> {parse striping="items" classes="row1,row2"}
+                <foreach loop="items:$items as $item">
+                    {parse template="item_row" group="classifieds" params="$item"}
+                </foreach>
+                <else />
+	                <div class='no_messages'>
+						{$this->lang->words['cfds_no_items']}
+					</div>
+            </if>
+        </div>
+                
+     		<if test="$this->memberData['g_classifieds_can_moderate']">
+			<div id='category_mod' class='moderation_bar rounded with_action clear'>
+				<form action='{parse url="app=classifieds&amp;module=moderate" base="public"}' method='post' id='modform'>
+				<input type='hidden' name='do' value='multimod' />
+				<input type='hidden' name='category_id' value='{$this->request['category_id']}' />
+				<input type="hidden" name="secure_key" value="{$this->member->form_hash}" />
+				<input type="hidden" value="{$this->request['selecteditemids']}" name="selecteditemids" id="selecteditemids" />
+					<select name='doaction' id='doaction' class='input_select'>
+						<option value=''>{$this->lang->words['cfds_mod_with_selected']}</option>
+						<option value='move'>{$this->lang->words['cfds_mod_move']}</option>
+						<option value='del'>{$this->lang->words['cfds_mod_delete']}</option>
+						<option value='feature'>{$this->lang->words['cfds_mod_feature']}</option>
+						<option value='unfeature'>{$this->lang->words['cfds_mod_unfeature']}</option>
+					</select>&nbsp;
+					<input type="submit" name="gobutton" value="{$this->lang->words['mod_button']}" class="input_submit alt" id='mod_submit' />
+				</form>
+			</div>
+			<div class='moderation_bar ipsType_small' style='text-align: center;'>
+				<a href='#' id='moderator_toggle'><img src='{$this->settings['img_url']}/moderation_cog.png' />&nbsp; {$this->lang->words['cfds_show_mod']}</a>
+			</div>
+			<script type='text/javascript'>
+				ipb.vars['lang_suredelete'] = '{$this->lang->words['cfds_suredelete']}';
+				
+				$('modform').observe('submit', ipb.classifieds.submitModForm);
+				$('category_mod').hide();
+				
+				$('moderator_toggle').up('div').show().observe('click', function(e){
+					Event.stop(e);
+					$('moderator_toggle').up('div').hide();
+					$('category_mod').show();
+				});
+			</script>
+			</if>
+		
+        
+                {$pages}
+                <br />
+    </div>
+    
+    
+    
+</div>
+{parse js_module="classifieds"}]]></template_content>
+      <template_name>category_view</template_name>
+      <template_data>$category, $categories, $items, $pages, $sort, $filter, $siblings, $types</template_data>
+      <template_updated>1325112960</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_classifieds</template_group>
+      <template_content><![CDATA[<br />
+<li class="ipsField ipsField_checkbox">
+            <input type="checkbox" name="custom-{$field['field_id']}" value="1" <if test="$field['value'] == 1">checked="checked"</if> />
+            <div class="ipsField_content"><labelfor="custom-{$field['field_id']}">{$field['title']}<if test="$field['required'] == 1"> <span class="ipsForm_required">*</span></if></label>
+            
+            <if test="$field['description'] != ''"><span class="desc">{$field['description']}</span></if></div>
+          </li>]]></template_content>
+      <template_name>checkboxFormField</template_name>
+      <template_data>$field</template_data>
+      <template_updated>1325112960</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_classifieds</template_group>
+      <template_content><![CDATA[<if test="hasError:|:$error">
+	<div class='message error'>{$error}</div>
+	<br />
+</if>
+{parse striping="post_stripe" classes="row1,row2"}
+<form action='{parse url="app=classifieds" base="public"}' method='post'>
+	<input type='hidden' name='module' value='listing' />
+	<input type='hidden' name='do' value='add' />
+	
+	<h2 class='maintitle'>{$this->lang->words['cfds_please_select_cat']}</h2>
+	<div class='ipsBox'>
+		<div class='ipsBox_container ipsPad'>
+			<br />
+			<ul class='ipsForm_horizontal'>
+				<li class='ipsField ipsField_select'>
+					<label for='category_id' class='ipsField_title'>{$this->lang->words['cfds_select_cat']}</label>
+					<div class='ipsField_content'>
+						{$form['category']}
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<fieldset class='submit'>
+		<input type="submit" name="dosubmit" value="{$this->lang->words['cfds_continue']}" tabindex="2" class="input_submit" accesskey="s" />
+		{$this->lang->words['or']}
+		<a href='{parse url="app=classifieds" base="public" seotitle="false" template="app=classifieds"}' title='{$this->lang->words['cancel']}' class='cancel'>{$this->lang->words['cancel']}</a>
+		</fieldset>
+</form>]]></template_content>
+      <template_name>chooseCategory</template_name>
+      <template_data><![CDATA[$form, $error='']]></template_data>
+      <template_updated>1325112960</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_classifieds</template_group>
+      <template_content><![CDATA[<div class="right_column">
+  <div class="post_form">
+    <h3 class="maintitle">{$this->lang->words['cfds_deleting']} {$item['name']}</h3>
+    <form action='{$this->settings['base_url']}app=classifieds&amp;do={$form['formcode']}' id='mainform' method='post'>
+      <input type='hidden' name='item_id' value='{$item['item_id']}' />
+      <fieldset>
+        <p style="padding:1.2em;">{$this->lang->words['cfds_sure_delete_q']}</p>
+      </fieldset>
+      <fieldset class="submit">
+        <input type="submit" name="submit" value="{$form['button']}" class="input_submit" />
+        {$this->lang->words['cfds_or']} <a href="{parse url="do=view_item&amp;item_id={$item['item_id']}" base="publicWithApp"}" title="{$this->lang->words['cfds_cancel']}" class="cancel">{$this->lang->words['cfds_cancel']}</a>
+      </fieldset>
+    </form>
+  </div>
+</div>]]></template_content>
+      <template_name>delete_item_form</template_name>
+      <template_data>$item, $form</template_data>
+      <template_updated>1325112960</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_classifieds</template_group>
+      <template_content><![CDATA[<div class="right_column">
+  <div class="post_form">
+    <h3 class="maintitle">{$this->lang->words['cfds_deleting']} Question</h3>
+    <form action='{$this->settings['base_url']}app=classifieds&amp;module=questions&amp;do={$form['formcode']}' id='mainform' method='post'>
+      <input type='hidden' name='question_id' value='{$question['question_id']}' />
+      <fieldset>
+        <p style="padding:1.2em;">{$this->lang->words['cfds_sure_delete_question_q']}</p>
+      </fieldset>
+      <fieldset class="submit">
+        <input type="submit" name="submit" value="{$form['button']}" class="input_submit" />
+        {$this->lang->words['cfds_or']} <a href="{parse url="do=view_item&amp;item_id={$question['item_id']}" base="publicWithApp"}" title="{$this->lang->words['cfds_cancel']}" class="cancel">{$this->lang->words['cfds_cancel']}</a>
+      </fieldset>
+    </form>
+  </div>
+</div>]]></template_content>
+      <template_name>delete_question_form</template_name>
+      <template_data>$question, $form</template_data>
+      <template_updated>1325112960</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_classifieds</template_group>
+      <template_content><![CDATA[<if test="!empty($field['options'])">
+<li class="ipsField ipsField_select">
+            <label class="ipsField_title" for="custom-{$field['field_id']}">{$field['title']}<if test="$field['required'] == 1"> <span class="ipsForm_required">*</span></if></label>
+            <div class="ipsField_content"><select name="custom-{$field['field_id']}" id="custom-{$field['field_id']}" class="dropdown">
+<foreach loop="$field['options'] as $option">
+    <option value="{$option}" <if test="$field['value'] == $option">selected="selected"</if>>{$option}</option>
+</foreach>
+</select></div>
+</li>
+</if>]]></template_content>
+      <template_name>dropdownFormField</template_name>
+      <template_data>$field</template_data>
+      <template_updated>1325112960</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_classifieds</template_group>
+      <template_content><![CDATA[<li class="ipsField">
+            <label class="ipsField_title" for="custom-{$field['field_id']}">{$field['title']}<if test="$field['required'] == 1"> <span class="ipsForm_required">*</span></if></label>
+            <div class="ipsField_content"><input value="{$field['value']}" name="custom-{$field['field_id']}" maxlength="150" size="30" class="input_text" id="custom-{$field['field_id']}" type="text">
+            <if test="$field['description'] != ''"><span class="desc">{$field['description']}</span></if></div>
+          </li>]]></template_content>
+      <template_name>inputFormField</template_name>
+      <template_data>$field</template_data>
+      <template_updated>1325112960</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_classifieds</template_group>
+      <template_content><![CDATA[<if test="$attachments">         
+			            <div id="Carousel" class="carousel">
+			                <div class="button navButton previous" style="display:none;">Back</div>
+			                <div class="button navButton next" style="display:none;">More</div>
+			                <div class="container">
+			                    <div class="items">                  
+			                    <foreach loop="$attachments as $attachment">
+			                    	<div class="item<if test="$item['attach_id'] == $attachment['attach_id']"> selected</if>">
+			                            <div class="key caption"></div>
+			                            <div class="icon">
+			                                <img width=75 height=75 src="{$this->settings['upload_url']}/{$attachment['thumb_location']}" />
+			                            </div>
+			                            <div class="picture">
+			                                <a href='{$this->settings['upload_url']}/{$attachment['full_location']}' rel='lightbox[1]'><img id="{$attachment['attach_id']}" width=300 height=300 src="{$this->settings['upload_url']}/{$attachment['med_location']}" /></a>
+			                            </div>
+			                        </div>                 
+			                    </foreach>                                                                                       
+			                    </div>
+			                </div>
+			            </div>        
+        				{parse js_module="classifieds_attachments"}
+        				</if>]]></template_content>
+      <template_name>item_attachments</template_name>
+      <template_data>$attachments, $item</template_data>
+      <template_updated>1325112960</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_classifieds</template_group>
+      <template_content><![CDATA[<div class='cfds_category_row {parse striping="items"}<if test="catitemopen:|:!$item['open']"> moderated</if>' id='itemrow_{$item['item_id']}'>
+						<if test="catssthumb:|:$item['thumb_location']">
+							<a href='{parse url="app=classifieds&amp;module=core&amp;do=view_item&amp;item_id={$item['item_id']}" base="public" template="view_item" seotitle="{$item['seo_title']}"}' title='{$item['name']}'><img src="{$this->settings['upload_url']}/{$item['thumb_location']}" width="75" height="75" class='cfdsthumb' /></a>
+						<else />
+							<a href='{parse url="app=classifieds&amp;module=core&amp;do=view_item&amp;item_id={$item['item_id']}" base="public" template="view_item" seotitle="{$item['seo_title']}"}' title='{$item['name']}'><img src='{style_images_url}/classifieds/noimage.png' width="75" height="75" class='cfdsthumb' /></a>
+						</if>
+						
+						<div class='item_info right'>
+							<if test="$this->memberData['g_classifieds_can_moderate']">
+								<input type='checkbox' class='input_check topic_mod right' id='item_{$item['item_id']}' />
+							</if>
+							<p class='ipsType_small'>
+							    {$this->lang->words['cfds_sort_views']} - {$item['views']}
+							</p>	
+											
+							<p class='ipsType_small'>
+								{$this->lang->words['cfds_expires']} - {parse time_until="$item['date_expiry']"}
+							</p>
+										
+						</div>
+						<if test="featuredbadge:|:$item['featured'] == 1"> <span class='ipsBadge ipsBadge_green right' style='margin-left:4px;'>{$this->lang->words['cfds_featured']}</span></if>
+						<if test="typebadge:|:$item['show_badge'] == 1"><span class='ipsBadge ipsBadge_{$item['badge_color']} right'>{$item['advert_type']}</span></if>
+												
+						<h3 class='ipsType_subtitle'>
+										
+							
+						<span class='ipsBadge ipsBadge_green priceBadge'>
+						<if test="$item['price'] != '0.00' || !$item['zero_text']"> {parse expression="ipsRegistry::getClass('class_localization')->formatMoney( $item['price'], false )"}
+                            <else />
+                            {$item['zero_text']}                         
+                        </if>
+						</span>
+							<a href='{parse url="app=classifieds&amp;module=core&amp;do=view_item&amp;item_id={$item['item_id']}" base="public" template="view_item" seotitle="{$item['seo_title']}"}' title='{$item['name']}'>{parse expression="IPSText::truncate( $item['name'], 40)"}</a>
+						</h3><br />
+						<span class='cat_name'>{$this->lang->words['cfds_in']} <a href="{parse url="module=core&amp;do=view_category&amp;category_id={$item['category_id']}" template="view_category" seotitle="{$item['catseo']}" base="publicWithApp"}">{$item['catname']}</a></span>
+						
+						{$this->lang->words['cfds_by']} {IPSMember::makeProfileLink($item['member']['members_display_name'], $item['member']['member_id'], $item['member']['members_seo_name'])}
+						
+						<if test="hasDescription:|:$item['description']">
+							<br /><br /><span class='desc'>{IPSText::truncate(strip_tags($item['description']) , $this->settings['classifieds_desc_trunc'])}</span>
+						</if>
+						<br style="clear:both;" />
+					</div>]]></template_content>
+      <template_name>item_row</template_name>
+      <template_data>$item</template_data>
+      <template_updated>1325112960</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_classifieds</template_group>
+      <template_content><![CDATA[{parse template="include_lightbox" group="global" params=""}
+{parse js_module="classifieds_tabs"}
+<!-- Start Buttons -->
+<ul class='topic_buttons'>
+    <if test="watchismember:|:$this->memberData['member_id']">
+        <if test="stopwatching:|:$watched">
+            <li><a href='{parse url="app=classifieds&amp;module=subscribe&amp;do=item_unsubscribe&amp;id={$item['item_id']}" base="public"}' title=''><img src='{style_images_url}/classifieds/transmit_blue.png'> {$this->lang->words['cfds_unsubscribe_item']}</a></li>
+            <else />
+            <li> <a href='{parse url="app=classifieds&amp;module=subscribe&amp;do=item_subscribe&amp;id={$item['item_id']}" base="public"}' title=''><img src='{style_images_url}/classifieds/transmit_blue.png'> {$this->lang->words['cfds_subscribe_item']}</a> </li>
+        </if>
+    </if>
+    <if test="($this->memberData['g_classifieds_can_open_close'] == 1 && $this->memberData['member_id'] == $item['member_id']) || $this->memberData['g_classifieds_can_moderate'] == 1">
+        <li>
+        <if test="$item['open'] == 1"> <a href="{parse url="module=core&amp;do=close_item&amp;item_id={$item['item_id']}" base="publicWithApp"}" title="{$this->lang->words['cfds_close_item']}"><img src='{style_images_url}/classifieds/close.png' /> {$this->lang->words['cfds_close_item']}</a>
+            <else />
+            <a href="{parse url="module=core&amp;do=open_item&amp;item_id={$item['item_id']}" base="publicWithApp"}" title="{$this->lang->words['cfds_open_item']}"><img src='{style_images_url}/classifieds/open.png' /> {$this->lang->words['cfds_open_item']}</a> </if>
+        </li>
+    </if>
+    <if test="edititem:|:($this->memberData['g_classifieds_can_edit_item'] == 1 && $this->memberData['member_id'] == $item['member_id']) || $this->memberData['g_classifieds_can_moderate'] == 1">
+        <li> <a href="{parse url="module=listing&amp;do=edit&amp;item_id={$item['item_id']}" base="publicWithApp"}" title="{$this->lang->words['cfds_edit_item']}"><img src='{style_images_url}/classifieds/edit.png' /> {$this->lang->words['cfds_edit_item']}</a> </li>
+    </if>
+    <if test="$this->memberData['g_classifieds_can_moderate'] == 1">
+        <li class="closed"> <a href="{parse url="module=core&amp;do=delete_item&amp;item_id={$item['item_id']}" base="publicWithApp"}" title="{$this->lang->words['cfds_delete_item']}"><img src='{style_images_url}/classifieds/bin.png' /> {$this->lang->words['cfds_delete_item']}</a> </li>
+    </if>
+</ul>
+<!-- End Buttons -->
+<br class='clear' />
+<div class='ipsBox'>
+<div class="ipsLayout ipsLayout_withright">
+<!-- Start Content -->
+        <div class='ipsLayout_content ipsBox_container'>
+            <div class='ipsPad_double'>
+            <!-- Item Head -->
+            <if test="$attachments">
+            <div style='width:700px;'>
+                <!-- Images -->
+                <div class='left item_images'>
+                    <div id="Viewer">
+		            	<div id="ViewerData" class="data"></div>
+	        		</div>            
+                </div>
+                <!-- End Images -->
+            	
+                <!-- Item Basics -->
+                <div class='right cfds_box_right ipsPad_double'>
+                
+                {parse template="basic_item_info" group="classifieds" params="$item, $seller"}
+                    
+                    <!-- Begin attachments -->
+					{parse template="item_attachments" group="classifieds" params="$attachments, $item"}
+                	<!-- End attachments -->
+                    
+                    </div>
+                <!-- End Item Basics -->
+            </div>          
+            <else />
+            
+                       <div style='width:700px;'>
+                            	
+                <!-- Item Basics -->
+                <div class='ipsPad_double'>
+                
+                {parse template="basic_item_info" group="classifieds" params="$item, $seller"}
+                                       
+                    </div>
+                <!-- End Item Basics -->
+            </div>            
+            
+            </if>
+            <!-- End Item Head -->    
+                
+                <br class='clear' />	
+				<script type="text/javascript">
+				//<!#^#|CDATA|
+				Event.observe(window, 'load', loadTabs, false);
+				function loadTabs() {
+				var tabs = new tabset('tabContainer');
+				tabs.autoActivate($('tab_overview'));
+				}
+				//|#^#]>
+				</script>               
+                <div id='tabContainer'>
+                <ul class='horizontalTabs' id='tabNav'>
+	                <li><a href='#overview' id='tab_overview' class='tab active'>{$this->lang->words['cfds_overview']}</a></li>
+	                <if test="!empty($item['fields'][0]['fields'])"><li><a href='#features' id='tab_features' class='tab'>{$this->lang->words['cfds_features']}</a></li></if>
+	                <li><a href='#questions' id='tab_questions' class='tab'>{$this->lang->words['cfds_questions']}</a></li>
+                </ul>
+                <div class='ipsBox_container ipsPad'>
+					<div id="panel_overview" class="panel">
+	                    <div class='clear'> {$item['description']} </div>
+					</div>
+					
+					<div id="panel_features" class="panel">
+						<div class='general_box clearfix'>
+						  <if test="!empty($item['fields'][0]['fields'])">
+						      <foreach loop="grouploop:$item['fields'] as $group">
+						        <if test="!empty($group['fields'])">
+								        <h3 class="bar"><if test="groupname:|:$group['name']">{$group['name']}<else />{$this->lang->words['cfds_global_field_h']}</if></h3>
+								        <br />
+								        <ul class="ipsList_data clearfix">
+						            <foreach loop="fieldinnerloop:$group['fields'] as $field">
+								            
+										<li>
+								                <span class="row_title">{$field['title']}</span>
+								                <span class="row_data"><if test="fieldtypetest:|:$field['type'] == 'checkbox'">
+						                  <if test="yesno:|:$field['value'] == '1'">{$this->lang->words['cfds_yes']}
+						                    <else />
+						                    {$this->lang->words['cfds_no']}</if>
+						                    <else />
+						                     {$field['value']}
+						                </if></span>
+								        </li>
+						                
+						            </foreach> 
+									</ul>
+						        </if>
+						      </foreach>
+						   </if>
+					     </div>				    
+					</div>
+									
+					<div id="panel_questions" class="panel">
+						<if test="!empty($questions)">					
+						      {parse striping="questions" classes="row1,row2"}
+						      <foreach loop="questionloop:$questions as $question">
+						      
+						      <if test="$question['asker_id'] == $this->memberData['member_id'] || $seller['member_id'] == $this->memberData['member_id'] || $question['is_public'] == 1">
+						       {parse variable="publicQuestions" oncondition="1 == 1" value="1"}
+						            <div class="post_block" style="margin: 0 0 6px 0;">
+						          <h3 class='bar'>
+						            {IPSMember::makeProfileLink($question['askerdata']['members_display_name'], $question['askerdata']['member_id'], $question['askerdata']['members_seo_name'])}<if test="$question['answer'] == ''"><span class='ipsType_small'> ({$this->lang->words['cfds_unanswered_question']})</span></if></h3>
+						          <div class="question {parse striping="questions"} <if test="$question['is_public'] != 1">moderated</if> ">
+						          <p>{$this->lang->words['cfds_pre_question']} {$question['question']}</p>
+						          <if test="$question['answer'] != ''">
+						            <p>{$this->lang->words['cfds_pre_answer']} {$question['answer']}</p>
+						          </if>
+						          						        <if test="$seller['member_id'] == $this->memberData['member_id'] || $this->memberData['g_classifieds_can_moderate'] == 1 ">
+						          <ul class='post_controls'>
+						            <if test="$question['answer'] == '' && $seller['member_id'] == $this->memberData['member_id']">
+						              <li><a href="{parse url="app=classifieds&amp;module=questions&amp;do=answer&amp;question_id={$question['question_id']}" base="public"}" class='ipsButton_secondary'>{$this->lang->words['cfds_answer_action']}</a></li>
+						            </if>
+						            <li><a href="{parse url="app=classifieds&amp;module=questions&amp;do=delete&amp;question_id={$question['question_id']}" base="public"}" class='ipsButton_secondary'>{$this->lang->words['cfds_delete_question']}</a></li>
+						          </ul>
+						          <br />
+						          </if>
+						        </div>
+						    </div>
+						    </if>
+						    </foreach>
+						    </if>
+						            <if test="!$this->templateVars['publicQuestions']">
+						            {$this->lang->words['cfds_no_questions']}
+						            </if>
+						    <if test="askquestion:|:$this->memberData['member_id'] AND $seller['member_id'] != $this->memberData['member_id'] AND $this->memberData['g_use_pm']">
+						    <ul class="topic_buttons">
+						                    <li><a href='{parse url="app=classifieds&amp;module=questions&amp;do=ask&amp;item_id={$item['item_id']}" base="public"}'><img src='{style_images_url}/classifieds/question.png' /> {$this->lang->words['cfds_no_questions_link_text']}</a> </li>
+						    </ul>
+						    </if>					  
+					</div>                   
+                <br class='clear' />
+                </div>
+                </div>
+                
+            </div>	
+            <if test="canReportItem:|:$this->memberData['member_id']">
+			<div class='ipsPad'>				
+				<div class='right'>
+					<a class='ipsButton_secondary' href="{parse url="app=core&amp;module=reports&amp;rcom=classifieds&amp;item_id={$item['item_id']}" base="public"}">{$this->lang->words['cfds_report']}</a>
+				</div>				
+			</div>		
+			<br /><br />
+			</if>
+        </div>
+<!-- End Content -->
+<!-- Start Right Column -->
+        <div class='ipsLayout_right'>   
+            <div class='ipsBox_container'>
+                <h3 class ='bar'>{$this->lang->words['cfds_seller_info']}</h3>
+                <div>
+                	{parse template="seller_info" group="classifieds" params="$seller,$item"}
+                </div>
+                <br class='clear' />
+            </div>
+        </div>
+<!-- End Right Column -->        
+        
+        <br class='clear' />		
+    </div>
+</div>]]></template_content>
+      <template_name>item_view</template_name>
+      <template_data>$item, $seller, $attachments, $questions, $watched</template_data>
+      <template_updated>1325112960</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_classifieds</template_group>
+      <template_content><![CDATA[<script type='text/javascript'>
+function getCheckedValue(radio) {
+	var radioLength = radio.length;
+	if(radioLength == undefined)
+		if(radio.checked)
+			return radio.value;
+		else
+			return "0";
+	for(var i = 0; i < radioLength; i++) {
+		if(radio[i].checked) {
+			return radio[i].value;
+		}
+	}
+	return "";
+}
+	function updatePrice( value )
+	{
+	
+	var packageid = getCheckedValue(document.forms['mainform'].elements['package']);
+	
+	
+	if(packageid == 0 && document.forms['mainform'].elements['package'].value != '') {
+	   packageid = document.forms['mainform'].elements['package'].value; 
+	}
+	
+		if(packageid != 0) {
+			new Ajax.Request( ipb.vars['base_url'] + "app=classifieds&module=ajax&section=listing&do=updateprice&secure_key={$this->member->form_hash}",
+			{
+				parameters:
+		    	{
+		    		packageid: packageid,
+		    		value: value
+		    	},
+				onSuccess: function( t )
+				{						
+				if ( t.responseJSON && t.responseJSON['error'] )
+					{
+						alert( t.responseJSON['error'] );
+					}
+					else
+					{
+								$( 'listing_price_container' ).innerHTML = t.responseText;
+								Effect.Pulsate( $('listing_price'), { pulses: 3, duration: 0.5 } );							
+					}			
+				}
+			});
+		}
+		
+	}
+</script>
+<div class="ipsLayout">
+  
+    <if test="AddOrEdit:|:$type == 'add'">
+      <h1 class='ipsType_pagetitle'>{parse expression="sprintf( $this->lang->words['cfds_listing_new_item_in'], "{$category['name']}" )"}</h1>
+      <else />
+      <h1 class='ipsType_pagetitle'>{$this->lang->words['cfds_editing']} {$item['name']}</h1>
+    </if>
+    
+    <div class="ipsBox">
+    <form action='{$this->settings['base_url']}app=classifieds&amp;module=listing&amp;do={$form['formcode']}' id='mainform' method='post'>
+      <input type='hidden' name='item_id' value='{$item['item_id']}' />
+      <input type='hidden' name='attach_post_key' value='{$post_key}' />
+      <input type='hidden' name='category_id' value='{$item['category_id']}' />
+     <ul class="ipsForm ipsForm_horizontal"> 
+     <if test="CategoryChange:|:$type == 'add'">
+     <div class='ipsBox_container ipsPad_double'>
+			<div class='ipsPad'>
+					<a href='{parse url="app=classifieds&amp;module=listing&amp;do=cat&amp;id=" base="public"}' class='input_submit alt'>{$this->lang->words['cfds_change_category']}</a>
+			</div>
+		</div>
+	<br />
+	</if>
+     <div class='ipsBox_container'>
+     
+        <h3 class="bar altbar">{$this->lang->words['cfds_item_details']}</h3>
+        <div class='ipsPad'>
+          <li class="ipsField">
+            <label class="ipsField_title" for="name">{$this->lang->words['cfds_name']} <span class="ipsForm_required">*</span></label>
+            <div class="ipsField_content"><input type="text" tabindex="0" value="{$item['name']}" name="name" maxlength="150" size="50" class="input_text" id="name"/></div>
+          </li>                  
+        <li class="ipsField">
+         <label class="ipsField_title" for="description">{$this->lang->words['cfds_description']} <span class="ipsForm_required">*</span></label>
+        <div class="ipsField_content">{$editor}</div>
+        </li>
+        
+        <if test="upload_form_check:|:$form['uploadForm']">
+          
+            {$form['uploadForm']}
+          
+          <br />
+      </if>
+        
+       </div>
+      </div>  
+      <br />
+            <foreach loop="grouploop:$fields as $group">
+            <if test="!empty($group['fields'])">
+            <div class='ipsBox_container'>
+            <h3 class="bar altbar"><if test="groupname:|:$group['name']">{$group['name']}<else />{$this->lang->words['cfds_global_field_h']}</if></h3>
+            <div class='ipsPad'>
+            <foreach loop="fieldinnerloop:$group['fields'] as $field">
+            <if test="$field['type'] == 'dropdown'">
+            {parse template="dropdownFormField" group="classifieds" params="$field"}
+            </if>
+            <if test="$field['type'] == 'input'">
+            {parse template="inputFormField" group="classifieds" params="$field"}
+            </if>
+            <if test="$field['type'] == 'radio'">
+            {parse template="radioFormField" group="classifieds" params="$field"}
+            </if>
+            <if test="$field['type'] == 'checkbox'">
+            {parse template="checkboxFormField" group="classifieds" params="$field"}
+            </if>
+            <if test="$field['type'] == 'textarea'">
+            {parse template="textareaFormField" group="classifieds" params="$field"}
+            </if>
+            </foreach>
+            </div>
+            </div>
+            <br />
+            </if>
+            </foreach>
+      <div class='ipsBox_container'>
+        <h3 class="bar altbar">{$this->lang->words['cfds_pricing_options']}</h3>
+        <div class='ipsPad'>
+          <li class="ipsField">
+            <label class="ipsField_title" for="price">{$this->lang->words['cfds_price']} <span class="ipsForm_required">*</span></label>           
+            <div class="ipsField_content">
+            	<if test="cs_precedes:|:$this->lang->local_data['p_cs_precedes']">{$this->lang->local_data['currency_symbol']} </if><input type="text" value="{$item['price']}" name="price" maxlength="150" size="10" class="input_text" id="price" onchange="updatePrice(price.value)"/><if test="cs_follows:|:!$this->lang->local_data['p_cs_precedes']"> {$this->lang->local_data['currency_symbol']}</if>
+            </div>
+          </li>
+           <li class="ipsField">
+            <label class="ipsField_title" for="advert_type">{$this->lang->words['cfds_advert_type']} <span class="ipsForm_required">*</span></label>
+           <div class="ipsField_content">
+           <foreach loop="typeloop:$category['types'] as $type">
+           <input type="radio" name="advert_type" value="{$type['type_id']}" <if test="$item['type_id'] == $type['type_id']">checked </if>/> {$type['name']}<br />
+           </foreach>
+           </div>
+          </li>
+        </div>
+      </div>
+      <br />
+      
+      <if test="packages_check:|:count($packages) > 1">
+      <div class='ipsBox_container'>
+        <h3 class="bar altbar">{$this->lang->words['cfds_packages']}</h3>
+        <div class='ipsPad'> 
+        	<span class="ipsForm_required">*</span> <span class='required'>{$this->lang->words['cfds_required']}</span>
+        </div>
+        <div class='ipsPad'>        
+        <foreach loop="packages:$packages as $package">
+           <li class="ipsField" style="float:left;">
+            <input id="package_{$package['package_id']}" type="radio" name="package" value="{$package['package_id']}" onclick="updatePrice(price.value)"/> 
+            <a class="_hovertrigger" hovercard-ref="ratecard" hovercard-id="{$package['package_id']}"><img src='{style_images_url}/classifieds/information.png' alt='{$this->lang->words['cfds_rate_card']}' /></a>
+            <label class="ipsField_title" for="package_{$package['package_id']}">{$package['name']}</label>
+            <span class="desc packagedesc" style="clear:left;">{$package['description']}</span>
+          </li>
+        </foreach>
+        <br class='clear' />
+        </div>
+        
+      </div>
+      <br />
+      <else />
+            <input type='hidden' name='package' value='{$packages[0]['package_id']}' />
+      </if></ul>
+      <div id="listing_price_container">
+	  </div>
+      <fieldset class="submit">
+        <input type="submit" name="submit" value="{$form['button']}" class="input_submit" />
+        <if test="$item['item_id']"> {$this->lang->words['cfds_or']} <a href="{parse url="do=view_item&amp;item_id={$item['item_id']}" base="publicWithApp"}" title="{$this->lang->words['cfds_cancel']}" class="cancel">{$this->lang->words['cfds_cancel']}</a>
+          <else />
+          {$this->lang->words['cfds_or']} <a href="{parse url="app=classifieds" base="public"}" title="{$this->lang->words['cfds_cancel']}" class="cancel">{$this->lang->words['cfds_cancel']}</a></if>
+      </fieldset>
+    </form>
+  </div>
+</div>
+<script type="text/javascript">
+var ajaxUrl = ipb.vars['base_url'] + '&app=classifieds&module=ajax&secure_key=' + ipb.vars['secure_hash'] + '&section=listing&do=ratecard';			
+ipb.hoverCardRegister.initialize('ratecard',{ 'w' : '400px', 'delay': 750, 'position' : 'auto' , 'ajaxUrl' : ajaxUrl, 'getId': true, 'setIdParam': 'packageid' } );
+</script>]]></template_content>
+      <template_name>listing_form</template_name>
+      <template_data>$item, $form, $type, $editor, $fields, $post_key, $packages, $category</template_data>
+      <template_updated>1325112960</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_classifieds</template_group>
+      <template_content><![CDATA[<div class='ipsBox_container ipsPad_double'>
+			<div class='ipsPad' id="listing_price">
+			Listing Price 
+			<span class='ipsBadge ipsBadge_green' >
+			<if test="$price != '0.00'"> {parse expression="ipsRegistry::getClass('class_localization')->formatMoney( $price, false )"}
+            <else />
+            <p>{$this->lang->words['cfds_free']}</p></if>
+</span>
+			</div>
+	  </div>
+	  <br />]]></template_content>
+      <template_name>listingPrice</template_name>
+      <template_data>$price</template_data>
+      <template_updated>1325112960</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_classifieds</template_group>
+      <template_content><![CDATA[<form action='{parse url="app=classifieds&amp;module=moderate&amp;section=moderate" base="public"}' method='post'>
+	<input type='hidden' name='do' value='multimod' />
+	<input type='hidden' name='category_id' value='{$this->request['category_id']}' />
+	<input type="hidden" value="{$this->request['selecteditemids']}" name="selecteditemids" id="selecteditemids" />
+	<input type='hidden' name='doaction' value='move' />
+	<input type='hidden' name='secure_key' value='{$this->member->form_hash}' />
+	<h2 class='maintitle'>{$this->lang->words['cfds_move_to']}</h2>
+	<div class='ipsBox'>
+		<div class='ipsBox_container'>
+			<h3 class='bar'>{$this->lang->words['cfds_move_to']}</h3>
+			<br />
+			<ul class='ipsForm_horizontal'>
+				<li class='ipsField ipsField_select'>
+					<label for='moveto' class='ipsField_title'>{$this->lang->words['cfds_select_cat']}</label>
+					<div class='ipsField_content'>
+						{$categories}
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<p class='submit'>
+		<input type="submit" name="dosubmit" value="{$this->lang->words['cfds_multimod_submit']}" tabindex="2" class="input_submit" accesskey="s" />
+		{$this->lang->words['or']} 
+		<a href='{parse url="app=classifieds" base="public" seotitle="false" template="app=classifieds"}' title='{$this->lang->words['cancel']}' class='cancel'>{$this->lang->words['cancel']}</a>
+	</p>
+</form>]]></template_content>
+      <template_name>moderateSelectCategory</template_name>
+      <template_data>$categories</template_data>
+      <template_updated>1325112960</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_classifieds</template_group>
+      <template_content><![CDATA[<h3 class='maintitle'>{$this->lang->words['cfds_profile_header']}</h3>
+<div class='ipsBox'>
+	<div class='ipsBox_container'>
+		<table class='ipb_table' summary='{$this->lang->words['cfds_profile_header']}'>
+			<if test="is_array($items) AND count($items)">
+			 <foreach loop="$items as $item">
+				<tr class='<if test="$item['is_read']"> unread</if>' id='item_{$item['item_id']}'>
+					<td class='col_f_icon short altrow'>
+						<if test="readunread:|:!$item['is_read']">
+							{parse replacement="t_unread"}
+						<else />
+							{parse replacement="t_read"}
+						</if>
+					</td>
+					<td style="width:75px;">
+					<div style='position:relative;'>
+				    	<span class='ipsBadge ipsBadge_green' style='position: absolute;top: -6px; left: -4px;font-size: 11px !important;'>
+					<if test="$item['price'] != '0.00' || !$item['zero_text']"> {parse expression="ipsRegistry::getClass('class_localization')->formatMoney( $item['price'], false )"}
+                            <else />
+                            {$item['zero_text']}                         
+                        </if>
+						</span>
+						<if test="profilethumb:|:$item['thumb_location']">
+							<a href='{parse url="app=classifieds&amp;module=core&amp;do=view_item&amp;item_id={$item['item_id']}" base="public" template="view_item" seotitle="{$item['seo_title']}"}' title='{$item['name']}'><img src="{$this->settings['upload_url']}/{$item['thumb_location']}" width="75" height="75" class='cfdsthumb' /></a>
+						<else />
+							<a href='{parse url="app=classifieds&amp;module=core&amp;do=view_item&amp;item_id={$item['item_id']}" base="public" template="view_item" seotitle="{$item['seo_title']}"}' title='{$item['name']}'><img src='{style_images_url}/classifieds/noimage.png' width="75" height="75" class='cfdsthumb' /></a>
+						</if>
+						</div>
+					</td>
+					<td>
+					<if test="featuredbadge:|:$item['featured'] == 1"> <span class='ipsBadge ipsBadge_green right' style='margin-left:4px;'>{$this->lang->words['cfds_featured']}</span></if>
+					<if test="typebadge:|:$item['show_badge'] == 1"><span class='ipsBadge ipsBadge_{$item['badge_color']} right'>{$item['advert_type']}</span></if>
+					<h3 class='ipsType_subtitle'><a href='{parse url="app=classifieds&amp;module=core&amp;do=view_item&amp;item_id={$item['item_id']}" base="public" template="view_item" seotitle="{$item['seo_title']}"}' title='{$item['name']}'>{parse expression="IPSText::truncate( $item['name'], 40)"}</a></h3>
+<br />
+					<span class='cat_name'>{$this->lang->words['cfds_in']} <a href="{parse url="app=classifieds&amp;module=core&amp;do=view_category&amp;category_id={$item['category_id']}" template="view_category" seotitle="{$item['catseo']}" base="public"}">{$item['catname']}</a></span>
+					<if test="hasDescription:|:$item['description']">
+							<br /><br /><span class='desc'>{IPSText::truncate(strip_tags($item['description']) , $this->settings['classifieds_desc_trunc'])}</span>
+						</if>
+					</td>
+					
+				</tr>
+			 </foreach>
+			</if>
+		</table>
+	</div>
+</div>]]></template_content>
+      <template_name>profileBlock</template_name>
+      <template_data>$items=array()</template_data>
+      <template_updated>1325112960</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_classifieds</template_group>
+      <template_content><![CDATA[<div class="ipsLayout">
+      <h3 class="maintitle">{$this->lang->words['cfds_asking_question']}</h3>
+	<div class='ipsBox'>
+	<h3 class="bar altbar">{$this->lang->words['cfds_item_details']}</h3>
+		<div class='ipsBox_container ipsPad'>  
+			<p>{$this->lang->words['cfds_name']} - {$item['name']}</p>
+			<p>{$this->lang->words['cfds_price']} - <if test="$item['price'] != '0.00'"> {parse expression="ipsRegistry::getClass('class_localization')->formatMoney( $item['price'], true )"}
+                <else />
+                    <if test="forsaleorwanted:|:$item['advert_type'] == 'sale'">{$this->lang->words['cfds_free']}<else />{$this->lang->words['cfds_wanted_noprice']}</if> </if></p>
+        </div>
+	</div>
+    
+	<form action='{$this->settings['base_url']}app=classifieds&amp;module=questions&amp;do=doask' id='mainform' method='post'>
+    <input type='hidden' name='item_id' value='{$item['item_id']}' />
+    <input type='hidden' name='post_key' value='{$post_key}' />
+    <ul class="ipsForm ipsForm_horizontal">
+	<div class='ipsBox'>
+		<div class='ipsBox_container ipsPad'>
+			<li class="ipsField">
+	        <label class="ipsField_title" for="question">{$this->lang->words['cfds_question']} <span class="ipsForm_required">*</span></label>
+	        <div class="ipsField_content">{$editor}</div>
+	        </li>
+		</div>
+	</div>
+    </ul>  
+		<fieldset class="submit">
+	        <input type="submit" name="submit" value="{$this->lang->words['cfds_ask_action']}" class="input_submit" />
+	          <if test="$item"> {$this->lang->words['cfds_or']} <a href="{parse url="do=view_item&amp;item_id={$item['item_id']}" base="publicWithApp"}" title="{$this->lang->words['cfds_cancel']}" class="cancel">{$this->lang->words['cfds_cancel']}</a>
+	          <else />
+	          {$this->lang->words['cfds_or']} <a href="{parse url="app=classifieds" base="public"}" title="{$this->lang->words['cfds_cancel']}" class="cancel">{$this->lang->words['cfds_cancel']}</a>
+	          </if>
+    	</fieldset>
+	</form>
+</div>]]></template_content>
+      <template_name>question_form</template_name>
+      <template_data>$item, $editor, $post_key</template_data>
+      <template_updated>1325112960</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_classifieds</template_group>
+      <template_content><![CDATA[<li class="ipsField">
+<label class="ipsField_title" for="custom-{$field['field_id']}">{$field['title']}<if test="$field['required'] == 1"> <span class="ipsForm_required">*</span></em></if></label>
+<div class="ipsField_content">
+<foreach loop="$field['options'] as $option">
+    <input type="radio" name="custom-{$field['field_id']}" value="{$option}" <if test="$field['value'] == $option">checked="checked"</if> /> {$option}<br />
+</foreach>
+<if test="$field['description'] != ''"><span class="desc">{$field['description']}</span></if>
+</div>
+</li>]]></template_content>
+      <template_name>radioFormField</template_name>
+      <template_data>$field</template_data>
+      <template_updated>1325112960</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_classifieds</template_group>
+      <template_content><![CDATA[<div>
+	<h3>{$this->lang->words['cfds_rate_card']}</h3>
+	<div style='min-height: 60px'>
+			<table class='ipb_table'>
+			<tr class='header'><th>&gt= {$this->lang->words['cfds_item_value']}</th><th>{$this->lang->words['cfds_base_price']}</th><th>{$this->lang->words['cfds_renewal_price']}</th></tr>
+			<if test="$package['pricing_format'] == 'value'">
+			{parse striping="rates" classes="row1,row2"}				 
+				 <foreach loop="$package['rates'] as $rate">
+				 <tr class='{parse striping="rates"}'>
+				 <td>{parse expression="ipsRegistry::getClass('class_localization')->formatMoney( $rate['value'], false )"}</td>
+				 <td>{parse expression="ipsRegistry::getClass('class_localization')->formatMoney( $rate['base'], false )"}</td>
+				 <td>{parse expression="ipsRegistry::getClass('class_localization')->formatMoney( $rate['renewal'], false )"}</td>
+				 </tr>
+				</foreach>
+			<else />
+			 	<tr class='{parse striping="rates"}'>
+				 <td>{$this->lang->words['cfds_all_values']}</td>
+				 <td>{parse expression="ipsRegistry::getClass('class_localization')->formatMoney( $package['price'], false )"}</td>
+				 <td>{parse expression="ipsRegistry::getClass('class_localization')->formatMoney( $package['renewal'], false )"}</td>
+				 </tr>
+			</if>
+			</table>
+	</div>
+</div>]]></template_content>
+      <template_name>rateCard</template_name>
+      <template_data>$package</template_data>
+      <template_updated>1325112960</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_classifieds</template_group>
+      <template_content><![CDATA[<form action='{$this->settings['base_url']}app=classifieds&amp;module=listing&amp;do={$form['formcode']}' id='mainform' method='post'>
+      <input type='hidden' name='item_id' value='{$item['item_id']}' />
+		<h2 class="maintitle">{$this->lang->words['cfds_renewing']} {$item['name']}</h2>
+  	<div class='ipsBox'>
+		<div class='ipsBox_container ipsPad'>
+			<br />        
+       
+        <ul class='ipsForm_horizontal'>
+          <li class='ipsField'>
+            <label for="price" class='ipsField_title'>{$this->lang->words['cfds_price']} <span class="ipsForm_required">*</span></label>
+            <div class='ipsField_content'>
+            <if test="cs_precedes:|:$this->lang->local_data['p_cs_precedes']">{$this->lang->local_data['currency_symbol']} </if><input type="text" value="{$item['price']}" name="price" maxlength="150" size="10" class="input_text" id="price"/><if test="cs_follows:|:!$this->lang->local_data['p_cs_precedes']"> {$this->lang->local_data['currency_symbol']}</if>
+            </div>
+          </li>
+        </ul>
+		</div>
+		</div>
+      <fieldset class="submit">
+        <input type="submit" name="submit" value="{$form['button']}" class="input_submit" />
+          {$this->lang->words['cfds_or']} <a href="{parse url="app=classifieds" base="public"}" title="{$this->lang->words['cfds_cancel']}" class="cancel">{$this->lang->words['cfds_cancel']}</a>
+      </fieldset>
+    </form>]]></template_content>
+      <template_name>renewal_form</template_name>
+      <template_data>$item, $form</template_data>
+      <template_updated>1325112960</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_classifieds</template_group>
+      <template_content><![CDATA[<div class="item_row">
+  <div style="float:left; margin-right:10px; width:150px;">
+    <if test="$item['is_read'] == 1"> <img src='{style_images_url}/classifieds/tag_read.png' alt='{$this->lang->words['item_read']}'/>
+      <else />
+      <img src='{style_images_url}/classifieds/tag_unread.png' alt='{$this->lang->words['item_unread']}'/> </if>
+    <a href="{parse url="app=classifieds&amp;module=core&amp;do=view_item&amp;item_id={$item['item_id']}" template="view_item" seotitle="{$item['seo_title']}" base="public"}"><if test="$item['thumb_location']"><img src="{$this->settings['upload_url']}/{$item['thumb_location']}" width="75" height="75" style='margin-left:10px;'/>
+      <else />
+      <img src='{style_images_url}/classifieds/noimage.png' style='margin-left:10px;' /></if></a>
+  </div>
+  <div style="float:left;">
+    <h4><a href="{parse url="app=classifieds&amp;module=core&amp;do=view_item&amp;item_id={$item['item_id']}" template="view_item" seotitle="{$item['seo_title']}" base="public"}">{$item['name']}</a><p class="desc">{IPSText::truncate(strip_tags($item['description']) , $this->settings['classifieds_desc_trunc'])}</p></h4>
+  </div>
+  <div style="float:right;margin-left:10px; padding-left:10px; border-left: 1px solid #BBB; width:200px;">
+    <p style="font-size: 1.2em;">{$this->lang->words['cfds_price']} - <if test="$item['price'] != '0.00'"> {parse expression="ipsRegistry::getClass('class_localization')->formatMoney( $item['price'], true )"}
+            <else />
+            <if test="forsaleorwanted:|:$item['advert_type'] == 'sale'">{$this->lang->words['cfds_free']}<else />{$this->lang->words['cfds_wanted_noprice']}</if> </if></p>
+   <p>{$this->lang->words['cfds_expires']} - {parse time_until="$item['date_expiry']"}</p></div>
+</div>]]></template_content>
+      <template_name>search_row</template_name>
+      <template_data>$item</template_data>
+      <template_updated>1325112960</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_classifieds</template_group>
+      <template_content><![CDATA[<div id='advertiser_overview' style='text-align:center'>
+<div>
+<div class='ipsPad'>
+					<if test="hasPhoto:|:$seller['pp_main_photo']">
+						<a href='{parse url="showuser={$seller['member_id']}" template="showuser" seotitle="{$seller['members_seo_name']}" base="public"}' class='ipsUserPhotoLink'>
+							{IPSMember::buildProfilePhoto($seller, 'full' )}
+						</a>
+					<else />
+						{IPSMember::buildNoPhoto(0, 'full' )}
+					</if>
+</div>
+<span class='ipsType_subtitle ipsPad'>{IPSMember::makeProfileLink($seller['members_display_name'], $seller['member_id'], $seller['members_seo_name'])}</span>
+  <ul>
+    <if test="authorspammer:|:$seller['spamStatus'] !== NULL && $seller['member_id'] != $this->memberData['member_id']">
+      <if test="authorspammerinner:|:$seller['spamStatus'] === TRUE">
+        <li><a href='#' onclick="return ipb.global.toggleFlagSpammer({$seller['member_id']}, false)">{parse replacement="spammer_on"} {$this->lang->words['spm_on']}</a></li>
+        <else />
+        <li><a href='{$this->settings['base_url']}&amp;app=forums&amp;module=moderate&amp;section=moderate&amp;do=setAsSpammer&amp;member_id={$seller['member_id']}&amp;auth_key={$this->member->form_hash}' onclick="return ipb.global.toggleFlagSpammer({$seller['member_id']}, true)">{parse replacement="spammer_off"} {$this->lang->words['spm_off']}</a></li>
+      </if>
+    </if>
+    <if test="noFriendYourself:|:$this->memberData['member_id'] AND $this->memberData['member_id'] != $seller['member_id'] && $this->settings['friends_enabled'] AND $this->memberData['g_can_add_friends']">
+      <li id='friend_toggle'>
+        <if test="isFriend:|:IPSMember::checkFriendStatus( $seller['member_id'] )"> <a href='{parse url="app=members&amp;section=friends&amp;module=profile&amp;do=remove&amp;member_id={$seller['member_id']}&amp;secure_key={$this->member->form_hash}" base="public"}' title='{$this->lang->words['remove_friend']}'><img src='{$this->settings['img_url']}/user_delete.png' alt='{$this->lang->words['remove_friend']}' /> {$this->lang->words['remove_as_friend']}</a>
+          <else />
+          <a href='{parse url="app=members&amp;section=friends&amp;module=profile&amp;do=add&amp;member_id={$seller['member_id']}&amp;secure_key={$this->member->form_hash}" base="public"}' title='{$this->lang->words['add_friend']}'><img src='{$this->settings['img_url']}/user_add.png' alt='{$this->lang->words['add_friend']}' /> {$this->lang->words['add_me_friend']}</a> </if>
+      </li>
+    </if>
+  
+    <li><a href='{parse url="app=core&amp;module=search&amp;do=user_activity&amp;search_app=classifieds&amp;mid={$seller['member_id']}" base="public"}'><img src='{style_images_url}/classifieds/merchant.png' /> {$this->lang->words['cfds_more_from_seller']}</a></li>
+    <if test="dnameHistory:|:$this->memberData['g_mem_info'] && $this->settings['auth_allow_dnames']">
+      <li id='dname_history'><a href='{parse url="app=members&amp;module=profile&amp;section=dname&amp;id={$seller['member_id']}" base="public"}' title='{$this->lang->words['view_dname_history']}'>{parse replacement="display_name"} {$this->lang->words['display_name_history']}</a></li>
+    </if>
+  </ul>
+</div>
+<if test="ourReputation:|:$this->settings['reputation_enabled'] && $this->settings['reputation_show_profile']">
+<div class='ipsPad'>
+<if test="RepPositive:|:$seller['pp_reputation_points'] > 0">
+<div class='reputation positive'>
+</if>
+<if test="RepNegative:|:$seller['pp_reputation_points'] < 0">
+<div class='reputation negative'>
+  </if>
+  <if test="RepZero:|:$seller['pp_reputation_points'] == 0">
+  <div class='reputation zero'>
+    </if>
+    <span class='number'>{$this->lang->words['m_reputation']} {$seller['pp_reputation_points']}</span>
+     </div>
+</div>     
+  </if>
+</div>]]></template_content>
+      <template_name>seller_info</template_name>
+      <template_data>$seller, $item</template_data>
+      <template_updated>1325112960</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_classifieds</template_group>
+      <template_content><![CDATA[<li class="ipsField">
+            <label class="ipsField_title" for="custom-{$field['field_id']}">{$field['title']}<if test="$field['required'] == 1"> <span class="ipsForm_required">*</span></if></label>
+            <div class="ipsField_content"><textarea name="custom-{$field['field_id']}" id="custom-{$field['field_id']}" rows="4" cols="30">{$option}</textarea>
+            <if test="$field['description'] != ''"><span class="desc">{$field['description']}</span></if></div>
+            </li>]]></template_content>
+      <template_name>textareaFormField</template_name>
+      <template_data>$field</template_data>
+      <template_updated>1325112960</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_classifieds</template_group>
+      <template_content><![CDATA[<if test="$this->memberData['member_uploader'] == 'flash'">
+  <script type='text/javascript' src='{$this->settings['public_dir']}js/3rd_party/swfupload/swfupload.js'></script>
+  <script type='text/javascript' src='{$this->settings['public_dir']}js/3rd_party/swfupload/plugins/swfupload.swfobject.js'></script>
+  <script type='text/javascript' src='{$this->settings['public_dir']}js/3rd_party/swfupload/plugins/swfupload.cookies.js'></script>
+  <script type='text/javascript' src='{$this->settings['public_dir']}js/3rd_party/swfupload/plugins/swfupload.queue.js'></script>
+</if>
+<script type='text/javascript'>
+//<!#^#|CDATA|
+	ipb.lang['used_space'] = "{parse expression="sprintf( $this->lang->words['used_space_js'], "{$stats['max_single_upload_human']}" )"}";
+//|#^#]>
+</script>
+{parse js_module="attach"}
+<div class='ipsPad'>
+	<div id='attach_error_box' class='message error' style='display:none'></div>
+	<input type='file' id='nojs_attach_{$id}_1' class='input_upload' name='FILE_UPLOAD' tabindex='1' />
+	<input type='file' id='nojs_attach_{$id}_2' class='input_upload' name='FILE_UPLOAD' tabindex='1' />
+	
+	<ul id='attachments'><li style='display: none'></li></ul>
+	
+	<div class='attach_controls'>
+		<h2 class='ipsType_subtitle'>{$this->lang->words['attach_header']}</h2>
+		<span id='buttonPlaceholder'></span>
+		<input type='button' id='add_files_attach_{$id}' class='ipsType_small ipsButton_secondary attach_button' value='{$this->lang->words['attach_selected']}' style='display: none; clear: both' tabindex='-1' />
+		&nbsp;&nbsp;<span class='desc ipsType_small' id='space_info_attach_{$id}'>{parse expression="sprintf( $this->lang->words['used_space'], "{$stats['space_used_human']}", "{$stats['total_space_allowed_human']}", "{$stats['max_single_upload_human']}")"}</span>
+		<if test="!IN_ACP">
+			<p class='desc lighter ipsType_smaller' id='help_msg'>
+				<if test="flashuploadhelp:|:$this->memberData['member_uploader'] == 'flash'">
+					 {$this->lang->words['trouble_uploading']} <a href='#' data-switch='default' title='{$this->lang->words['switch']}' tabindex='1'>{$this->lang->words['switch_to_basic']}</a>
+				<else />
+					<a href='#' data-switch='flash' title='{$this->lang->words['switch']}' tabindex='-1'>{$this->lang->words['switch_to_advanced']}</a>
+				</if>
+			</p>
+		</if>
+	</div>
+	
+</div>
+<script type='text/javascript'>
+//<!#^#|CDATA|
+	// Show the button and info
+	$('add_files_attach_{$id}').show();
+	$('space_info_attach_{$id}').show();
+	var useType = 'simple';
+	var uploadURL = ipb.vars['base_url'] + "app=core&module=attach&section=attach&do=attachiFrame&attach_rel_module={$type}&attach_rel_id={$id}&attach_post_key={$post_key}&attach_id=attach_{$id}&fetch_all=1";
+	if( jimAuld.utils.flashsniffer.meetsMinVersion(9) && ( ipb.vars['swfupload_enabled'] && ipb.vars['use_swf_upload'] ) )
+	{
+		useType = 'swf';
+		var uploadURL = "{parse url="app=core&module=attach&section=attach&do=attach_upload_process&attach_rel_module={$type}&attach_rel_id={$id}&attach_post_key={$post_key}" base="public"}";
+		$('add_files_attach_{$id}').observe('mouseover', function(e){  } );
+	}
+	ipb.attach.template = "<li id='ali_[id]' class='attach_row' style='display: none'><div><h4 class='attach_name'>[name]</h4><p class='info'>[info]</p><span class='img_holder'></span><p class='progress_bar'><span style='width: 0%'>0%</span></p><p class='links'><a href='#' class='cancel delete' title='{$this->lang->words['attach_delete_title']}'>{$this->lang->words['attach_delete']}</a></p></div></li>";
+	document.observe('dom:loaded', function(){
+		ipb.attach.registerUploader( 'attach_{$id}', useType, 'attachments', {
+			'upload_url': uploadURL,
+			'attach_rel_module': "{$type}",
+			'attach_rel_id': "{$id}",
+			'attach_post_key': "{$post_key}",
+			'file_size_limit': "{$stats['max_single_upload']}"
+		} )});
+//|#^#]>
+</script>]]></template_content>
+      <template_name>uploadForm</template_name>
+      <template_data><![CDATA[$post_key="",$type="",$stats=array(),$id=0]]></template_data>
+      <template_updated>1325112960</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+  </templategroup>
+  <templategroup group="skin_classifieds_hooks">
+    <template>
+      <template_group>skin_classifieds_hooks</template_group>
+      <template_content><![CDATA[<li><a href='{$url}'>{$this->lang->words['cfds_manage_classifieds']}</a></li>]]></template_content>
+      <template_name>manage_link</template_name>
+      <template_data>$url</template_data>
+      <template_updated>1325112960</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_classifieds_hooks</template_group>
+      <template_content><![CDATA[<br />
+<h3 class='bar'>{$this->lang->words['cfds_random_ad']}</h3>
+  <div class="ipsBox_container ipsPad" style="text-align:center;">
+  	
+    <h4 class='ipsType_subtitle'><a href="{parse url="module=core&amp;do=view_item&amp;item_id={$item['item_id']}" template="view_item" seotitle="{$item['seo_title']}" base="publicWithApp"}">{$item['name']}</a></h4>
+    <p class='ipsType'>
+    <if test="typebadge:|:$item['show_badge'] == 1"><span class='ipsBadge ipsBadge_{$item['badge_color']}'>{$item['advert_type']}</span></if>
+	{$this->lang->words['cfds_by']} <a href='{parse url="showuser={$item['seller']['member_id']}" base="public" seotitle="{$item['seller']['members_seo_name']}" template="showuser"}'>{$item['seller']['members_display_name']}</a>{parse template="user_popup" group="global" params="$item['seller']['member_id'],$item['seller']['members_seo_name']"}</p>
+    <div style='position: relative; margin: 4px 0 12px 0;'>
+	 <a href="{parse url="module=core&amp;do=view_item&amp;item_id={$item['item_id']}" template="view_item" seotitle="{$item['seo_title']}" base="publicWithApp"}"><if test="$item['thumb_location']"> <img src="{$this->settings['upload_url']}/{$item['thumb_location']}" width="100" height="100" class="cfdsthumb" style="float:none; margin-top:4px;" />
+                <else />
+                <img src='{style_images_url}/classifieds/noimage.png' class="cfdsthumb" width="100" height="100" style="float:none; margin-top:4px;" /> </if></a>
+						<span class='ipsBadge ipsBadge_green priceBadge_sidebar'>
+						<if test="$item['price'] != '0.00' || !$item['zero_text']"> {parse expression="ipsRegistry::getClass('class_localization')->formatMoney( $item['price'], false )"}
+                            <else />
+                            {$item['zero_text']}                         
+                        </if>
+						</span>
+                    </div>
+            <p class='ipsType_small'>{$this->lang->words['cfds_expires']} - {parse time_until="$item['date_expiry']"}</p>
+                
+    </div>]]></template_content>
+      <template_name>randomAd</template_name>
+      <template_data>$item</template_data>
+      <template_updated>1325112960</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_classifieds_hooks</template_group>
+      <template_content><![CDATA[<div class='ipsSideBlock clearfix'>
+		<h3><img src='{$this->settings['img_url']}/classifieds/merchant.png' alt='{$this->lang->words['icon']}' /> {$this->lang->words['cfds_latest']}</h3>
+		<div class='_sbcollapsable'>
+		<ul class='ipsList_withminiphoto'>
+			<if test="latestclassifieds:|:is_array( $items ) && count( $items )">
+				{parse striping="latest_classifieds" classes="row1,row2 altrow"}
+				<foreach loop="latest_classifieds_hook:$items as $item">
+				<li class='hentry {parse striping="latest_classifieds"}'>
+							<if test="$item['member']['member_id']">
+				<a href='{parse url="showuser={$item['member']['member_id']}" seotitle="{$item['member']['members_seo_name']}" template="showuser" base="public"}' title='{$this->lang->words['view_profile']}' class='ipsUserPhotoLink'>
+			</if>
+			<img src='{$item['member']['pp_thumb_photo']}' alt="{parse expression="sprintf($this->lang->words['users_photo'],$item['member']['members_display_name'])"}" class='ipsUserPhoto ipsUserPhoto_mini left' />
+			<if test="$item['member']['member_id']">
+				</a>
+			</if>
+			<div class='list_content'>
+				<if test="$item['advert_type'] == 'wanted'"><span>{$this->lang->words['cfds_wanted']} </span></if><a href='{parse url="app=classifieds&amp;module=core&amp;do=view_item&amp;item_id={$item['item_id']}" template="view_item" seotitle="{$item['seo_title']}" base="public"}' rel='bookmark' title='{$this->lang->words['cfds_view_classified']}' class='ipsType_small'>{$item['name']}</a>
+				{$this->lang->words['cfds_by']} <address class="author vcard"><a class="url fn" href="{parse url="showuser={$item['member']['member_id']}" template="showuser" seotitle="{$item['member']['members_seo_name']}" base="public"}" title='{$this->lang->words['view_profile']}'>{$item['member']['members_display_name']}</a>{parse template="user_popup" group="global" params="$item['member']['member_id'], $item['member']['members_seo_name']"}</address><br />
+				<span class='date'>{$this->lang->words['cfds_expires']} - {parse time_until="$item['date_expiry']"}</span>
+				</div>
+				</li>
+				</foreach>
+			<else />
+				<li>{$this->lang->words['cfds_no_recent']}</li>
+			</if>
+		</ul>
+		</div>
+                <p style='margin:5px 0 5px 5px;'><a href="{parse url="app=classifieds&amp;module=listing&amp;do=cat" base="public"}" title="{$this->lang->words['cfds_add_item']}"><img src='{style_images_url}/add.png' /> {$this->lang->words['cfds_add_item']}</a></p>
+	</div>]]></template_content>
+      <template_name>sidebar_hook_latest</template_name>
+      <template_data>$items</template_data>
+      <template_updated>1325112960</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+  </templategroup>
+  <templategroup group="skin_classifieds_manage">
+    <template>
+      <template_group>skin_classifieds_manage</template_group>
+      <template_content><![CDATA[<div class='cfds_category_row {parse striping="items"}<if test="manageitemopen:|:!$item['open']"> moderated</if>' id='itemrow_{$item['item_id']}'>
+						<if test="catssthumb:|:$item['thumb_location']">
+							<a href='{parse url="app=classifieds&amp;module=core&amp;do=view_item&amp;item_id={$item['item_id']}" base="public" template="view_item" seotitle="{$item['seo_title']}"}' title='{$item['name']}'><img src="{$this->settings['upload_url']}/{$item['thumb_location']}" width="75" height="75" class='cfdsthumb' /></a>
+						<else />
+							<a href='{parse url="app=classifieds&amp;module=core&amp;do=view_item&amp;item_id={$item['item_id']}" base="public" template="view_item" seotitle="{$item['seo_title']}"}' title='{$item['name']}'><img src='{style_images_url}/classifieds/noimage.png' width="75" height="75" class='cfdsthumb' /></a>
+						</if>
+						
+						<div class='item_info right'>
+								<p class='ipsType_small'>
+								    {$this->lang->words['cfds_sort_views']} - {$item['views']}
+								</p>						
+							<if test="$item['expired'] == 0">
+								<p class='ipsType_small'>
+									{$this->lang->words['cfds_expires']} - {parse time_until="$item['date_expiry']"}
+								</p>
+							<else />	
+								<if test="$item['package_info']['max_renewals'] > $item['renewals']">
+	                                    <a href='{parse url="app=classifieds&amp;module=listing&amp;do=renew&amp;item_id={$item['item_id']}" base="public"}' class="ipsButton_secondary">{$this->lang->words['cfds_renew']}</a>
+	                            
+	                            <else />
+	                                {$this->lang->words['cfds_expired']}
+	                            </if>
+							</if>	                            
+										
+						</div>			
+						
+						<h3 class='ipsType_subtitle'>
+																
+								<span class='ipsBadge ipsBadge_green priceBadge'>
+										    {parse expression="ipsRegistry::getClass('class_localization')->formatMoney( $item['price'], false )"}
+								</span>
+							<a href='{parse url="app=classifieds&amp;module=core&amp;do=view_item&amp;item_id={$item['item_id']}" base="public" template="view_item" seotitle="{$item['seo_title']}"}' title='{$item['name']}'>{parse expression="IPSText::truncate( $item['name'], 40)"}</a>
+						</h3>
+						<span class='cat_name'> {$this->lang->words['cfds_in']} <a href="{parse url="module=core&amp;do=view_category&amp;category_id={$item['category_id']}" template="view_category" seotitle="{$item['catseo']}" base="publicWithApp"}">{$item['catname']}</a></span>
+						<if test="featuredbadge:|:$item['featured'] == 1"> <span class='ipsBadge ipsBadge_green right' style='margin-left:4px;'>{$this->lang->words['cfds_featured']}</span></if>
+						<if test="typebadge:|:$item['show_badge'] == 1"><span class='ipsBadge ipsBadge_{$item['badge_color']} right'>{$item['advert_type']}</span></if>
+						<br />
+						
+						{$this->lang->words['cfds_by']} {IPSMember::makeProfileLink($item['member']['members_display_name'], $item['member']['member_id'], $item['member']['members_seo_name'])}
+						
+						<if test="hasDescription:|:$item['description']">
+							<br /><br /><span class='desc'>{IPSText::truncate(strip_tags($item['description']) , $this->settings['classifieds_desc_trunc'])}</span>
+						</if>
+						<br style="clear:both;" />
+					</div>]]></template_content>
+      <template_name>item_row</template_name>
+      <template_data>$item</template_data>
+      <template_updated>1325112960</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_classifieds_manage</template_group>
+      <template_content><![CDATA[<ul class='topic_buttons'>
+<li><a href="{parse url="module=listing&amp;do=cat" base="publicWithApp"}" title="{$this->lang->words['cfds_add_item']}" class='ipsButton'><img src='{style_images_url}/add.png' /> {$this->lang->words['cfds_add_item']}</a></li>
+</ul>
+<h1 class='ipsType_pagetitle ipsPad'>{$this->lang->words['cfds_my_classifieds']}</h1>
+<div class='ipsBox'>
+	<div class='ipsLayout ipsLayout_withleft ipsLayout_smallleft ipsVerticalTabbed'>
+		{parse template="menu" group="classifieds_manage" params=""}		
+		<div class='ipsLayout_content ipsVerticalTabbed_content ipsBox_container'>
+		<div class='ipsPad'>{$pages}</div>
+			<div class='ipsPad clear'>
+			
+				<div id='cfds_category' class='ipsBox_container'>
+		            <if test="count($items)"> {parse striping="items" classes="row1,row2"}
+		                <foreach loop="items:$items as $item">	
+		                    {parse template="item_row" group="classifieds_manage" params="$item"}	
+		                </foreach>
+		                <else />
+			                <div class='no_messages'>
+								{$this->lang->words['cfds_no_items']}
+							</div>
+		            </if>
+		        </div>
+	        </div>
+		</div>
+	</div>
+	<br class='clear' />
+</div>]]></template_content>
+      <template_name>items</template_name>
+      <template_data>$items, $pages</template_data>
+      <template_updated>1325112960</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_classifieds_manage</template_group>
+      <template_content><![CDATA[<div class='ipsLayout_left ipsVerticalTabbed_tabs'>
+			<ul>
+				<li<if test="activeActive:|:$this->request['do'] == 'active' || $this->request['do'] == ''"> class='active'</if>><a href='{parse url="app=classifieds&amp;module=manage&amp;do=active" base="public"}'>{$this->lang->words['cfds_active_adverts']}</a></li>
+				<li<if test="expiredActive:|:$this->request['do'] == 'expired'"> class='active'</if>><a href='{parse url="app=classifieds&amp;module=manage&amp;do=expired" base="public"}'>{$this->lang->words['cfds_expired_adverts']}</a></li>
+			</ul>			
+		</div>]]></template_content>
+      <template_name>menu</template_name>
+      <template_data/>
+      <template_updated>1325112960</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+  </templategroup>
+</templates>

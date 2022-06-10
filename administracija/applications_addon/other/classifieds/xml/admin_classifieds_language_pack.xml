@@ -1,0 +1,1061 @@
+<?xml version="1.0" encoding="utf-8"?>
+<languageexport>
+  <languagegroup>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_types_badge_color</word_key>
+      <word_default>Badge Colour</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_types_form_name</word_key>
+      <word_default>Type Name</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_type_zero_text_desc</word_key>
+      <word_default>If an advertiser enters a zero value price what should be displayed? e.g. Free, Offers, By Negotiation</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_type_save_edit</word_key>
+      <word_default><![CDATA[Succesfully edited classifieds type - &#39;%s&#39;]]></word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_type_noid</word_key>
+      <word_default><![CDATA[This type doesn't exist.]]></word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_type_save_add</word_key>
+      <word_default><![CDATA[Succesfully added classifieds type - &#39;%s&#39;]]></word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_type_deleted</word_key>
+      <word_default>Type Deleted</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_type_management</word_key>
+      <word_default>Type Management</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_type_badmd5</word_key>
+      <word_default>You are not authorized to do that</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_type_badge_desc</word_key>
+      <word_default>Show a badge for this advert type in the advert listings?</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_type_added</word_key>
+      <word_default>Succesfully added type.</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_tools_button</word_key>
+      <word_default>Tools</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_set_name</word_key>
+      <word_default>Set Name</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_sure_q</word_key>
+      <word_default>Are you sure?</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_tool_rebuild_images</word_key>
+      <word_default>Rebuild Images</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_root</word_key>
+      <word_default>Root</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_select_fieldset</word_key>
+      <word_default>Select a Field Set</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_pricing</word_key>
+      <word_default>Listing Fees</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_price_no_nexus</word_key>
+      <word_default>You have specified a package price but IP.Nexus is not installed/enabled.</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_permissions</word_key>
+      <word_default>Permissions</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_packages_form_tbl_info</word_key>
+      <word_default>Package Information</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_packages_form_tax_class</word_key>
+      <word_default>Tax Class</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_packages_form_renewal_price</word_key>
+      <word_default>Renewal Price</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_packages_form_price</word_key>
+      <word_default>Price</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_packages_form_name</word_key>
+      <word_default>Package Name</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_packages_form_max_renewals</word_key>
+      <word_default><![CDATA[Maximum Number of Renewals <span class='desctext'>(Leave blank or enter 0 for no renewals)</span>]]></word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_packages_form_feature</word_key>
+      <word_default>Automatically feature adverts?</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_packages_form_duration</word_key>
+      <word_default>Advert Duration (In Days)</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_packages_form_active</word_key>
+      <word_default>Active?</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_packages_form_description</word_key>
+      <word_default>Description</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_package_tax_desc</word_key>
+      <word_default>Specify the rate of tax (if any) that should be charged for adverts added under this package. Tax classes can be defined in your IP.Nexus settings.</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_package_save_edit</word_key>
+      <word_default><![CDATA[Succesfully edited classifieds package - &#39;%s&#39;]]></word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_package_save_add</word_key>
+      <word_default><![CDATA[Succesfully added classifieds package - &#39;%s&#39;]]></word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_package_renewals_desc</word_key>
+      <word_default>How many times should the advertiser be allowed to re-list their advert?</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_package_price_format_desc</word_key>
+      <word_default>If item value is chosen, the price a user is charged will be dependent on the value of the item as defined below.</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_package_noid</word_key>
+      <word_default><![CDATA[This package doesn't exist.]]></word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_package_management</word_key>
+      <word_default>Package Management</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_package_group</word_key>
+      <word_default>Limit to member groups</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_package_group_desc</word_key>
+      <word_default>Leave blank to allow all current and future groups to use.</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_package_deleted</word_key>
+      <word_default>Succesfully deleted package</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_package_duration_desc</word_key>
+      <word_default>How long should an advert show before expiring?</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_package_feature_desc</word_key>
+      <word_default>All adverts added using this package will automatically show at the top of the category list.</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_package_added</word_key>
+      <word_default>Succesfully added package.</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_package_badmd5</word_key>
+      <word_default>You are not authorized to do that</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_overview</word_key>
+      <word_default>Overview</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_none</word_key>
+      <word_default>None</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_options</word_key>
+      <word_default>Options</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_no_types</word_key>
+      <word_default>There are no types</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_no_type_name</word_key>
+      <word_default>You must enter a type name.</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_no_subcats</word_key>
+      <word_default>There are no sub-categories</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_no_packages</word_key>
+      <word_default>There are no packages</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_no_package_name</word_key>
+      <word_default>You must enter a package name.</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_no_group_fields</word_key>
+      <word_default>There are no custom fields in this group.</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_no_globalfields</word_key>
+      <word_default>There are no global fields defined.</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_no_fieldsets</word_key>
+      <word_default>There are no custom field sets.</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_no_fieldset</word_key>
+      <word_default>No Fieldset</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_no_fields</word_key>
+      <word_default>There are no custom fields defined.</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_no_fieldgroup</word_key>
+      <word_default>No Field Group</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_no_field_groups</word_key>
+      <word_default>This field set is empty.</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_no_field</word_key>
+      <word_default>No Field</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_no_cat_name</word_key>
+      <word_default>You must enter a category name.</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_move_fields_q</word_key>
+      <word_default>Move this groups fields?</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_moderation</word_key>
+      <word_default>Moderation</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_move_cat_q</word_key>
+      <word_default>Move items and subcategories to...</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_manage_fields</word_key>
+      <word_default>Manage Custom Fields</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_invalid_price</word_key>
+      <word_default>Please enter a valid price</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_invalid_duration</word_key>
+      <word_default>Please enter a valid advert duration</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_info_manage_packages</word_key>
+      <word_default>Setting up packages allows you to define how much it costs your members to advertise. You can also specify how long an advert should show for and whether or not renewals are permitted.</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_info_add_field_set</word_key>
+      <word_default><![CDATA[Once you have created a field set, don't forget to edit you categories to apply it.]]></word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_info_fields</word_key>
+      <word_default>Global custom fields will show on all adverts. Alternatively (or in addition) you can define custom field sets which can then be applied individually on a per category basis.</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_globalfield_management</word_key>
+      <word_default>Manage Global Fields</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_fieldset_management</word_key>
+      <word_default>Manage Field Sets</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_fieldset_delete</word_key>
+      <word_default>Delete Field Set</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_fieldset_deleted</word_key>
+      <word_default>Field Set Deleted</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_fieldgroup_save_edit</word_key>
+      <word_default>Succesfully edited %s</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_field_title</word_key>
+      <word_default>Field Title</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_fieldgroup_save_add</word_key>
+      <word_default>Succesfully added %s</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_field_type</word_key>
+      <word_default>Type</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_field_settings</word_key>
+      <word_default>Field Settings</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_field_save_edit</word_key>
+      <word_default>Succesfully edited %s</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_field_save_add</word_key>
+      <word_default>Succesfully added %s</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_field_required_q</word_key>
+      <word_default>Required?</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_field_options_desc</word_key>
+      <word_default>Enter options, one per line.</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_field_group_other</word_key>
+      <word_default>Other</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_field_options</word_key>
+      <word_default>Options</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_field_group_name</word_key>
+      <word_default>Group Name</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_field_group_form_header</word_key>
+      <word_default>Group Info</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_field_group_deleted</word_key>
+      <word_default>Succesfully deleted field group</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_field_group_delete</word_key>
+      <word_default>Delete</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_field_edit</word_key>
+      <word_default>Edit</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_field_group</word_key>
+      <word_default>Field Group</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_field_description</word_key>
+      <word_default>Description</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_field_deleted</word_key>
+      <word_default>Field Deleted</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_field_active_q</word_key>
+      <word_default>Active?</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_field_delete</word_key>
+      <word_default>Delete</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_feature_access</word_key>
+      <word_default><![CDATA[Feature & Access Control]]></word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_empty_cat</word_key>
+      <word_default>Empty Category</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_editing_set</word_key>
+      <word_default>Editing Field Set</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_editing_field</word_key>
+      <word_default>Editing Field - %s</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_edit_type_title</word_key>
+      <word_default>Edit Type</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_edit_type</word_key>
+      <word_default>Edit Type</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_edit_time</word_key>
+      <word_default>Edit time restriction (in minutes)?</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_edit_time_desc</word_key>
+      <word_default><![CDATA[Specify a length of time after posting in which this group can edit their adverts.<br />Enter 0 or leave blank for no restriction.]]></word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_edit_package_title</word_key>
+      <word_default>Edit Package</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_edit_fieldset</word_key>
+      <word_default>Edit Field Set</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_edit_package</word_key>
+      <word_default>Edit Package</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_edit_fieldgroup_title</word_key>
+      <word_default>Editing Field Group - %s</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_edit_cat</word_key>
+      <word_default>Edit Category</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_edit_cat_title</word_key>
+      <word_default>Edit Category</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_delete_type_title</word_key>
+      <word_default>Deleting Type: %s</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_delete_package_q</word_key>
+      <word_default>Are you sure you want to delete this package?</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_delete_package_title</word_key>
+      <word_default>Deleting Package: %s</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_delete_type</word_key>
+      <word_default>Delete Type</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_delete_fieldset_title</word_key>
+      <word_default>Delete Field Set</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_delete_package</word_key>
+      <word_default>Delete Package</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_delete_fieldset_q</word_key>
+      <word_default>Are you sure you want to delete this field set?</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_delete_fieldset</word_key>
+      <word_default>Delete Field Set</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_delete_fieldgroup_title</word_key>
+      <word_default>Deleting Field Group - %s</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_delete_field_title</word_key>
+      <word_default>Deleting Field - %s</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_delete_cat_title</word_key>
+      <word_default>Deleting Category: %s</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_delete_field_q</word_key>
+      <word_default>Are you sure you want to delete this custom field?</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_delete_cat</word_key>
+      <word_default>Delete Category</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_custom_fields</word_key>
+      <word_default>Custom Fields</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_change_type_q</word_key>
+      <word_default>Change adverts currently set to this type to</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_cats_form_name</word_key>
+      <word_default>Category Name</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_cats_form_parent</word_key>
+      <word_default>Sub-Category Of</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_cats_form_tbl_cfields</word_key>
+      <word_default>Custom Fields</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_cats_tool_nodes</word_key>
+      <word_default>Rebuild Category Tree</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_cats_form_tbl_info</word_key>
+      <word_default>Category Information</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_cats_form_fieldset</word_key>
+      <word_default>Custom Field Set</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_cats_form_description</word_key>
+      <word_default>Description</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_category_management</word_key>
+      <word_default>Category Management</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_cat_type_desc</word_key>
+      <word_default>Leave blank to allow all current and future types to be used.</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_cat_save_subcat</word_key>
+      <word_default><![CDATA[You cannot set a category as a subcategory of own of it&#39;s own subcategories]]></word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_cat_save_edit</word_key>
+      <word_default><![CDATA[Succesfully edited classifieds category - &#39;%s&#39;]]></word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_cat_save_parent</word_key>
+      <word_default><![CDATA[You can't make a category a parent of itself.]]></word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_cat_save_add</word_key>
+      <word_default><![CDATA[Succesfully added classifieds category - &#39;%s&#39;]]></word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_cat_noid</word_key>
+      <word_default><![CDATA[This category doesn't exist.]]></word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_cat_empty_page_title</word_key>
+      <word_default>Emptying Category: %s</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_cat_empty_page_detail</word_key>
+      <word_default>You can elect to empty the category and move all items to another category, or to remove all items in the category you are emptying</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_cat_emptied_msg_nomove</word_key>
+      <word_default>The category has been emptied and the contents deleted</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_cat_deleted_msg_move</word_key>
+      <word_default><![CDATA[The category has been removed and it&#39;s contents moved to the selected category]]></word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_cat_deleted</word_key>
+      <word_default>Category Deleted</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_can_open_close</word_key>
+      <word_default>Can open/close OWN adverts?</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_cat_badmd5</word_key>
+      <word_default>You are not authorized to do that</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_can_moderate_desc</word_key>
+      <word_default>Allow this group to moderate classifieds adverts?</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_can_moderate</word_key>
+      <word_default>Can moderate adverts?</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_can_list</word_key>
+      <word_default>Can add adverts?</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_can_edit</word_key>
+      <word_default>Can edit OWN adverts?</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_basic</word_key>
+      <word_default>Basic</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_can_access</word_key>
+      <word_default>Can access classifieds?</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_attachments</word_key>
+      <word_default>Attachments</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_all</word_key>
+      <word_default>Root</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_advert_types</word_key>
+      <word_default>Advert Types</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_adding_set</word_key>
+      <word_default>Adding Field Set</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_adding_field</word_key>
+      <word_default>Adding Field</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_add_type</word_key>
+      <word_default>Add Type</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_add_type_title</word_key>
+      <word_default>Add Type</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_add_subcat</word_key>
+      <word_default>Add Sub-Category</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_add_package_title</word_key>
+      <word_default>Add Package</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_add_package</word_key>
+      <word_default>Add Package</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_add_group</word_key>
+      <word_default>Add Group</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_add_globalfield</word_key>
+      <word_default>Add Global Field</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_add_fieldset</word_key>
+      <word_default>Add Field Set</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_add_fieldgroup_title</word_key>
+      <word_default>Adding a Field Group</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_add_field</word_key>
+      <word_default>Add Field</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_add_cat</word_key>
+      <word_default>Add Category</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_add_cat_title</word_key>
+      <word_default>Add Category</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_types_form_tbl_info</word_key>
+      <word_default>Type Information</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_types_show_badge</word_key>
+      <word_default>Show Badge?</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_types_zero_text</word_key>
+      <word_default>Zero Value Text</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_upgrade_history</word_key>
+      <word_default>Upgrade History</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_upload_per_item</word_key>
+      <word_default>Maximum upload size for attachments per advert (in KB)?</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_upload_per_item_desc</word_key>
+      <word_default>Enter 0 to disable the per advert limit.  This number must be less than the total amount.</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_upload_size</word_key>
+      <word_default>Total upload size for attachments (in KB)?</word_default>
+    </lang>
+    <lang>
+      <word_app>classifieds</word_app>
+      <word_pack>admin_lang</word_pack>
+      <word_key>cfds_upload_size_desc</word_key>
+      <word_default>Enter -1 to disable uploads or enter 0 to disable the limit.</word_default>
+    </lang>
+  </languagegroup>
+</languageexport>

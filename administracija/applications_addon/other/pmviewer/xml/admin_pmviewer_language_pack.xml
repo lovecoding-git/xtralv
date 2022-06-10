@@ -1,0 +1,791 @@
+<?xml version="1.0" encoding="utf-8"?>
+<languageexport>
+  <languagegroup>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>pm_no_join_system</word_key>
+      <word_default>This is a system message.</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>pm_no_join_draft</word_key>
+      <word_default>This is a draft message.</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>pm_draft</word_key>
+      <word_default>Draft Message</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>pm_system</word_key>
+      <word_default>System Message</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>pm_no_permission</word_key>
+      <word_default>You do not have permission based on your current settings to access this page. Please adjust the PM Viewer settings and try again.</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>pm_attached_imgs</word_key>
+      <word_default>Attached image(s)</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>pm_attched_num_downloads</word_key>
+      <word_default>Number of downloads</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>pm_attched_thumbs</word_key>
+      <word_default>Attached thumbnail(s)</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>pm_attched_imgs</word_key>
+      <word_default>Attached file(s)</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>pm_attched_downloads</word_key>
+      <word_default>Download attachment</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>pm_attched_file</word_key>
+      <word_default>Attached File</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>pm_msg_too_short</word_key>
+      <word_default>You must enter a message larger than 3 characters.</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>pm_msg_edited</word_key>
+      <word_default>Message Edited</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>pm_attched_size</word_key>
+      <word_default>Size</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>pm_attched_img</word_key>
+      <word_default>Attached Image</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>pm_new_update_text</word_key>
+      <word_default>The latest version can be downloaded from %s here</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>pm_downloads</word_key>
+      <word_default>Downloads</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>pm_save</word_key>
+      <word_default>Save</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>pm_editing_message</word_key>
+      <word_default>Editing Message</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>pm_logs_empty</word_key>
+      <word_default>Delete All PM Viewer Logged Conversations</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>pm_logs_empty_desc</word_key>
+      <word_default>This will delete all the conversations that have been deleted from the public side and logged by the PM Viewer</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>pm_logs_empty_warn</word_key>
+      <word_default>Are you sure you wish to continue, there is no way to restore these messages once deleted</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>pm_logs_empty_confirm</word_key>
+      <word_default>Confirm deletion of all PM Viewer logs</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>pm_keyword_confirm_head</word_key>
+      <word_default>Confirm permission to prune old conversations</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>pm_all_unhidden</word_key>
+      <word_default>All messages unhidden</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>pm_logs_emptied</word_key>
+      <word_default>Emptied the PM Viewer log tables</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>pm_location</word_key>
+      <word_default>Location:</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>sent_time</word_key>
+      <word_default>Sent Date</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>pm_deleted_member</word_key>
+      <word_default>Deleted Member</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>pm_interests</word_key>
+      <word_default>Interests:</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>no_topics_with_id</word_key>
+      <word_default>Sorry we cannot find any conversations with the ID specified.</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>read</word_key>
+      <word_default>Read Message</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>author</word_key>
+      <word_default>Message Author</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>pm_posted</word_key>
+      <word_default>Posted</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>not_valid_post_id</word_key>
+      <word_default>Sorry we cannot find any posts with the ID specified.</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>sent</word_key>
+      <word_default>Sent</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>poster</word_key>
+      <word_default>Author</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>convo_topic</word_key>
+      <word_default><![CDATA[Member's Conversation Topic]]></word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>was_starter</word_key>
+      <word_default>and was starter</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>member_name</word_key>
+      <word_default>Member Name</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>status</word_key>
+      <word_default>Status</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>last_read</word_key>
+      <word_default>Last Read</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>blocked</word_key>
+      <word_default>Blocked</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>other</word_key>
+      <word_default>other</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>left_convo</word_key>
+      <word_default>Left</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>members_in</word_key>
+      <word_default>Members In Conversation</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>and</word_key>
+      <word_default>and</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>no_convos</word_key>
+      <word_default>Sorry we could not find any conversations.</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>others</word_key>
+      <word_default>others</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>view_last</word_key>
+      <word_default>View Last Message</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>last_message</word_key>
+      <word_default>Last Message</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>to</word_key>
+      <word_default>To</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>replies</word_key>
+      <word_default>Replies</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>mod_title</word_key>
+      <word_default>(SN) PM Viewer</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>starter</word_key>
+      <word_default>Starter</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>overview_title</word_key>
+      <word_default><![CDATA[Member's Conversations]]></word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>ok_to_hide</word_key>
+      <word_default>PLEASE CONFIRM: Ok to proceed with hide?</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>topic</word_key>
+      <word_default>Topic Subject</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>pm_search</word_key>
+      <word_default>Search</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>pm_nothing_searched</word_key>
+      <word_default>You must enter something to search by. Please try again.</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>pm_starter_recipient</word_key>
+      <word_default>Sorry you must select either the starter or primary recipient field to check.</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>pm_no_matches</word_key>
+      <word_default>No matches.</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>pm_no_difference</word_key>
+      <word_default>Sorry the groups you have selected to hide and show are identical.</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>pm_no_group</word_key>
+      <word_default>Sorry you must select a group to view messages for.</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>pm_hidden</word_key>
+      <word_default>Sorry the conversation you are trying to view has been hidden.</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>pm_search_exact</word_key>
+      <word_default>Is exactly</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>pm_no_boxes</word_key>
+      <word_default>Sorry, you need to select something to hide.</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>pm_settings</word_key>
+      <word_default>Edit settings</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>pm_search_like</word_key>
+      <word_default>Contains</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>pm_search_main</word_key>
+      <word_default>Search Conversations</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>pm_search_where</word_key>
+      <word_default>Search where</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>pm_edit_member</word_key>
+      <word_default>Edit Member</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>pm_find_sent</word_key>
+      <word_default>Find All Messages Sent By This Member</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>pm_read_pm</word_key>
+      <word_default>Read PM</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>pm_find_to</word_key>
+      <word_default>Find All Messages Sent To This Member</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>pm_with_select</word_key>
+      <word_default>With Selected...</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>pm_delete_selected</word_key>
+      <word_default>Delete</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>pm_hide_selected</word_key>
+      <word_default>Hide</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>pm_hide_convo</word_key>
+      <word_default>Hide Conversation</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>pm_hide_all_pages</word_key>
+      <word_default>Hide All Pages</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>pm_go</word_key>
+      <word_default>Go</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>pm_days</word_key>
+      <word_default>Day(s)</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>pm_weeks</word_key>
+      <word_default>Week(s)</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>pm_months</word_key>
+      <word_default>Month(s)</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>pm_years</word_key>
+      <word_default>Year(s)</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>pm_all_conversations</word_key>
+      <word_default>All Conversations</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>pm_delete</word_key>
+      <word_default>Delete</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>pm_join_convo</word_key>
+      <word_default>Join Conversation</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>pm_join</word_key>
+      <word_default>Join</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>pm_delete_convo</word_key>
+      <word_default>Delete Conversation</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>pm_select_hidden</word_key>
+      <word_default>Conversation(s) Hidden</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>pm_convo_hidden</word_key>
+      <word_default>Conversation Hidden</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>pm_all_hidden</word_key>
+      <word_default>All Conversations Hidden</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>pm_no_to_delete</word_key>
+      <word_default>Sorry, you need to select something to delete.</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>pm_deleted_convos</word_key>
+      <word_default>Conversation(s) Deleted</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>pm_deleted_convo</word_key>
+      <word_default>This conversation has been deleted</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>pm_joined</word_key>
+      <word_default>Joined Conversation</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>pm_no_join</word_key>
+      <word_default>You cannot join this conversation</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>pm_edit_message</word_key>
+      <word_default>Edit</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>pm_unhide_all</word_key>
+      <word_default>Unhide All Conversations</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>pm_deleted</word_key>
+      <word_default>Deleted</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>pm_new_update</word_key>
+      <word_default>An update is available</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>pm_content_search</word_key>
+      <word_default>Message content</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>pm_unhide_desc</word_key>
+      <word_default>This tool will unhide EVERY conversation making them viewable to everyone using this PM Viewer</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>pm_show_no</word_key>
+      <word_default>Sorry, you have not selected to show messages for any groups</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>pm_unblock</word_key>
+      <word_default>Unblock</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>pm_block</word_key>
+      <word_default>Block</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>pm_no_topic_id_block</word_key>
+      <word_default>You must provide a conversation ID</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>pm_no_member_id_block</word_key>
+      <word_default>You must input the member id of the person you wish to block</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>pm_no_member_block</word_key>
+      <word_default>The member must be in the conversation before you block them from it</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>pm_no_block_starter</word_key>
+      <word_default>You cannot block the message starter</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>pm_block_complete</word_key>
+      <word_default>Member (un)blocked successfully</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>pm_no_block_member</word_key>
+      <word_default>You cannot block this member</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>pm_no_topic_id_found</word_key>
+      <word_default>A conversation id for this conversation has not been able to be generated</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>pm_no_multiple_topics</word_key>
+      <word_default>Your posts originate from more than one conversation. You may only delete from one conversation at a time</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>pm_no_delete_first</word_key>
+      <word_default>You cannot delete the first message of a conversation</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>pm_delete_post_complete</word_key>
+      <word_default>Post(s) deleted</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>pm_no_join_deleted</word_key>
+      <word_default>You cannot join a deleted conversation</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>topic_id</word_key>
+      <word_default>Topic ID</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>pm_pruneConvo_msg</word_key>
+      <word_default><![CDATA[You can use this tool to prune conversations older than the specified time, from the inboxes of the selected groups. Conversations will not be completley removed, if there are still active members who are not part of the selected groups.<br /><strong>Caution: Conversations will be DELETED, with no option to restore.</strong>]]></word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>pm_pruneConvo_title</word_key>
+      <word_default>Prune Old Conversations</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>pm_tools</word_key>
+      <word_default>Tools</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>pm_pruneConvo_option</word_key>
+      <word_default>Delete conversations older than %s %s from the inboxes of %s</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>pm_pruneConvo_confirm</word_key>
+      <word_default><![CDATA[Pruning conversations older than %s %s(s) from %s group(s), will affect <strong>%s</strong> conversations, although some conversations will not be completley removed, if there are still active members who are not part of the selected groups.]]></word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>pm_invalid_int</word_key>
+      <word_default>Invalid Interval</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>pm_invalid_int</word_key>
+      <word_default>Invalid Interval</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>pm_invalid_time</word_key>
+      <word_default>The time value entered is not valid</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>pm_invalid_groups</word_key>
+      <word_default>You must select at least one group to prune messages from</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>pm_convos_pruned</word_key>
+      <word_default>%s conversations processed (%s removed and %s still have participants)</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>pm_convos_finished</word_key>
+      <word_default>Finished pruning: %s conversations processed (%s removed and %s still have participants)</word_default>
+    </lang>
+    <lang>
+      <word_app>pmviewer</word_app>
+      <word_pack>admin_pmviewer</word_pack>
+      <word_key>pm_none_to_prune</word_key>
+      <word_default>Based on the time interval and groups selected; no conversations would be pruned.</word_default>
+    </lang>
+  </languagegroup>
+</languageexport>

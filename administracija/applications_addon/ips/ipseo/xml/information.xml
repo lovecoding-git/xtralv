@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<information>
+  <data>
+    <name>IP.SEO</name>
+    <public_name>IP.SEO</public_name>
+    <hide_tab>1</hide_tab>
+    <author>Invision Power Services, Inc.</author>
+    <description>Search engine optimisation addons for IP.Board.</description>
+    <disabledatinstall>0</disabledatinstall>
+    <ipskey>375917e2f297c08de757ffade771632d</ipskey>
+    <global_caches/>
+    <website/>
+    <update_check/>
+   <templategroups>
+        <template match="contains">skin_ipseo</template>
+    </templategroups>
+  </data>
+</information>

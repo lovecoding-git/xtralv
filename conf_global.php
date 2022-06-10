@@ -1,0 +1,26 @@
+<?php
+
+$INFO = array (
+  'sql_driver' => 'mysqli',
+  'sql_host' => 'localhost',
+  'sql_database' => 'reklamb_xtra',
+  'sql_user' => 'root',
+  'sql_pass' => '',
+  'sql_tbl_prefix' => '',
+  'sql_debug' => '0',
+  'sql_charset' => 'utf8mb4',
+  'board_start' => '1286559268',
+  'installed' => '1',
+  'php_ext' => 'php',
+  'safe_mode' => '0',
+  'board_url' => 'http://localhost',
+  'banned_group' => '5',
+  'admin_group' => '4',
+  'guest_group' => '2',
+  'member_group' => '3',
+  'auth_group' => '1',
+  'use_friendly_urls' => '1',
+  '_jsDebug' => '0',
+  'mysql_tbl_type' => 'MyISAM',
+  'sql_utf8mb4' => true,
+);

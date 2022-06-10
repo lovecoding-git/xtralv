@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hookexport>
+  <hookdata>
+    <config>
+      <hook_name>IP.SEO: Activity Tracking</hook_name>
+      <hook_desc>Tracks visits from users coming from search.</hook_desc>
+      <hook_author>Invision Power Services, Inc.</hook_author>
+      <hook_email>dcryer@invisionpower.com</hook_email>
+      <hook_website>http://www.invisionpower.com/</hook_website>
+      <hook_update_check/>
+      <hook_requirements><![CDATA[a:4:{s:20:"hook_ipb_version_min";i:0;s:20:"hook_ipb_version_max";i:0;s:20:"hook_php_version_min";s:1:"0";s:20:"hook_php_version_max";s:1:"0";}]]></hook_requirements>
+      <hook_version_human>1.0</hook_version_human>
+      <hook_version_long>10001</hook_version_long>
+      <hook_extra_data/>
+      <hook_key>ipseo_tracking</hook_key>
+    </config>
+  </hookdata>
+  <hookfiles>
+    <file>
+      <hook_file_real>ipseoTracking.php</hook_file_real>
+      <hook_type>templateHooks</hook_type>
+      <hook_classname>ipSeoTracking</hook_classname>
+      <hook_data><![CDATA[a:8:{s:12:"dataLocation";s:0:"";s:14:"libApplication";s:0:"";s:15:"classToOverload";s:0:"";s:9:"skinGroup";s:11:"skin_global";s:12:"skinFunction";s:14:"globalTemplate";s:4:"type";s:2:"if";s:2:"id";s:14:"showdebuglevel";s:8:"position";s:11:"pre.startif";}]]></hook_data>
+      <hooks_source><![CDATA[<?php
+
+class ipSeoTracking
+{
+	public $registry;
+
+	public function __construct()
+	{
+		require_once( IPSLib::getAppDir('ipseo') . '/sources/tracker.php' );
+		$this->tracker = new ipSeo_Tracker();		
+	}
+
+	public function getOutput()
+	{
+		$print = $this->tracker->trackVisit();
+		if($print)
+		{
+			return $print;
+		}
+		else
+		{
+			return '<!-- Visit Tracked -->';
+		}
+	}
+}]]></hooks_source>
+    </file>
+  </hookfiles>
+  <hookextras_settings/>
+  <hookextras_language/>
+  <hookextras_modules/>
+  <hookextras_help/>
+  <hookextras_templates/>
+  <hookextras_css/>
+  <hookextras_tasks/>
+  <hookextras_database_create/>
+  <hookextras_database_alter/>
+  <hookextras_database_update/>
+  <hookextras_database_insert/>
+</hookexport>

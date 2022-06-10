@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<css>
+  <cssfile>
+    <css_set_id>0</css_set_id>
+    <css_updated>1325112961</css_updated>
+    <css_group>ipb_classifieds</css_group>
+    <css_content>#category_view .icon {
+	min-width: 40px;
+	margin: 4px 5px 0 5px;
+}
+
+#item_view {
+	margin: 5px; border : 1px solid #b8b8b8;
+	position: relative;
+	background-color: #ffffff;
+	border: 1px solid #b8b8b8;
+}
+
+#item_view .panel {
+	padding: 10px;
+}
+
+#category_menu li {
+	padding: 4px;
+	background-color: #eaeff5;
+	border: 0 1px 1px 1px;
+	border-color: #b8b8b8;
+}
+
+#category_menu li {
+	padding: 4px;
+	background-color: #eaeff5;
+	border: 0 1px 1px 1px;
+	border-color: #b8b8b8;
+}
+
+.item_count {
+	font-size: 10px;
+	padding: 1px 4px;
+	font-weight: bold;
+	color: #ccc;
+	background: #333;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	margin: 0 5px;
+}
+
+.cfdsthumb {
+	float: left;
+	padding: 5px;
+}</css_content>
+    <css_position>1</css_position>
+    <css_app>classifieds</css_app>
+    <css_app_hide>1</css_app_hide>
+    <css_attributes><![CDATA[title="Main" media="screen"]]></css_attributes>
+    <css_modules/>
+    <css_removed>0</css_removed>
+    <css_master_key>mobile</css_master_key>
+  </cssfile>
+</css>

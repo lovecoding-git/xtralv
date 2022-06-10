@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<permissions>
+	<group>
+		<grouptitle>Viewing Private Conversations</grouptitle>
+		<items>
+			<item>
+				<key>pmviewer_download_attach</key>
+				<string>Can download and view attachments?</string>
+			</item>				
+		</items>
+	</group>
+</permissions>

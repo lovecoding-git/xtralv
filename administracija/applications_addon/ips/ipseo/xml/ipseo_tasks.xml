@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<export>
+  <group>
+    <row>
+      <task_id>39</task_id>
+      <task_title>Daily Cleanup</task_title>
+      <task_file>dailycleanup.php</task_file>
+      <task_next_run>1301072618</task_next_run>
+      <task_week_day>-1</task_week_day>
+      <task_month_day>-1</task_month_day>
+      <task_hour>0</task_hour>
+      <task_minute>0</task_minute>
+      <task_cronkey>d4465b83dbc1d6fc093e552c7c5b61e6</task_cronkey>
+      <task_log>0</task_log>
+      <task_description>Deletes old search visitor logs.</task_description>
+      <task_enabled>0</task_enabled>
+      <task_key>ipseo_daily_clean</task_key>
+      <task_safemode>0</task_safemode>
+      <task_locked>0</task_locked>
+      <task_application>ipseo</task_application>
+    </row>
+    <row>
+      <task_id>38</task_id>
+      <task_title>Sitemap Generator</task_title>
+      <task_file>sitemapgenerator.php</task_file>
+      <task_next_run>1301072618</task_next_run>
+      <task_week_day>-1</task_week_day>
+      <task_month_day>-1</task_month_day>
+      <task_hour>-1</task_hour>
+      <task_minute>0</task_minute>
+      <task_cronkey>3de9455654a33588ff02c9b22db37176</task_cronkey>
+      <task_log>1</task_log>
+      <task_description>Generates a sitemap for your forum.</task_description>
+      <task_enabled>1</task_enabled>
+      <task_key>ipseo_sitemap_generator</task_key>
+      <task_safemode>0</task_safemode>
+      <task_locked>0</task_locked>
+      <task_application>ipseo</task_application>
+    </row>
+  </group>
+</export>

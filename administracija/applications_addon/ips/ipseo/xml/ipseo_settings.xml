@@ -1,0 +1,762 @@
+<?xml version="1.0" encoding="utf-8"?>
+<settingexport>
+  <settinggroup>
+    <setting>
+      <conf_is_title>1</conf_is_title>
+      <conf_title_keyword>ipseo</conf_title_keyword>
+      <conf_title_title>IP.SEO</conf_title_title>
+      <conf_title_desc/>
+      <conf_title_tab>IPS Apps</conf_title_tab>
+      <conf_title_app>ipseo</conf_title_app>
+      <conf_title_noshow>0</conf_title_noshow>
+    </setting>
+    <setting>
+      <conf_title>Ping services</conf_title>
+      <conf_description>List any XML-RPC ping services you wish to notify when new content is created.</conf_description>
+      <conf_group>41</conf_group>
+      <conf_type>textarea</conf_type>
+      <conf_key>ipseo_ping_services</conf_key>
+      <conf_default>http://rpc.pingomatic.com/&#13;
+http://api.my.yahoo.com/RPC2&#13;
+http://api.moreover.com/ping&#13;
+</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>21</conf_position>
+      <conf_start_group>Ping Services</conf_start_group>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>ipseo</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Guest skin</conf_title>
+      <conf_description>Select a default skin set specifically for guests.</conf_description>
+      <conf_group>41</conf_group>
+      <conf_type>dropdown</conf_type>
+      <conf_key>ipseo_guest_skin</conf_key>
+      <conf_default>0</conf_default>
+      <conf_extra/>
+      <conf_evalphp><![CDATA[if($show == 1)
+{
+$dropdown = array(0 => array('0', 'No Guest Skin'));
+$dropdown = array_merge($dropdown, $this->registry->output->generateSkinDropdown());
+}]]></conf_evalphp>
+      <conf_protected>1</conf_protected>
+      <conf_position>22</conf_position>
+      <conf_start_group>Look and Feel</conf_start_group>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>ipseo</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Google Analytics code</conf_title>
+      <conf_description>Enter your Google Analytics code here, and it will be automatically inserted into all skins. It is not advised that you use this setting if you are not using the asynchronous tracking code.</conf_description>
+      <conf_group>41</conf_group>
+      <conf_type>textarea</conf_type>
+      <conf_key>ipseo_ga</conf_key>
+      <conf_default/>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>23</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords>ipseo, ip.seo, google, analytics, tracking, code</conf_keywords>
+      <conf_title_keyword>ipseo</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_is_title>1</conf_is_title>
+      <conf_title_keyword>sitemaps</conf_title_keyword>
+      <conf_title_title>Sitemap</conf_title_title>
+      <conf_title_desc><![CDATA[Control the generation of your forum's sitemap.]]></conf_title_desc>
+      <conf_title_tab>IPS Apps</conf_title_tab>
+      <conf_title_app>ipseo</conf_title_app>
+      <conf_title_noshow>0</conf_title_noshow>
+    </setting>
+    <setting>
+      <conf_title>Sitemap path</conf_title>
+      <conf_description><![CDATA[Path to where you want your sitemap. If you're using IP.Content, this may not be your forum root. <br /><br /><b>Note:</b> If your path does not start with a /, it will be treated as relative to your forum root. Leave blank for the forum root.]]></conf_description>
+      <conf_group>39</conf_group>
+      <conf_type>input</conf_type>
+      <conf_key>sitemap_path</conf_key>
+      <conf_default/>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>1</conf_position>
+      <conf_start_group>Sitemap Options</conf_start_group>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords>sietmap,path</conf_keywords>
+      <conf_title_keyword>sitemaps</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Sitemap URL</conf_title>
+      <conf_description><![CDATA[URL to your sitemap location, not including the filename. Leave blank to use board root URL.<br /><br />e.g. http://www.mysite.com/]]></conf_description>
+      <conf_group>39</conf_group>
+      <conf_type>input</conf_type>
+      <conf_key>sitemap_url</conf_key>
+      <conf_default/>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>2</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords>sitemap,url</conf_keywords>
+      <conf_title_keyword>sitemaps</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Ping search engines?</conf_title>
+      <conf_description>Do you want to inform search engines (Google, Bing, Yahoo, Ask and Moreover) when your sitemap is updated?</conf_description>
+      <conf_group>39</conf_group>
+      <conf_type>yes_no</conf_type>
+      <conf_key>sitemap_ping</conf_key>
+      <conf_default>1</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>3</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords>sitemap,ping,google,bing,yahoo</conf_keywords>
+      <conf_title_keyword>sitemaps</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Board Index</conf_title>
+      <conf_description>Priority value of the board index.</conf_description>
+      <conf_group>39</conf_group>
+      <conf_type>dropdown</conf_type>
+      <conf_key>sitemap_priority_index</conf_key>
+      <conf_default>1</conf_default>
+      <conf_extra>1=1&#13;
+0.9=0.9&#13;
+0.8=0.8&#13;
+0.7=0.7&#13;
+0.6=0.6&#13;
+0.5=0.5&#13;
+0.4=0.4&#13;
+0.3=0.3&#13;
+0.2=0.2&#13;
+0.1=0.1&#13;
+0=Do not include</conf_extra>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>4</conf_position>
+      <conf_start_group>IP.Board</conf_start_group>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords>sitemap,priority,index</conf_keywords>
+      <conf_title_keyword>sitemaps</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Forums</conf_title>
+      <conf_description>Priority value of forums and categories.</conf_description>
+      <conf_group>39</conf_group>
+      <conf_type>dropdown</conf_type>
+      <conf_key>sitemap_priority_forums</conf_key>
+      <conf_default>0.6</conf_default>
+      <conf_extra>1=1&#13;
+0.9=0.9&#13;
+0.8=0.8&#13;
+0.7=0.7&#13;
+0.6=0.6&#13;
+0.5=0.5&#13;
+0.4=0.4&#13;
+0.3=0.3&#13;
+0.2=0.2&#13;
+0.1=0.1&#13;
+0=Do not include</conf_extra>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>5</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords>sitemap,priority,forum</conf_keywords>
+      <conf_title_keyword>sitemaps</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Topics</conf_title>
+      <conf_description>Basic priority value of topics, would apply to a new topic, for example.</conf_description>
+      <conf_group>39</conf_group>
+      <conf_type>dropdown</conf_type>
+      <conf_key>sitemap_priority_topics</conf_key>
+      <conf_default>100</conf_default>
+      <conf_extra>100=Calculate automatically&#13;
+1=1&#13;
+0.9=0.9&#13;
+0.8=0.8&#13;
+0.7=0.7&#13;
+0.6=0.6&#13;
+0.5=0.5&#13;
+0.4=0.4&#13;
+0.3=0.3&#13;
+0.2=0.2&#13;
+0.1=0.1&#13;
+0=Do not include</conf_extra>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>6</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords>sitemap,priority,topic</conf_keywords>
+      <conf_title_keyword>sitemaps</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Number of topics</conf_title>
+      <conf_description><![CDATA[The number of recent topics to include in your generated sitemap.<br /><br /><strong>Important</strong>: You must disable the sitemap generator task and run as a cron job in order to include more than 10,000 topics.]]></conf_description>
+      <conf_group>39</conf_group>
+      <conf_type>dropdown</conf_type>
+      <conf_key>sitemap_recent_topics</conf_key>
+      <conf_default>1000</conf_default>
+      <conf_extra>50=50&#13;
+100=100&#13;
+500=500&#13;
+1000=1,000&#13;
+2500=2,500&#13;
+5000=5,000&#13;
+10000=10,000&#13;
+25000=25,000&#13;
+50000=50,000&#13;
+-1=All Topics</conf_extra>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>7</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords>sitemap,number,topic</conf_keywords>
+      <conf_title_keyword>sitemaps</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Include all pages in topics?</conf_title>
+      <conf_description>Do you want to include all pages in multi-page topics?</conf_description>
+      <conf_group>39</conf_group>
+      <conf_type>yes_no</conf_type>
+      <conf_key>sitemap_topic_pages</conf_key>
+      <conf_default>1</conf_default>
+      <conf_extra/>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>8</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords>sitemap,topic,pages</conf_keywords>
+      <conf_title_keyword>sitemaps</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Blog entries</conf_title>
+      <conf_description>Priority value of blog entries in IP.Blog.</conf_description>
+      <conf_group>39</conf_group>
+      <conf_type>dropdown</conf_type>
+      <conf_key>sitemap_priority_blog_entries</conf_key>
+      <conf_default>0.8</conf_default>
+      <conf_extra>1=1&#13;
+0.9=0.9&#13;
+0.8=0.8&#13;
+0.7=0.7&#13;
+0.6=0.6&#13;
+0.5=0.5&#13;
+0.4=0.4&#13;
+0.3=0.3&#13;
+0.2=0.2&#13;
+0.1=0.1&#13;
+0=Do not include</conf_extra>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>9</conf_position>
+      <conf_start_group>IP.Blog</conf_start_group>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords>sitemap,priority,blog,entries</conf_keywords>
+      <conf_title_keyword>sitemaps</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Blogs</conf_title>
+      <conf_description>Priority value of blogs in IP.Blog.</conf_description>
+      <conf_group>39</conf_group>
+      <conf_type>dropdown</conf_type>
+      <conf_key>sitemap_priority_blogs</conf_key>
+      <conf_default>0.6</conf_default>
+      <conf_extra>1=1&#13;
+0.9=0.9&#13;
+0.8=0.8&#13;
+0.7=0.7&#13;
+0.6=0.6&#13;
+0.5=0.5&#13;
+0.4=0.4&#13;
+0.3=0.3&#13;
+0.2=0.2&#13;
+0.1=0.1&#13;
+0=Do not include</conf_extra>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>10</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords>sitemap,priority,blog,blogs</conf_keywords>
+      <conf_title_keyword>sitemaps</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Number of entries</conf_title>
+      <conf_description>The number of blog entries to include in the sitemap.</conf_description>
+      <conf_group>39</conf_group>
+      <conf_type>dropdown</conf_type>
+      <conf_key>sitemap_count_blog_entries</conf_key>
+      <conf_default>1000</conf_default>
+      <conf_extra>50=50&#13;
+100=100&#13;
+500=500&#13;
+1000=1,000&#13;
+2500=2,500&#13;
+5000=5,000&#13;
+10000=10,000&#13;
+25000=25,000&#13;
+50000=50,000&#13;
+-1=All Entries</conf_extra>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>11</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords>sitemap,count,number,blog,entries</conf_keywords>
+      <conf_title_keyword>sitemaps</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Images</conf_title>
+      <conf_description>Priority value of images.</conf_description>
+      <conf_group>39</conf_group>
+      <conf_type>dropdown</conf_type>
+      <conf_key>sitemap_priority_gallery_images</conf_key>
+      <conf_default>0.6</conf_default>
+      <conf_extra>1=1&#13;
+0.9=0.9&#13;
+0.8=0.8&#13;
+0.7=0.7&#13;
+0.6=0.6&#13;
+0.5=0.5&#13;
+0.4=0.4&#13;
+0.3=0.3&#13;
+0.2=0.2&#13;
+0.1=0.1&#13;
+0=Do not include</conf_extra>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>12</conf_position>
+      <conf_start_group>IP.Gallery</conf_start_group>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords>ip.seo, ipseo, seo, sitemap, priority, gallery, images</conf_keywords>
+      <conf_title_keyword>sitemaps</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Albums</conf_title>
+      <conf_description>Priority value of albums.</conf_description>
+      <conf_group>39</conf_group>
+      <conf_type>dropdown</conf_type>
+      <conf_key>sitemap_priority_gallery_albums</conf_key>
+      <conf_default>0.4</conf_default>
+      <conf_extra>1=1&#13;
+0.9=0.9&#13;
+0.8=0.8&#13;
+0.7=0.7&#13;
+0.6=0.6&#13;
+0.5=0.5&#13;
+0.4=0.4&#13;
+0.3=0.3&#13;
+0.2=0.2&#13;
+0.1=0.1&#13;
+0=Do not include</conf_extra>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>13</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords>ip.seo, ipseo, seo, sitemap, priority, gallery, albums</conf_keywords>
+      <conf_title_keyword>sitemaps</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Number of Images</conf_title>
+      <conf_description>Number of images to include in the sitemap.</conf_description>
+      <conf_group>39</conf_group>
+      <conf_type>dropdown</conf_type>
+      <conf_key>sitemap_count_gallery_images</conf_key>
+      <conf_default>1000</conf_default>
+      <conf_extra>50=50&#13;
+100=100&#13;
+500=500&#13;
+1000=1,000&#13;
+2500=2,500&#13;
+5000=5,000&#13;
+10000=10,000&#13;
+25000=25,000&#13;
+50000=50,000&#13;
+-1=All Images</conf_extra>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>14</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords>ip.seo, ipseo, seo, sitemap, gallery, images, number, count</conf_keywords>
+      <conf_title_keyword>sitemaps</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Home page</conf_title>
+      <conf_description>Priority value of the IP.Content home page.</conf_description>
+      <conf_group>39</conf_group>
+      <conf_type>dropdown</conf_type>
+      <conf_key>sitemap_priority_ccs_index</conf_key>
+      <conf_default>1</conf_default>
+      <conf_extra>1=1&#13;
+0.9=0.9&#13;
+0.8=0.8&#13;
+0.7=0.7&#13;
+0.6=0.6&#13;
+0.5=0.5&#13;
+0.4=0.4&#13;
+0.3=0.3&#13;
+0.2=0.2&#13;
+0.1=0.1</conf_extra>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>15</conf_position>
+      <conf_start_group>IP.Content</conf_start_group>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords>sitemap,content,ip.content,homepage</conf_keywords>
+      <conf_title_keyword>sitemaps</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Other pages</conf_title>
+      <conf_description>Priority value of other pages in IP.Content.</conf_description>
+      <conf_group>39</conf_group>
+      <conf_type>dropdown</conf_type>
+      <conf_key>sitemap_priority_ccs_page</conf_key>
+      <conf_default>0.8</conf_default>
+      <conf_extra>1=1&#13;
+0.9=0.9&#13;
+0.8=0.8&#13;
+0.7=0.7&#13;
+0.6=0.6&#13;
+0.5=0.5&#13;
+0.4=0.4&#13;
+0.3=0.3&#13;
+0.2=0.2&#13;
+0.1=0.1</conf_extra>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>16</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords>sitemap,content,ip.content,page</conf_keywords>
+      <conf_title_keyword>sitemaps</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Database Records</conf_title>
+      <conf_description>Priority value for database records (including articles)</conf_description>
+      <conf_group>39</conf_group>
+      <conf_type>dropdown</conf_type>
+      <conf_key>sitemap_priority_content_records</conf_key>
+      <conf_default>0.6</conf_default>
+      <conf_extra>1=1&#13;
+0.9=0.9&#13;
+0.8=0.8&#13;
+0.7=0.7&#13;
+0.6=0.6&#13;
+0.5=0.5&#13;
+0.4=0.4&#13;
+0.3=0.3&#13;
+0.2=0.2&#13;
+0.1=0.1&#13;
+0=Do not include</conf_extra>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>17</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords>ip.seo, ipseo, seo, ip.content, content, priority, sitemap, records</conf_keywords>
+      <conf_title_keyword>sitemaps</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Database Categories</conf_title>
+      <conf_description>Priority value for database categories (including Articles categories)</conf_description>
+      <conf_group>39</conf_group>
+      <conf_type>dropdown</conf_type>
+      <conf_key>sitemap_priority_content_categories</conf_key>
+      <conf_default>0.4</conf_default>
+      <conf_extra>1=1&#13;
+0.9=0.9&#13;
+0.8=0.8&#13;
+0.7=0.7&#13;
+0.6=0.6&#13;
+0.5=0.5&#13;
+0.4=0.4&#13;
+0.3=0.3&#13;
+0.2=0.2&#13;
+0.1=0.1&#13;
+0=Do not include</conf_extra>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>18</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords>ip.seo, ipseo, seo, ip.content, content, priority, sitemap, categories</conf_keywords>
+      <conf_title_keyword>sitemaps</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Categories</conf_title>
+      <conf_description>Priority value for categories in IP.Downloads.</conf_description>
+      <conf_group>39</conf_group>
+      <conf_type>dropdown</conf_type>
+      <conf_key>sitemap_priority_downloads_categories</conf_key>
+      <conf_default>0.2</conf_default>
+      <conf_extra>1=1&#13;
+0.9=0.9&#13;
+0.8=0.8&#13;
+0.7=0.7&#13;
+0.6=0.6&#13;
+0.5=0.5&#13;
+0.4=0.4&#13;
+0.3=0.3&#13;
+0.2=0.2&#13;
+0.1=0.1&#13;
+0=Do not include</conf_extra>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>19</conf_position>
+      <conf_start_group>IP.Downloads</conf_start_group>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords>sitemap,priority,download,categories,category</conf_keywords>
+      <conf_title_keyword>sitemaps</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Files</conf_title>
+      <conf_description>Priority value for files in IP.Downloads.</conf_description>
+      <conf_group>39</conf_group>
+      <conf_type>dropdown</conf_type>
+      <conf_key>sitemap_priority_downloads_files</conf_key>
+      <conf_default>0.4</conf_default>
+      <conf_extra>1=1&#13;
+0.9=0.9&#13;
+0.8=0.8&#13;
+0.7=0.7&#13;
+0.6=0.6&#13;
+0.5=0.5&#13;
+0.4=0.4&#13;
+0.3=0.3&#13;
+0.2=0.2&#13;
+0.1=0.1&#13;
+0=Do not include</conf_extra>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>20</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords>sitemap,priority,downloads,file,files</conf_keywords>
+      <conf_title_keyword>sitemaps</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Number of files</conf_title>
+      <conf_description>Number of files to include in sitemap.</conf_description>
+      <conf_group>39</conf_group>
+      <conf_type>dropdown</conf_type>
+      <conf_key>sitemap_count_downloads_files</conf_key>
+      <conf_default>1000</conf_default>
+      <conf_extra>50=50&#13;
+100=100&#13;
+500=500&#13;
+1000=1,000&#13;
+2500=2,500&#13;
+5000=5,000&#13;
+10000=10,000&#13;
+25000=25,000&#13;
+50000=50,000</conf_extra>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>21</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords>sitemap,count,number,download,file</conf_keywords>
+      <conf_title_keyword>sitemaps</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Categories</conf_title>
+      <conf_description>Priority value for categories in IP.Nexus.</conf_description>
+      <conf_group>39</conf_group>
+      <conf_type>dropdown</conf_type>
+      <conf_key>sitemap_priority_nexus_categories</conf_key>
+      <conf_default>0.4</conf_default>
+      <conf_extra>1=1&#13;
+0.9=0.9&#13;
+0.8=0.8&#13;
+0.7=0.7&#13;
+0.6=0.6&#13;
+0.5=0.5&#13;
+0.4=0.4&#13;
+0.3=0.3&#13;
+0.2=0.2&#13;
+0.1=0.1&#13;
+0=Do not include</conf_extra>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>22</conf_position>
+      <conf_start_group>IP.Nexus</conf_start_group>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>sitemaps</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Products</conf_title>
+      <conf_description>Priority value for products in IP.Nexus.</conf_description>
+      <conf_group>39</conf_group>
+      <conf_type>dropdown</conf_type>
+      <conf_key>sitemap_priority_nexus_products</conf_key>
+      <conf_default>0.6</conf_default>
+      <conf_extra>1=1&#13;
+0.9=0.9&#13;
+0.8=0.8&#13;
+0.7=0.7&#13;
+0.6=0.6&#13;
+0.5=0.5&#13;
+0.4=0.4&#13;
+0.3=0.3&#13;
+0.2=0.2&#13;
+0.1=0.1&#13;
+0=Do not include</conf_extra>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>23</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>sitemaps</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>IP.Chat</conf_title>
+      <conf_description>Priority value of IP.Chat.	</conf_description>
+      <conf_group>39</conf_group>
+      <conf_type>dropdown</conf_type>
+      <conf_key>sitemap_priority_chat</conf_key>
+      <conf_default>0</conf_default>
+      <conf_extra>1=1&#13;
+0.9=0.9&#13;
+0.8=0.8&#13;
+0.7=0.7&#13;
+0.6=0.6&#13;
+0.5=0.5&#13;
+0.4=0.4&#13;
+0.3=0.3&#13;
+0.2=0.2&#13;
+0.1=0.1&#13;
+0=Do not include</conf_extra>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>24</conf_position>
+      <conf_start_group>IP.Chat</conf_start_group>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>sitemaps</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Events</conf_title>
+      <conf_description>Priority value for events in IP.Calendar.</conf_description>
+      <conf_group>39</conf_group>
+      <conf_type>dropdown</conf_type>
+      <conf_key>sitemap_priority_calendar</conf_key>
+      <conf_default>0.4</conf_default>
+      <conf_extra>1=1&#13;
+0.9=0.9&#13;
+0.8=0.8&#13;
+0.7=0.7&#13;
+0.6=0.6&#13;
+0.5=0.5&#13;
+0.4=0.4&#13;
+0.3=0.3&#13;
+0.2=0.2&#13;
+0.1=0.1&#13;
+0=Do not include</conf_extra>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>25</conf_position>
+      <conf_start_group>IP.Calendar</conf_start_group>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>sitemaps</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Number of past events</conf_title>
+      <conf_description><![CDATA[Number of <strong>past</strong> events to include in sitemap.]]></conf_description>
+      <conf_group>39</conf_group>
+      <conf_type>dropdown</conf_type>
+      <conf_key>sitemap_count_calendar_past</conf_key>
+      <conf_default>250</conf_default>
+      <conf_extra>50=50&#13;
+100=100&#13;
+250=250&#13;
+500=500&#13;
+1000=1,000&#13;
+2500=2,500&#13;
+5000=5,000&#13;
+10000=10,000&#13;
+25000=25,000&#13;
+50000=50,000</conf_extra>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>26</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>sitemaps</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+    <setting>
+      <conf_title>Number of future events</conf_title>
+      <conf_description><![CDATA[Number of <strong>future</strong> events to include in sitemap.]]></conf_description>
+      <conf_group>39</conf_group>
+      <conf_type>dropdown</conf_type>
+      <conf_key>sitemap_count_calendar_future</conf_key>
+      <conf_default>750</conf_default>
+      <conf_extra>50=50&#13;
+100=100&#13;
+500=500&#13;
+750=750&#13;
+1000=1,000&#13;
+2500=2,500&#13;
+5000=5,000&#13;
+10000=10,000&#13;
+25000=25,000&#13;
+50000=50,000</conf_extra>
+      <conf_evalphp/>
+      <conf_protected>1</conf_protected>
+      <conf_position>27</conf_position>
+      <conf_start_group/>
+      <conf_add_cache>1</conf_add_cache>
+      <conf_keywords/>
+      <conf_title_keyword>sitemaps</conf_title_keyword>
+      <conf_is_title>0</conf_is_title>
+    </setting>
+  </settinggroup>
+</settingexport>

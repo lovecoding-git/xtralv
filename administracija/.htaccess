@@ -1,0 +1,13 @@
+# order deny,allow
+# allow from 120.136.
+# allow from 173.234.
+# allow from 107.6.
+# allow from 80.81.33.159
+# allow from 78.84.58.194
+# allow from 88.135.147.208
+# allow from 91.247.72.34 # ESTERIA SMS
+# allow from 91.247.72.46 # ESTERIA SMS
+# allow from 217.199.115.18
+# allow from 80.255.224.34
+# allow from 80.255.238.34
+# deny from all

@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="utf-8"?>
+<templates application="classifieds" templategroups="a:1:{s:16:&quot;skin_classifieds&quot;;s:8:&quot;contains&quot;;}">
+  <templategroup group="skin_classifieds">
+    <template>
+      <template_group>skin_classifieds</template_group>
+      <template_content><![CDATA[<!--no data in this master skin-->]]></template_content>
+      <template_name>answer_form</template_name>
+      <template_data>$item, $question, $editor, $post_key</template_data>
+      <template_updated>1325112960</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_classifieds</template_group>
+      <template_content><![CDATA[<div class='panel'>
+                    <if test="$item['item_condition']">
+                        <p>{$this->lang->words['cfds_condition']} - {$item['item_condition']}</p>
+                    </if>
+                    {$this->lang->words['cfds_price']} -
+                        <if test="$item['price'] != '0.00'"> {parse expression="ipsRegistry::getClass('class_localization')->formatMoney( $item['price'], true )"}
+                            <else />
+                            <if test="forsaleorwanted:|:$item['advert_type'] == 'sale'">{$this->lang->words['cfds_free']}
+                                <else />
+                                {$this->lang->words['cfds_wanted_noprice']}</if>
+                        </if>
+                    <p>{$this->lang->words['cfds_expires']} - {parse time_until="$item['date_expiry']"}</p>
+</div>]]></template_content>
+      <template_name>basic_item_info</template_name>
+      <template_data>$item, $seller</template_data>
+      <template_updated>1325112961</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>mobile</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_classifieds</template_group>
+      <template_content><![CDATA[<!--no data in this master skin-->]]></template_content>
+      <template_name>bbCodeItem</template_name>
+      <template_data><![CDATA[$item=""]]></template_data>
+      <template_updated>1325112960</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_classifieds</template_group>
+      <template_content><![CDATA[<!--no data in this master skin-->]]></template_content>
+      <template_name>category_index</template_name>
+      <template_data>$categories</template_data>
+      <template_updated>1325112960</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_classifieds</template_group>
+      <template_content><![CDATA[<script type='text/javascript' src='{$this->settings['js_base_url']}js/ips.classifieds_mobile.js'></script>
+<div class='master_list' id='category_view'>
+<if test="count($categories)">
+	<div class='controls' id='cat-dropdown'>
+		<div class='buttons'>
+		<span class='button'>{$category['name']}</span>
+		</div>
+	</div>	
+</if>
+					<div class="category_list" id="category_menu">
+					<ul>
+          				<foreach loop="sub_categories:$categories as $category">
+				            <li class='row touch-row'>
+				            
+                		<span class='item_count' data-tooltip="{parse format_number="$category['item_count']"} {$this->lang->words['cfds_active_adverts']}">
+							{parse format_number="$category['item_count']"}
+						</span>
+										            
+				            <a href="{parse url="module=core&amp;do=view_category&amp;category_id={$category['category_id']}&amp;sort_key={$sort['key']}&amp;sort_order={$sort['order']}&amp;filter={$filter}" template="view_category" seotitle="{$category['seo_title']}" base="publicWithApp"}" data-tooltip="{$category['name']}" class='title'>{IPSText::truncate($category['name'], 35)}</a>
+
+            				</li>
+          				</foreach>
+        			</ul>
+				</div>        			
+        	<script type="text/javascript">
+				/* Prevent flash of header */
+				document.getElementById('category_menu').style.display = 'none';
+			</script>
+	<div >
+				<h3 class="title">{$this->lang->words['cfds_items_in']} {$category['name']}</h3>
+	</div>
+        			
+            <if test="count($items)"> {parse striping="items" classes="row1,row2"}
+                <foreach loop="items:$items as $item">
+                    {parse template="item_row" group="classifieds" params="$item"}
+                </foreach>
+                <else />
+	                <div class='no_messages'>
+						{$this->lang->words['cfds_no_items']}
+					</div>
+            </if>
+<div class='controls'>
+	<div class='buttons'>
+		{$pages}
+	</div>
+</div>
+
+</div>]]></template_content>
+      <template_name>category_view</template_name>
+      <template_data>$category, $categories, $items, $pages, $sort, $filter, $siblings</template_data>
+      <template_updated>1325112961</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>mobile</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_classifieds</template_group>
+      <template_content><![CDATA[<!--no data in this master skin-->]]></template_content>
+      <template_name>checkboxFormField</template_name>
+      <template_data>$field</template_data>
+      <template_updated>1325112960</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_classifieds</template_group>
+      <template_content><![CDATA[<!--no data in this master skin-->]]></template_content>
+      <template_name>chooseCategory</template_name>
+      <template_data><![CDATA[$form, $error='']]></template_data>
+      <template_updated>1325112960</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_classifieds</template_group>
+      <template_content><![CDATA[<!--no data in this master skin-->]]></template_content>
+      <template_name>delete_item_form</template_name>
+      <template_data>$item, $form</template_data>
+      <template_updated>1325112960</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_classifieds</template_group>
+      <template_content><![CDATA[<!--no data in this master skin-->]]></template_content>
+      <template_name>delete_question_form</template_name>
+      <template_data>$question, $form</template_data>
+      <template_updated>1325112960</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_classifieds</template_group>
+      <template_content><![CDATA[<!--no data in this master skin-->]]></template_content>
+      <template_name>dropdownFormField</template_name>
+      <template_data>$field</template_data>
+      <template_updated>1325112960</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_classifieds</template_group>
+      <template_content><![CDATA[<!--no data in this master skin-->]]></template_content>
+      <template_name>inputFormField</template_name>
+      <template_data>$field</template_data>
+      <template_updated>1325112960</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_classifieds</template_group>
+      <template_content><![CDATA[<!--no data in this master skin-->]]></template_content>
+      <template_name>item_attachments</template_name>
+      <template_data>$attachments, $item</template_data>
+      <template_updated>1325112960</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_classifieds</template_group>
+      <template_content><![CDATA[<div class='row touch-row' id="item-{$item['item_id']}">
+	<div class='icon'>
+						<if test="catssthumb:|:$item['thumb_location']">
+							<a href='{parse url="app=classifieds&amp;module=core&amp;do=view_item&amp;item_id={$item['item_id']}" base="public" template="view_item" seotitle="{$item['seo_title']}"}' title='{$item['name']}'><img src="{$this->settings['upload_url']}/{$item['thumb_location']}" width="35" height="35" /></a>
+						<else />
+							<a href='{parse url="app=classifieds&amp;module=core&amp;do=view_item&amp;item_id={$item['item_id']}" base="public" template="view_item" seotitle="{$item['seo_title']}"}' title='{$item['name']}'><img src='{style_images_url}/classifieds/noimage.png' width="35" height="35" /></a>
+						</if>
+	</div>
+	<div class='rowContent'>
+	
+		<a href="{parse url="app=classifieds&amp;module=core&amp;do=view_item&amp;item_id={$item['item_id']}" base="public" template="view_item" seotitle="{$item['seo_title']}"}' title='{$item['name']}" title='' class='title'>{IPSText::truncate($item['name'], 28)}</a>
+		<br />
+		<span class='desc'>
+			<if test="typebadge:|:$item['advert_type'] == 'wanted'"> <span class='ipsBadge ipsBadge_orange right'>{$this->lang->words['cfds_wanted']}</span> &middot; </if>
+			<if test="typebadge:|:$item['advert_type'] == 'exchange'"> <span class='ipsBadge ipsBadge_purple right'>{$this->lang->words['cfds_exchange']}</span> &middot; </if>
+			<if test="$item['price'] != '0.00'"> {parse expression="ipsRegistry::getClass('class_localization')->formatMoney( $item['price'], false )"}
+	        <else />
+	        <if test="forsaleorwanted:|:$item['advert_type'] == 'sale'">{$this->lang->words['cfds_free']}<else />{$this->lang->words['cfds_wanted_noprice']}</if> </if>
+		</span>
+	</div>
+</div>]]></template_content>
+      <template_name>item_row</template_name>
+      <template_data>$item</template_data>
+      <template_updated>1325112961</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>mobile</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_classifieds</template_group>
+      <template_content><![CDATA[<h2>
+					<if test="$item['advert_type'] == 'sale'">{$this->lang->words['cfds_sale']}</if>
+        			<if test="$item['advert_type'] == 'wanted'">{$this->lang->words['cfds_wanted']}</if>
+					<if test="$item['advert_type'] == 'exchange'">{$this->lang->words['cfds_exchange']}</if> &middot; {parse expression="IPSText::truncate( $item['name'], 45 )"}
+	</h2>
+	<div id='item_view'>                        	              
+                {parse template="basic_item_info" group="classifieds" params="$item, $seller"}                                       
+					<div id="panel_overview" class="panel">
+	                    <div class='clear'><if test="catssthumb:|:$item['thumb_location']">
+							<img src="{$this->settings['upload_url']}/{$item['thumb_location']}" width="75" height="75" class='cfdsthumb' />
+						</if> {$item['description']} </div>
+						
+					</div>
+					
+					<if test="!empty($item['fields'][0]['fields'])">
+					  
+					      <foreach loop="grouploop:$item['fields'] as $group">
+					        <if test="!empty($group['fields'])">
+							        <h3 class="bar altbar">{$group['name']}</h3>
+							        <div class='panel'>
+							        <ul class="ipsList_data clearfix">
+					            <foreach loop="fieldinnerloop:$group['fields'] as $field">
+							            
+									<li>{$field['title']} &middot; <if test="fieldtypetest:|:$field['type'] == 'checkbox'">
+					                  <if test="yesno:|:$field['value'] == '1'">{$this->lang->words['cfds_yes']}
+					                    <else />
+					                    {$this->lang->words['cfds_no']}</if>
+					                    <else />
+					                     {$field['value']}
+					                </if>
+							        </li>
+					                
+					            </foreach> 
+								</ul>
+								</div>
+					        </if>
+					      </foreach>
+					</if>
+             <br class='clear' />   
+</div>]]></template_content>
+      <template_name>item_view</template_name>
+      <template_data>$item, $seller, $attachments, $questions, $watched</template_data>
+      <template_updated>1325112961</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>mobile</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_classifieds</template_group>
+      <template_content><![CDATA[<if test="cfdsInstalled:|:ipsRegistry::$applications['classifieds']['app_enabled']">
+	<li id='nav_cfds'><a href='{parse url="app=classifieds" seotitle="false" base="public"}' title='{$this->lang->words['go_to_prefix']}{IPSLib::getAppTitle( 'classifieds' )}'><span class='icon'></span>{IPSLib::getAppTitle( 'classifieds' )}</a></li>
+</if>]]></template_content>
+      <template_name>launcher_link</template_name>
+      <template_data/>
+      <template_updated>1325112961</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>mobile</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_classifieds</template_group>
+      <template_content><![CDATA[<!--no data in this master skin-->]]></template_content>
+      <template_name>listing_form</template_name>
+      <template_data>$item, $form, $type, $editor, $fields, $post_key, $packages, $category</template_data>
+      <template_updated>1325112960</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_classifieds</template_group>
+      <template_content><![CDATA[<!--no data in this master skin-->]]></template_content>
+      <template_name>listingPrice</template_name>
+      <template_data>$price</template_data>
+      <template_updated>1325112960</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_classifieds</template_group>
+      <template_content><![CDATA[<!--no data in this master skin-->]]></template_content>
+      <template_name>moderateSelectCategory</template_name>
+      <template_data>$categories</template_data>
+      <template_updated>1325112960</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_classifieds</template_group>
+      <template_content><![CDATA[<!--no data in this master skin-->]]></template_content>
+      <template_name>profileBlock</template_name>
+      <template_data>$items=array()</template_data>
+      <template_updated>1325112960</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_classifieds</template_group>
+      <template_content><![CDATA[<!--no data in this master skin-->]]></template_content>
+      <template_name>question_form</template_name>
+      <template_data>$item, $editor, $post_key</template_data>
+      <template_updated>1325112960</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_classifieds</template_group>
+      <template_content><![CDATA[<!--no data in this master skin-->]]></template_content>
+      <template_name>radioFormField</template_name>
+      <template_data>$field</template_data>
+      <template_updated>1325112960</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_classifieds</template_group>
+      <template_content><![CDATA[<!--no data in this master skin-->]]></template_content>
+      <template_name>rateCard</template_name>
+      <template_data>$package</template_data>
+      <template_updated>1325112960</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_classifieds</template_group>
+      <template_content><![CDATA[<!--no data in this master skin-->]]></template_content>
+      <template_name>renewal_form</template_name>
+      <template_data>$item, $form</template_data>
+      <template_updated>1325112960</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_classifieds</template_group>
+      <template_content><![CDATA[<!--no data in this master skin-->]]></template_content>
+      <template_name>search_row</template_name>
+      <template_data>$item</template_data>
+      <template_updated>1325112960</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_classifieds</template_group>
+      <template_content><![CDATA[<!--no data in this master skin-->]]></template_content>
+      <template_name>seller_info</template_name>
+      <template_data>$seller, $item</template_data>
+      <template_updated>1325112960</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_classifieds</template_group>
+      <template_content><![CDATA[<!--no data in this master skin-->]]></template_content>
+      <template_name>textareaFormField</template_name>
+      <template_data>$field</template_data>
+      <template_updated>1325112960</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_classifieds</template_group>
+      <template_content><![CDATA[<!--no data in this master skin-->]]></template_content>
+      <template_name>uploadForm</template_name>
+      <template_data><![CDATA[$post_key="",$type="",$stats=array(),$id=0]]></template_data>
+      <template_updated>1325112960</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+  </templategroup>
+  <templategroup group="skin_classifieds_hooks">
+    <template>
+      <template_group>skin_classifieds_hooks</template_group>
+      <template_content><![CDATA[<!--no data in this master skin-->]]></template_content>
+      <template_name>manage_link</template_name>
+      <template_data>$url</template_data>
+      <template_updated>1325112960</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_classifieds_hooks</template_group>
+      <template_content><![CDATA[<!--no data in this master skin-->]]></template_content>
+      <template_name>randomAd</template_name>
+      <template_data>$item</template_data>
+      <template_updated>1325112960</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_classifieds_hooks</template_group>
+      <template_content><![CDATA[<!--no data in this master skin-->]]></template_content>
+      <template_name>sidebar_hook_latest</template_name>
+      <template_data>$items</template_data>
+      <template_updated>1325112960</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+  </templategroup>
+  <templategroup group="skin_classifieds_manage">
+    <template>
+      <template_group>skin_classifieds_manage</template_group>
+      <template_content><![CDATA[<!--no data in this master skin-->]]></template_content>
+      <template_name>item_row</template_name>
+      <template_data>$item</template_data>
+      <template_updated>1325112960</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_classifieds_manage</template_group>
+      <template_content><![CDATA[<!--no data in this master skin-->]]></template_content>
+      <template_name>items</template_name>
+      <template_data>$items, $pages</template_data>
+      <template_updated>1325112960</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+    <template>
+      <template_group>skin_classifieds_manage</template_group>
+      <template_content><![CDATA[<!--no data in this master skin-->]]></template_content>
+      <template_name>menu</template_name>
+      <template_data/>
+      <template_updated>1325112960</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+  </templategroup>
+</templates>

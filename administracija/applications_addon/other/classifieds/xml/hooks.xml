@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hooks>
+	<hook>
+		<file>latest_ads.xml</file>
+		<enabled>1</enabled>
+	</hook>
+	<hook>
+		<file>cfds_launcher_link.xml</file>
+		<enabled>1</enabled>
+	</hook>
+	<hook>
+		<file>cfds_manage_link.xml</file>
+		<enabled>1</enabled>
+	</hook>
+	<hook>
+		<file>cfds_random_ad.xml</file>
+		<enabled>1</enabled>
+	</hook>	
+</hooks>

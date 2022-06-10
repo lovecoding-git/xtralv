@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<templates application="ipseo" templategroups="a:1:{s:10:&quot;skin_ipseo&quot;;s:8:&quot;contains&quot;;}">
+  <templategroup group="skin_ipseo">
+    <template>
+      <template_group>skin_ipseo</template_group>
+      <template_content><![CDATA[<div class='ipsBox ipsPad'>
+	
+	<h2 class='ipsType_subtitle left'>{$this->lang->words['meta_editor_title']}</h2>
+	
+	<span class='right'><a href='{parse url="app=ipseo&module=meta&section=meta&do=end" base="public"}' class='ipsButton_secondary'>{$this->lang->words['meta_editor_done']}</a></span>
+	
+	<br class='clear' />
+	
+	<form action='{parse url="app=ipseo&module=meta&section=meta&do=save" base="public"}' method='post'>
+		<input type='hidden' name='url' value='{$url}' />
+		<table class='ipb_table'>
+			<tr>
+				<th>{$this->lang->words['meta_tag_title']}<br /><span class='desc'>{$this->lang->words['meta_tag_title_desc']}</span></th>
+				<th>{$this->lang->words['meta_tag_content']}</th>
+			</tr>
+			<foreach loop="$tags as $k => $v">
+				<if test="$k != 'identifier-url'">
+					<tr>
+						<td><input name='meta-tags-title[]' value='{$k}' /></td>
+						<td><input name='meta-tags-content[]' value='{$v}' /></td>
+					</tr>
+					<php>$_metaTagId++;</php>
+				</if>
+			</foreach>
+			<tr>
+				<td><input name='meta-tags-title[]' /></td>
+				<td><input name='meta-tags-content[]' /></td>
+			</tr>
+			<tr>
+				<td colspan='2'>
+					<input type='submit' class='ipsButton_secondary clickable' value='{$this->lang->words['meta_save']}' />
+				</td>
+			</tr>
+		</table>
+	</form>
+	
+</div>]]></template_content>
+      <template_name>metaEditor</template_name>
+      <template_data>$tags, $url</template_data>
+      <template_updated>1317131579</template_updated>
+      <template_removable>0</template_removable>
+      <template_user_added>0</template_user_added>
+      <template_user_edited>0</template_user_edited>
+      <template_master_key>root</template_master_key>
+    </template>
+  </templategroup>
+</templates>

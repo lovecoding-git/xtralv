@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<css>
+  <cssfile>
+    <css_set_id>0</css_set_id>
+    <css_updated>1326126082</css_updated>
+    <css_group>ipshoutbox</css_group>
+    <css_content>table.shoutbox_table tr td {&#13;
+	padding: 4px;&#13;
+}&#13;
+&#13;
+.shoutbox_disabled {&#13;
+	font-style: italic;&#13;
+	color: red;&#13;
+}&#13;
+&#13;
+#shoutbox-smilies-button_menucontent {&#13;
+	border: 1px solid #d5dde5;&#13;
+}&#13;
+&#13;
+#shoutbox-smilies-button_menucontent td {&#13;
+	width: 20%;&#13;
+}&#13;
+&#13;
+/* Sidebar hook */&#13;
+#shoutbox_sidebar table.ipb_table.shoutbox_table {&#13;
+	border-bottom: 0;&#13;
+	margin: -5px 0;&#13;
+}&#13;
+&#13;
+#shoutbox_sidebar table.ipb_table.shoutbox_table tr td {&#13;
+	padding: 4px;&#13;
+}&#13;
+&#13;
+.sidebar_shout {&#13;
+	padding: 0;&#13;
+	border-bottom: 1px solid #d5dde5;&#13;
+}&#13;
+&#13;
+.sidebar_shout_div {&#13;
+	padding: 5px;&#13;
+	border-bottom: 1px dashed #d5dde5;&#13;
+}&#13;
+&#13;
+#shoutbox-shouts-table {&#13;
+	border: 1px solid #d5dde5;&#13;
+}&#13;
+&#13;
+#shoutbox-shouts-table .row2 td {&#13;
+	border-bottom: 1px solid #d5dde5;&#13;
+	vertical-align: middle;&#13;
+}&#13;
+&#13;
+#shouts-global-resizer,&#13;
+#shouts-resizer {&#13;
+	background-color: #DBE2EC;&#13;
+	cursor:n-resize;&#13;
+	height:6px;&#13;
+}</css_content>
+    <css_position>5</css_position>
+    <css_app>shoutbox</css_app>
+    <css_app_hide>0</css_app_hide>
+    <css_attributes><![CDATA[title="Main" media="screen"]]></css_attributes>
+    <css_modules/>
+    <css_removed>0</css_removed>
+    <css_master_key>root</css_master_key>
+  </cssfile>
+</css>

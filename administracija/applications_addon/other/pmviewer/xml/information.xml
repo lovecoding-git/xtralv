@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<information>
+  <data>
+    <name>(SN) PM Viewer</name>
+    <public_name>Disabled</public_name>
+    <hide_tab>1</hide_tab>
+    <author>signet51</author>
+    <description>Read and delete members private conversations.</description>
+    <disabledatinstall>0</disabledatinstall>
+    <global_caches/>
+    <website>http://community.invisionpower.com/files/file/4494-sn32-pm-viewer/</website>
+    <update_check>http://signet51.co.uk/index.php?</update_check>
+    <templategroups/>
+  </data>
+</information>

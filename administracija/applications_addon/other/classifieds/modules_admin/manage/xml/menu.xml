@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu>
+    <tabitems>
+        <item>
+            <title>Categories</title>
+            <subitems>
+                <subitem>
+                    <subitemtitle>Manage Categories</subitemtitle>
+                    <subsection>categories</subsection>
+                    <subitemurl>do=managecategories</subitemurl>
+                    <subitemrolekey></subitemrolekey>
+                    <subisredirect>0</subisredirect>
+                </subitem>
+            </subitems>
+        </item>
+        <item>
+            <title>Manage Custom Fields</title>
+            <subitems>
+                <subitem>
+                    <subitemtitle>Manage Custom Fields</subitemtitle>
+                    <subsection>fields</subsection>
+                    <subitemurl>do=managesets</subitemurl>
+                    <subitemrolekey></subitemrolekey>
+                    <subisredirect>0</subisredirect>
+                </subitem>
+            </subitems>
+        </item>
+        <item>
+            <title>Manage Packages</title>
+            <subitems>
+                <subitem>
+                    <subitemtitle>Manage Packages</subitemtitle>
+                    <subsection>packages</subsection>
+                    <subitemurl>do=managepackagess</subitemurl>
+                    <subitemrolekey></subitemrolekey>
+                    <subisredirect>0</subisredirect>
+                </subitem>
+            </subitems>
+        </item>
+        <item>
+            <title>Advert Types</title>
+            <subitems>
+                <subitem>
+                    <subitemtitle>Manage Advert Types</subitemtitle>
+                    <subsection>types</subsection>
+                    <subitemurl>do=types</subitemurl>
+                    <subitemrolekey></subitemrolekey>
+                    <subisredirect>0</subisredirect>
+                </subitem>
+            </subitems>
+        </item>        
+    </tabitems>
+
+</menu>

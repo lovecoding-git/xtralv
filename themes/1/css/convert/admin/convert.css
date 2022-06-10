@@ -1,0 +1,7 @@
+/* Make the reputation images NOT huge */
+#rep_like img,
+#rep_neutral img,
+#rep_positive img,
+#rep_negative img {
+	max-width: 50px;
+}

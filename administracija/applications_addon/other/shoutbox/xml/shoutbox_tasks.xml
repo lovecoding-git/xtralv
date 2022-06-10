@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<export>
+  <group>
+    <row>
+      <task_id>68</task_id>
+      <task_title>Prune Old Shouts</task_title>
+      <task_file>shoutbox_pruneshouts.php</task_file>
+      <task_next_run>1326157200</task_next_run>
+      <task_week_day>-1</task_week_day>
+      <task_month_day>-1</task_month_day>
+      <task_hour>1</task_hour>
+      <task_minute>0</task_minute>
+      <task_cronkey>20538abcad237abf4cf3a0cd4280b94b</task_cronkey>
+      <task_log>1</task_log>
+      <task_description>This task removes from Shoutbox shouts older than X days</task_description>
+      <task_enabled>1</task_enabled>
+      <task_key>shoutbox_pruneshouts</task_key>
+      <task_safemode>0</task_safemode>
+      <task_locked>0</task_locked>
+      <task_application>shoutbox</task_application>
+    </row>
+  </group>
+</export>
