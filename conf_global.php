@@ -2,10 +2,10 @@
 
 $INFO = array (
   'sql_driver' => 'mysqli',
-  'sql_host' => 'localhost',
+  'sql_host' => '137.184.133.41',
   'sql_database' => 'reklamb_xtra',
-  'sql_user' => 'root',
-  'sql_pass' => '',
+  'sql_user' => 'forge',
+  'sql_pass' => 'ZYLzs4IaqSxjU4MTkj9Z',
   'sql_tbl_prefix' => '',
   'sql_debug' => '0',
   'sql_charset' => 'utf8mb4',
